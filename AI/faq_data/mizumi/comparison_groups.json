@@ -1,0 +1,363 @@
+{
+  "mizumi_face_sunscreen": {
+    "group_name": "MizuMi Face Sunscreen Comparison",
+    "description": "เปรียบเทียบกันแดดหน้า MizuMi ทุกสูตร",
+    "products": [
+      "FG-MZ-SUN-WSR040",
+      "FG-MZ-SUN-DFP040",
+      "FG-MZ-SUN-SPT040",
+      "FG-MZ-SUN-JLA040",
+      "FG-MZ-SUN-MOC040",
+      "FG-MZ-SUN-MWS010",
+      "FG-MZ-SUN-AST020"
+    ],
+    "comparison_axes": [
+      "sunscreen_type",
+      "texture",
+      "water_resistant",
+      "skin_type",
+      "finish",
+      "special_feature"
+    ]
+  },
+  "mizumi_body_sunscreen": {
+    "group_name": "MizuMi Body Sunscreen Comparison",
+    "description": "เปรียบเทียบกันแดดผิวตัว MizuMi ทั้ง 3 สูตร",
+    "products": [
+      "FG-MZ-SUN-UBS180",
+      "FG-MZ-SUN-FGN180",
+      "FG-MZ-SUN-UCL165",
+      "FG-MZ-SUN-UBB120",
+      "FG-MZ-SUN-UBL120",
+      "FG-MZ-SUN-UCG180",
+      "FG-MZ-SUN-UCH180"
+    ],
+    "comparison_axes": [
+      "fragrance",
+      "cooling_effect",
+      "sensitive_skin",
+      "age_min",
+      "skin_benefit",
+      "special_feature"
+    ]
+  },
+  "mizumi_cleansing_first_step": {
+  "group_name": "MizuMi First-Step Cleansing Comparison",
+  "description": "เปรียบเทียบคลีนซิ่ง MizuMi สำหรับล้างเครื่องสำอางและกันแดด",
+  "products": [
+    "FG-MZ-CLS-SMT500",
+    "FG-MZ-CLS-RDO150",
+    "FG-MZ-CLS-BLM060",
+    "FG-MZ-CLS-BLC060",
+    "FG-MZ-CLS-BLW060"
+  ],
+  "comparison_axes": [
+    "cleansing_type",
+    "texture",
+    "waterproof_makeup_removal",
+    "skin_type",
+    "special_feature"
+  ]
+},
+  "mizumi_gentle_cleansers": {
+  "group_name": "MizuMi Gentle Facial Cleanser Comparison",
+  "description": "เปรียบเทียบเจลล้างหน้า MizuMi สูตรอ่อนโยน สำหรับผิวแพ้ง่ายและใช้งานประจำวัน",
+  "products": [
+    "FG-MZ-CLS-EXM",
+    "FG-MZ-CLS-PHC100"
+  ],
+  "comparison_axes": [
+    "cleanser_type",
+    "ph_range",
+    "texture",
+    "skin_type",
+    "age_min_years",
+    "special_feature"
+  ]
+},
+"mizumi_acne_cleansers": {
+  "group_name": "MizuMi Acne Cleanser Comparison",
+  "description": "เปรียบเทียบคลีนเซอร์ MizuMi สำหรับผิวมันและเป็นสิวง่าย",
+  "products": [
+    "FG-MZ-CLS-GAW",
+    "FG-MZ-CLS-EZA100"
+  ],
+  "comparison_axes": [
+    "cleanser_type",
+    "bha_percent",
+    "ph_range",
+    "oil_control",
+    "skin_type",
+    "sensation"
+  ]
+},
+"mizumi_enzyme_reju": {
+  "group_name": "MizuMi Enzyme Reju Facial Cleanser Comparison",
+  "description": "เปรียบเทียบโฟมล้างหน้า Enzyme Reju ทั้ง 3 สูตร",
+  "products": [
+    "FG-MZ-CLS-EZA100",
+    "FG-MZ-CLS-EZB100",
+    "FG-MZ-CLS-EZC100"
+  ],
+  "comparison_axes": [
+    "main_benefit",
+    "active_ingredient",
+    "bha_percent",
+    "brightening",
+    "hydration",
+    "skin_type"
+  ]
+},
+  "mizumi_advance_serum": {
+    "group_name": "MizuMi Advance Serum Comparison",
+    "description": "เปรียบเทียบเซรั่ม MizuMi ทุกสูตร เพื่อเลือกให้เหมาะกับสภาพผิวและปัญหาผิว",
+    "products": [
+      "FG-MZ-FCC-HYA",
+      "FG-MZ-FCC-NOS",
+      "FG-MZ-FCC-NIA",
+      "FG-MZ-FCC-TXB",
+      "FG-MZ-FCC-RTN030"
+    ],
+    "comparison_axes": [
+      "main_active",
+      "key_concern",
+      "contains_aha",
+      "contains_bha",
+      "contains_retinoid",
+      "pregnancy_safe",
+      "age_min",
+      "recommended_routine_time",
+      "sensitive_skin"
+    ]
+  },
+  "mizumi_moisturizer": {
+    "group_name": "MizuMi Moisturizer Comparison",
+    "description": "เปรียบเทียบมอยส์เจอร์ไรเซอร์ MizuMi ทุกสูตร เพื่อเลือกให้เหมาะกับสภาพผิว",
+    "products": [
+      "FG-MZ-FCC-DRY*",
+      "FG-MZ-FCC-CIC*",
+      "FG-MZ-FCC-SKB045"
+    ],
+    "comparison_axes": [
+      "main_function",
+      "texture",
+      "hydration_level",
+      "barrier_repair",
+      "skin_type",
+      "acne_safe",
+      "contains_bha",
+      "contains_niacinamide",
+      "sensitive_skin",
+      "pregnancy_safe",
+      "age_min"
+    ]
+  },
+"mimi_serum": {
+    "group_name": "MizuMi Acne (MiMi) Serum Comparison",
+    "description": "เปรียบเทียบเซรั่มและทรีตเมนต์กลุ่มสิว MizuMi (MiMi) ทั้ง 6 สูตร เพื่อเลือกใช้ให้เหมาะกับปัญหาสิว",
+    "products": [
+      "FG-MZ-ACN-HYA*",
+      "FG-MZ-ACN-PAG*",
+      "FG-MZ-ACN-AHA*",
+      "FG-MZ-ACN-BBB*",
+      "FG-MZ-ACN-SUL*",
+      "FG-MZ-ACN-ALO005"
+    ],
+    "comparison_axes": [
+      "main_function",
+      "acne_type",
+      "treatment_speed",
+      "hydration_level",
+      "exfoliation_type",
+      "contains_bha",
+      "contains_aha",
+      "contains_niacinamide",
+      "contains_sulfur",
+      "texture",
+      "use_area",
+      "sensitive_skin",
+      "pregnancy_safe",
+      "age_min",
+      "recommended_routine_step"
+    ]
+  },
+
+  "mizumi_body_serum": {
+    "group_name": "MizuMi Body Serum Comparison",
+    "description": "เปรียบเทียบโลชั่นและบอดี้เซรั่ม MizuMi ทุกสูตร เพื่อเลือกให้เหมาะกับสภาพผิวกาย",
+    "products": [
+      "FG-MZ-BDC-BST250",
+      "FG-MZ-BDC-PHA250",
+      "FG-MZ-BDC-URE250"
+    ],
+    "comparison_axes": [
+      "main_function",
+      "exfoliation_type",
+      "exfoliation_level",
+      "hydration_level",
+      "brightening",
+      "keratosis_pilaris",
+      "sebderm_friendly",
+      "texture",
+      "contains_aha",
+      "contains_bha",
+      "contains_urea",
+      "contains_fragrance",
+      "sensitive_skin",
+      "pregnancy_safe",
+      "recommended_use_time"
+    ]
+  },
+  "mizumi_lip_care": {
+  "group_name": "MizuMi Lip Balm vs Lip Mask",
+  "description": "เปรียบเทียบลิปบาล์มและลิปมาส์ก MizuMi เพื่อเลือกให้เหมาะกับการใช้งานในแต่ละช่วงเวลา",
+  "products": [
+    "FG-MZ-LIP-LPB",
+    "FG-MZ-LIP-LPM"
+  ],
+  "comparison_axes": [
+    "main_function",
+    "texture",
+    "finish_type",
+    "hydration_level",
+    "repair_level",
+    "lip_plumping",
+    "brightening_dark_lips",
+    "spf",
+    "uv_type",
+    "protection_hours",
+    "recommended_use_time",
+    "daily_use",
+    "night_mask_use",
+    "sensitive_lips",
+    "pregnancy_safe"
+  ]
+},
+"mizumi_cicafuse_mask": {
+  "group_name": "MizuMi CICAFuse Calming Mask Comparison",
+  "description": "เปรียบเทียบมาส์กหน้า MizuMi CICAFuse ทั้ง 4 สูตร เพื่อเลือกให้เหมาะกับสภาพผิวและปัญหาผิว",
+  "products": [
+    "FG-MZ-STM-CFA030",
+    "FG-MZ-STM-CFS030",
+    "FG-MZ-STM-CFW030",
+    "FG-MZ-STM-CFB030"
+  ],
+  "comparison_axes": [
+    "main_function",
+    "skin_focus",
+    "instant_effect",
+    "calming_level",
+    "brightening_level",
+    "hydration_level",
+    "contains_salicylic_acid",
+    "niacinamide_percent",
+    "tranexamic_acid",
+    "after_laser_safe",
+    "recommended_use_case",
+    "sensitive_skin",
+    "vegan",
+    "pregnancy_safe",
+    "age_min_years"
+  ]
+},
+"mizumi_invisible_toner_pad": {
+  "group_name": "MizuMi Invisible Toner Pad Comparison",
+  "description": "เปรียบเทียบโทนเนอร์แพด MizuMi Invisible Pad ทั้ง 3 สูตร เพื่อเลือกให้เหมาะกับสภาพผิวและปัญหาผิว",
+  "products": [
+    "FG-MZ-STM-AIP130",
+    "FG-MZ-STM-BIP130",
+    "FG-MZ-STM-SIP130"
+  ],
+  "comparison_axes": [
+    "main_function",
+    "skin_focus",
+    "daily_use",
+    "calming_level",
+    "brightening_level",
+    "oil_control",
+    "hydration_level",
+    "contains_salicylic_acid",
+    "contains_pha",
+    "niacinamide_percent",
+    "pad_texture",
+    "mask_like_effect",
+    "sensitive_skin",
+    "pregnancy_safe",
+    "age_min_years",
+    "recommended_use_case"
+  ]
+},
+"mizumi_black_nova_toner_pad": {
+  "group_name": "MizuMi Black Nova Pad Comparison",
+  "description": "เปรียบเทียบโทนเนอร์แพด MizuMi Black Nova Pad ทั้ง 3 สูตร เพื่อเลือกให้เหมาะกับปัญหารูขุมขนและสภาพผิว",
+  "products": [
+    "FG-MZ-STM-BPC170",
+    "FG-MZ-STM-BPB170",
+    "FG-MZ-STM-BPT170"
+  ],
+  "comparison_axes": [
+    "pore_focus",
+    "skin_focus",
+    "oil_control",
+    "hydration_level",
+    "pore_tightening_level",
+    "contains_bha",
+    "cooling_effect",
+    "pad_material",
+    "pad_texture",
+    "patch_duration_minutes",
+    "daily_use",
+    "sensitive_skin",
+    "pregnancy_safe",
+    "age_min_years",
+    "recommended_use_case"
+  ]
+},
+  "mizumi_uv_blush_stick_shades": {
+    "group_name": "MizuMi UV Blush Stick Shade Comparison",
+    "description": "เปรียบเทียบเฉดสีของ MizuMi UV Blush Stick ทั้ง 8 สี เพื่อเลือกให้เหมาะกับโทนผิวและลุคที่ต้องการ",
+    "products": [
+      "FG-MZ-CHK-UVB001",
+      "FG-MZ-CHK-UVB002",
+      "FG-MZ-CHK-UVB003",
+      "FG-MZ-CHK-UVB004",
+      "FG-MZ-CHK-UVB005",
+      "FG-MZ-CHK-UVB006",
+      "FG-MZ-CHK-UVB007",
+      "FG-MZ-CHK-UVB008"
+    ],
+    "comparison_axes": [
+      "shade_name",
+      "shade_tone",
+      "finish_type",
+      "look_vibe",
+      "skin_tone_match",
+      "daily_use",
+      "glow_level"
+    ]
+  },
+  "mizumi_pdrn_platinum_black_mask": {
+    "group_name": "MizuMi PDRN Platinum Black Mask Comparison",
+    "description": "เปรียบเทียบมาสก์ดำ MizuMi PDRN Platinum Black Mask ทั้ง 3 สูตร เพื่อเลือกให้เหมาะกับสภาพผิวและผลลัพธ์ที่ต้องการ",
+    "products": [
+      "FG-MZ-STM-PMB030",
+      "FG-MZ-STM-PMG030",
+      "FG-MZ-STM-PMM030"
+    ],
+    "comparison_axes": [
+      "variant_name",
+      "main_focus",
+      "key_benefits",
+      "best_for_skin_concern",
+      "finish_result",
+      "recommended_frequency",
+      "recommended_time"
+    ]
+  }
+
+
+
+
+
+
+}

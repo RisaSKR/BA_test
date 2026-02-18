@@ -1,0 +1,251 @@
+{
+  "FG-MZ-FMU-FIL": {
+    "base_product_name": "MizuMi Filter Effect Airy Skincare Cushion",
+    "category": "cushion",
+
+    "variants": [
+      {
+        "variant_code": "FG-MZ-FMU-FIL001",
+        "variant_name": "MizuMi Filter Effect Airy Skincare Cushion Vanilla",
+        "shade_code": "01",
+        "shade_name": "Vanilla",
+        "undertone": "neutral",
+        "skin_tone_range": "ผิวขาว"
+      },
+      {
+        "variant_code": "FG-MZ-FMU-FIL01P",
+        "variant_name": "MizuMi Filter Effect Airy Skincare Cushion Pink Vanilla",
+        "shade_code": "01P",
+        "shade_name": "Pink Vanilla",
+        "undertone": "pink",
+        "skin_tone_range": "ผิวขาวอมชมพู"
+      },
+      {
+        "variant_code": "FG-MZ-FMU-FIL002",
+        "variant_name": "MizuMi Filter Effect Airy Skincare Cushion Custard",
+        "shade_code": "02",
+        "shade_name": "Custard",
+        "undertone": "neutral",
+        "skin_tone_range": "ผิวขาว-กลาง"
+      },
+      {
+        "variant_code": "FG-MZ-FMU-FIL003",
+        "variant_name": "MizuMi Filter Effect Airy Skincare Cushion Honey",
+        "shade_code": "03",
+        "shade_name": "Honey",
+        "undertone": "warm",
+        "skin_tone_range": "ผิวกลาง"
+      },
+      {
+        "variant_code": "FG-MZ-FMU-FIL004",
+        "variant_name": "MizuMi Filter Effect Airy Skincare Cushion Mocha",
+        "shade_code": "04",
+        "shade_name": "Mocha",
+        "undertone": "warm",
+        "skin_tone_range": "ผิวแทน"
+      },
+      {
+        "variant_code": "FG-MZ-FMU-FIL005",
+        "variant_name": "MizuMi Filter Effect Airy Skincare Cushion Cocoa",
+        "shade_code": "05",
+        "shade_name": "Cocoa",
+        "undertone": "neutral-deep",
+        "skin_tone_range": "ผิวเข้ม"
+      }
+    ]
+  },
+
+  "FG-MZ-LIP-LPB": {
+    "base_product_name": "MizuMi Skincare UV Lip Glassy Balm",
+    "category": "lip_care",
+
+    "variants": [
+      {
+        "variant_code": "FG-MZ-LIP-LPB001",
+        "variant_name": "MizuMi Skincare UV Lip Glassy Balm Clear",
+        "shade_name": "Clear",
+        "shade_description": "ไม่มีสี ให้ลุคใสเป็นธรรมชาติ",
+        "size_gram": 3.5
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPB002",
+        "variant_name": "MizuMi Skincare UV Lip Glassy Balm Seoul Kiss",
+        "shade_name": "Seoul Kiss",
+        "shade_description": "สีแดงอมชมพู สดใส",
+        "size_gram": 3.5
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPB003",
+        "variant_name": "MizuMi Skincare UV Lip Glassy Balm Paris Pink",
+        "shade_name": "Paris Pink",
+        "shade_description": "สีชมพูหวาน ดูสุขภาพดี",
+        "size_gram": 3.5
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPB004",
+        "variant_name": "MizuMi Skincare UV Lip Glassy Balm Boston Brick",
+        "shade_name": "Boston Brick",
+        "shade_description": "สีน้ำตาลอมส้ม สุภาพ ดูแพง",
+        "size_gram": 3.5
+      }
+    ]
+  },
+
+  "FG-MZ-LIP-LPM": {
+    "base_product_name": "MizuMi Skincare UV Lip Glassy Mask",
+    "category": "lip_care",
+
+    "variants": [
+      {
+        "variant_code": "FG-MZ-LIP-LPM001",
+        "variant_name": "MizuMi Skincare UV Lip Glassy Mask Clear",
+        "shade_name": "Clear",
+        "shade_description": "ไม่มีสี ให้ลุคใสเป็นธรรมชาติ",
+        "size_ml": 8
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPM002",
+        "variant_name": "MizuMi Skincare UV Lip Glassy Mask Seoul Kiss",
+        "shade_name": "Seoul Kiss",
+        "shade_description": "มีสีชมพูอ่อน ช่วยให้ริมฝีปากดูสดใส",
+        "size_ml": 8
+      }
+    ]
+  },
+
+  "FG-MZ-LIP-LPO": {
+    "base_product_name": "MizuMi UV Plumping Lip Oil",
+    "category": "lip_care",
+
+    "variants": [
+      {
+        "variant_code": "FG-MZ-LIP-LPO001",
+        "variant_name": "MizuMi UV Plumping Lip Oil Clear",
+        "shade_name": "Clear",
+        "shade_description": "ไม่มีสี ให้ลุคใสเป็นธรรมชาติ",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPO002",
+        "variant_name": "MizuMi UV Plumping Lip Oil Rouge",
+        "shade_name": "Rouge",
+        "shade_description": "สีแดง ช่วยให้ริมฝีปากดูสดใส",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPO003",
+        "variant_name": "MizuMi UV Plumping Lip Oil Champagne",
+        "shade_name": "Champagne",
+        "shade_description": "สีชมพูอ่อน ดูสุภาพ เป็นธรรมชาติ",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-LIP-LPO004",
+        "variant_name": "MizuMi UV Plumping Lip Oil Sand",
+        "shade_name": "Sand",
+        "shade_description": "สีน้ำตาลอ่อน ให้ลุคสุภาพ ดูแพง",
+        "size_gram": 4
+      }
+    ]
+  },
+
+  "FG-MZ-LIP-LOS": {
+    "base_product_name": "MizuMi Lip Oil Serum",
+    "category": "lip_care",
+
+    "variants": [
+      {
+        "variant_code": "FG-MZ-LIP-LOS016",
+        "variant_name": "MizuMi Lip Oil Serum 1.6g",
+        "shade_name": "Soft Pink",
+        "shade_description": "สีชมพูอ่อนธรรมชาติ ไม่ให้สีชัด",
+        "size_gram": 1.6
+      }
+    ]
+  },
+  
+  "FG-MZ-CHK-UVB": {
+    "base_product_name": "MizuMi UV Blush Stick",
+    "category": "makeup_blush",
+
+    "variants": [
+      {
+        "variant_code": "FG-MZ-CHK-UVB001",
+        "variant_name": "MizuMi UV Blush Stick Peach Mojito",
+        "shade_name": "PEACH MOJITO",
+        "shade_description": "สีพีชอมส้ม ให้ลุคสดใส สุขภาพดี",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB002",
+        "variant_name": "MizuMi UV Blush Stick Coco Martini",
+        "shade_name": "COCO MARTINI",
+        "shade_description": "สีเบจน้ำตาล โทน Neutral สุภาพ ใช้ได้ทุกวัน",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB003",
+        "variant_name": "MizuMi UV Blush Stick Sunset Punch",
+        "shade_name": "SUNSET PUNCH",
+        "shade_description": "สีน้ำตาลอมชมพูตุ่นๆ ให้ลุคอบอุ่น",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB004",
+        "variant_name": "MizuMi UV Blush Stick Rosy Sangria",
+        "shade_name": "ROSY SANGRIA",
+        "shade_description": "สีน้ำตาลอมแดงตุ่นๆ ลุคสวยคม",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB005",
+        "variant_name": "MizuMi UV Blush Stick Pink Spritz",
+        "shade_name": "PINK SPRITZ",
+        "shade_description": "สีชมพูนม ให้ลุคหวานละมุน",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB006",
+        "variant_name": "MizuMi UV Blush Stick Bloody Berry",
+        "shade_name": "BLOODY BERRY",
+        "shade_description": "สีแดงเบอร์รี่ ช่วยให้แก้มดูโดดเด่น",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB007",
+        "variant_name": "MizuMi UV Blush Stick Roseberry Vodka",
+        "shade_name": "ROSEBERRY VODKA",
+        "shade_description": "สีชมพูพีช ให้ลุคสุภาพ สดใส",
+        "size_gram": 4
+      },
+      {
+        "variant_code": "FG-MZ-CHK-UVB008",
+        "variant_name": "MizuMi UV Blush Stick Devil's Margarita",
+        "shade_name": "DEVIL'S MARGARITA",
+        "shade_description": "สีแดงอมม่วงโทนไวน์ ให้ลุคมั่นใจ",
+        "size_gram": 4
+      }
+    ]
+  },
+  "mizumi_pdrn_platinum_black_mask_variants": [
+    {
+      "product_code": "FG-MZ-STM-PMB030",
+      "variant": "Instant Bright",
+      "best_for": "ผิวหมองคล้ำ / จุดด่างดำ",
+      "key_result": "ผิวดูกระจ่างใส สีผิวสม่ำเสมอ"
+    },
+    {
+      "product_code": "FG-MZ-STM-PMG030",
+      "variant": "Instant Glow",
+      "best_for": "ผิวอ่อนล้า / อยากผิวโกลว์",
+      "key_result": "ผิวดูอิ่มน้ำ โกลว์ กระชับ"
+    },
+    {
+      "product_code": "FG-MZ-STM-PMM030",
+      "variant": "Instant Moist",
+      "best_for": "ผิวแห้ง / ขาดน้ำ",
+      "key_result": "ผิวชุ่มชื้น สุขภาพดี"
+    }
+  ]
+  
+}

@@ -1,0 +1,176 @@
+{
+  "faq_face_sunscreen_comparison": {
+    "question_patterns": [
+      "กันแดดหน้าแต่ละสีต่างกันยังไง",
+      "กันแดดหน้ามิซึมิสีไหนดี",
+      "กันแดดฟ้า เขียว ส้ม ชมพู ต่างกันยังไง",
+      "เลือกกันแดดหน้าตัวไหนดี"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_face_sunscreen"
+  },
+  "faq_body_sunscreen_comparison": {
+    "question_patterns": [
+      "กันแดดตัวต่างกันยังไง",
+      "กันแดดตัวสีชมพู สีขาว สีฟ้า ต่างกันยังไง",
+      "body sunscreen แต่ละสูตรต่างกันยังไง",
+      "เลือกกันแดดตัวไหนดี"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_body_sunscreen"
+  },
+  "faq_cleansing_comparison": {
+    "question_patterns": [
+      "คลีนซิ่งมิซึมิต่างกันยังไง",
+      "คลีนซิ่งแต่ละสูตรต่างกันยังไง",
+      "คลีนซิ่งน้ำ ออยล์ บาล์ม ต่างกันยังไง",
+      "เลือกคลีนซิ่งตัวไหนดี",
+      "ใช้คลีนซิ่งแบบไหนดี"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_cleansing"
+  },
+
+  "faq_cleanser_comparison": {
+    "question_patterns": [
+      "โฟมล้างหน้ามิซึมิต่างกันยังไง",
+      "เจลล้างหน้ามิซึมิแต่ละสูตรต่างกันยังไง",
+      "ล้างหน้าสูตรไหนดี",
+      "ผิวเป็นสิวควรใช้ล้างหน้าตัวไหน",
+      "เลือกคลีนเซอร์ตัวไหนดี"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_cleanser"
+  },
+ "faq_serum_comparison": {
+    "question_patterns": [
+      "เซรั่มมิซึมิต่างกันยังไง",
+      "เซรั่มแต่ละสูตรต่างกันยังไง",
+      "เซรั่มสีฟ้า สีส้ม สีชมพู สีม่วง ต่างกันยังไง",
+      "ควรใช้เซรั่มตัวไหนดี",
+      "เลือกเซรั่มมิซึมิตัวไหนดี",
+      "เซรั่มมิซึมิสูตรไหนเหมาะกับเรา",
+      "เซรั่มมิซึมิแต่ละตัวช่วยอะไรบ้าง"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_advance_serum"
+  },
+  "faq_mimi_serum_comparison": {
+    "question_patterns": [
+      "เซรั่มสิวมิมิแต่ละตัวต่างกันยังไง",
+      "มิมิสีม่วง สีเขียว สีชมพู สีฟ้า สีดำ ต่างกันยังไง",
+      "เป็นสิวควรใช้มิมิตัวไหนดี",
+      "สิวอักเสบ สิวอุดตัน ใช้ตัวไหน",
+      "อยากลดรอยสิวควรใช้มิมิสูตรไหน",
+      "มิมิ 6 สูตรต่างกันยังไง",
+      "เลือกเซรั่มสิวมิมิตัวไหนดี",
+      "มิมิแต่ละตัวช่วยอะไรบ้าง"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mimi_serum"
+  },
+  "faq_body_serum_comparison": {
+    "question_patterns": [
+      "โลชั่นทาตัวมิซึมิต่างกันยังไง",
+      "โลชั่น AHA PHA Urea ต่างกันยังไง",
+      "บอดี้เซรั่มมิซึมิแต่ละสูตรต่างกันยังไง",
+      "อยากให้ผิวกระจ่างใสควรใช้โลชั่นตัวไหนดี",
+      "เป็นขนคุดควรใช้โลชั่นสูตรไหน",
+      "ผิวแห้งมาก เป็นขุย ใช้โลชั่นตัวไหนดี",
+      "เลือกบอดี้เซรั่มมิซึมิตัวไหนดี",
+      "โลชั่นทาตัวมิซึมิสูตรไหนเหมาะกับเรา"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_body_serum"
+  },
+  "faq_lip_balm_vs_lip_mask_comparison": {
+  "question_patterns": [
+    "ลิปบาล์มกับลิปมาส์กต่างกันยังไง",
+    "Lip Balm กับ Lip Mask ต่างกันยังไง",
+    "ควรใช้ลิปบาล์มหรือลิปมาส์กดี",
+    "ลิปบาล์มกับลิปมาส์กใช้ต่างกันยังไง",
+    "ริมฝีปากแห้งควรใช้ลิปอะไรดี",
+    "กลางวันควรใช้ลิปแบบไหน กลางคืนใช้แบบไหน",
+    "ลิปบาล์มกับลิปมาส์กอันไหนดีกว่า",
+    "เลือก Lip Balm หรือ Lip Mask ดี"
+  ],
+  "answer_template": "comparison_table",
+  "comparison_group": "mizumi_lip_care"
+},
+"faq_cicafuse_mask_comparison": {
+  "question_patterns": [
+    "มาส์กเสือแต่ละสีต่างกันยังไง",
+    "CICAFuse มีกี่สูตร",
+    "ผิวเป็นสิวควรใช้มาส์กสูตรไหน",
+    "อยากผิวใสควรใช้มาส์กตัวไหน",
+    "มาส์กเสือสีเขียว ฟ้า ขาว ชมพู ต่างกันยังไง"
+  ],
+  "answer_template": "comparison_table",
+  "comparison_group": "mizumi_cicafuse_mask"
+},
+"faq_invisible_pad_comparison": {
+  "question_patterns": [
+    "โทนเนอร์แพดมิซึมิต่างกันยังไง",
+    "Invisible Pad มีกี่สูตร",
+    "ผิวเป็นสิวควรใช้โทนเนอร์แพดสูตรไหน",
+    "อยากผิวใสใช้โทนเนอร์แพดตัวไหน",
+    "โทนเนอร์แพดสีเขียว สีฟ้า ต่างกันยังไง"
+  ],
+  "answer_template": "comparison_table",
+  "comparison_group": "mizumi_invisible_toner_pad"
+},
+"faq_black_nova_pad_comparison": {
+  "question_patterns": [
+    "Black Nova Pad ต่างกันยังไง",
+    "โนวาแพดแต่ละสีต่างกันยังไง",
+    "Black Nova Pad มีกี่สูตร",
+    "ผิวเป็นสิวควรใช้ Nova Pad สีไหน",
+    "ผิวแพ้ง่ายใช้ Nova Pad สูตรไหน",
+    "Nova Pad สีเขียว สีฟ้า สีม่วง ต่างกันยังไง",
+    "อยากกระชับรูขุมขนใช้ Nova Pad ตัวไหน"
+  ],
+  "answer_template": "comparison_table",
+  "comparison_group": "mizumi_black_nova_toner_pad"
+},
+
+"faq_compare_pad_series": {
+  "question_patterns": [
+    "Invisible Pad กับ Nova Pad ต่างกันยังไง",
+    "ควรเลือก Nova หรือ Invisible ดี",
+    "โทนเนอร์แพดสีดำต่างจากแบบบางยังไง"
+  ],
+  "answer_template": "comparison_table",
+  "comparison_group": "mizumi_toner_pad_series"
+},
+  "faq_uv_blush_stick_comparison": {
+    "question_patterns": [
+      "UV Blush Stick มีกี่สี",
+      "บลัชสติ๊กสีไหนดี",
+      "ผิวขาวควรใช้บลัชสีอะไร",
+      "อยากได้ลุคธรรมชาติใช้สีไหน",
+      "บลัชสติ๊กสีไหนสุภาพ"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_uv_blush_stick_shades"
+  },
+  "faq_black_mask_comparison": {
+    "question_patterns": [
+      "มาสก์ดำมีกี่สูตร",
+      "Black Mask มีกี่สูตร",
+      "มาสก์ดำแต่ละสูตรต่างกันยังไง",
+      "สูตรไหนเหมาะกับผิวแบบไหน",
+      "ควรเลือกมาสก์ดำสูตรไหนดี",
+      "ผิวแห้งควรใช้มาสก์สูตรไหน",
+      "อยากผิวใสควรใช้สูตรไหน",
+      "อยากได้ผิวโกลว์ใช้สูตรไหนดี"
+    ],
+    "answer_template": "comparison_table",
+    "comparison_group": "mizumi_pdrn_platinum_black_mask_variants"
+  }
+
+
+
+
+
+}
+

@@ -1,0 +1,375 @@
+{
+  "faq_texture": {
+    "question": "เนื้อสัมผัสเป็นยังไง",
+    "answer": "เนื้อสัมผัสของรุ่นนี้เป็นแบบ {texture} บางเบา สบายผิวค่ะ"
+  },
+
+  "faq_body_use": {
+    "question": "ใช้กับผิวหน้าได้ไหม",
+    "answer": "รุ่นนี้ออกแบบมาสำหรับผิวกาย แนะนำไม่ใช้กับผิวหน้าโดยเฉพาะผู้ที่ผิวแพ้ง่ายค่ะ"
+  },
+
+  "faq_yellow_stain": {
+    "question": "ทำให้เสื้อเหลืองไหม",
+    "answer": "{yellow_stain_answer}"
+  },
+
+  "faq_skin_type": {
+    "question": "เหมาะกับผิวแบบไหน",
+    "answer": "เหมาะสำหรับผิว {skin_types} ค่ะ"
+  },
+
+  "faq_water_resistant": {
+    "question": "กันน้ำ กันเหงื่อไหม",
+    "answer": "{water_resistant_description}"
+  },
+
+  "faq_pregnancy": {
+    "question": "คนท้องใช้ได้ไหม",
+    "answer": "สามารถใช้ได้ในคนท้อง แต่แนะนำให้ทดสอบการแพ้ก่อนใช้งานค่ะ"
+  },
+
+  "faq_reapply": {
+    "question": "ต้องทาซ้ำไหม",
+    "answer": "แนะนำให้ทาซ้ำทุก {recommended_reapply_hours} ชั่วโมงเพื่อคงประสิทธิภาพค่ะ"
+  },
+
+  "faq_upsell": {
+    "question": "ใช้คู่กับอะไรดี",
+    "answer": "{upsell_recommendation}"
+  },
+
+  "faq_oil_control": {
+    "question": "คุมมันได้นานแค่ไหน",
+    "answer": "ช่วยควบคุมความมันได้นานถึง {oil_control_hours} ชั่วโมงค่ะ"
+  },
+
+  "faq_salicylic": {
+    "question": "มี Salicylic Acid ไหม",
+    "answer": "มี Salicylic Acid {salicylic_acid_percent}% ซึ่งช่วยดูแลปัญหาสิวค่ะ"
+  },
+
+  "faq_fragrance": {
+    "question": "มีน้ำหอมไหม",
+    "answer": "{fragrance_answer}"
+  },
+
+ 
+
+  "faq_product_feature": {
+    "question": "คุณสมบัติ",
+    "answer": "{product_feature_description}"
+  },
+
+  "faq_eye_sting": {
+    "question": "แสบตาไหม",
+    "answer": "{eye_sting_answer}"
+  },
+
+  "faq_how_to_use": {
+    "question": "ใช้ยังไง",
+    "answer": "{how_to_use}"
+  },
+
+  "faq_acne_skin": {
+    "question": "เป็นสิวใช้ได้ไหม",
+    "answer": "{acne_skin_answer}"
+  },
+
+  "faq_hybrid": {
+    "question": "เป็นแบบ Hybrid ไหม",
+    "answer": "{hybrid_answer}"
+  },
+
+  "faq_ingredients": {
+    "question": "ส่วนผสม",
+    "answer": "{ingredients}"
+  },
+
+  "faq_size_options": {
+    "question": "มีกี่ขนาด",
+    "answer": "{size_options}"
+  },
+
+  "faq_eye_lip_use": {
+    "question": "ใช้รอบดวงตาและปากได้ไหม",
+    "answer": "{eye_lip_use_answer}"
+  },
+
+  "faq_full_face_use": {
+    "question": "สามารถใช้ทำความสะอาดทั้งใบหน้าได้ไหม",
+    "answer": "{full_face_use_answer}"
+  },
+
+  "faq_lash_extension": {
+    "question": "ต่อขนตาสามารถใช้ได้ไหม",
+    "answer": "{lash_extension_answer}"
+  },
+
+  "faq_age_min": {
+    "question": "สามารถใช้ตั้งแต่อายุเท่าไหร่",
+    "answer": "แนะนำอายุ {age_min_years} ปีขึ้นไปค่ะ"
+  },
+
+  "faq_ph_value": {
+  "question": "ค่า pH เท่าไหร่",
+  "answer": "ค่า pH อยู่ที่ประมาณ {ph_range} ค่ะ"
+},
+
+"faq_tingling": {
+  "question": "ใช้แล้วรู้สึกยิบๆ แสบหน้าปกติไหม",
+  "answer": "{tingling_explanation}"
+},
+
+"faq_bha": {
+  "question": "มี BHA ไหม",
+  "answer": "{bha_answer}"
+},
+
+"faq_sebderm": {
+  "question": "เป็นเซ็บเดิร์มช่วยด้วยไหม",
+  "answer": "{sebderm_answer}"
+},
+
+"faq_niacinamide": {
+  "question": "มี Niacinamide ไหม",
+  "answer": "มี Niacinamide {niacinamide_percent}% ค่ะ"
+},
+
+"faq_ectoin_percent": {
+  "question": "มี Ectoin ไหม",
+  "answer": "มี Ectoin {ectoin_percent}% ค่ะ"
+},
+
+"faq_use_with_mimi_serum": {
+  "question": "สามารถใช้กับเซรั่มน้องมิมิได้ไหม",
+  "answer": "สามารถใช้ร่วมกันได้ แนะนำลงเซรั่มน้องมิมิก่อน จากนั้นค่อยลงเซรั่มแอดวานซ์ค่ะ"
+},
+
+"faq_use_with_retinol": {
+  "question": "ใช้ร่วมกับเรตินอลได้ไหม",
+  "answer": "ไม่แนะนำให้ใช้ร่วมกันในขั้นตอนเดียวกัน วิตามินซีควรใช้ตอนเช้า และ Retinol ใช้ตอนกลางคืนค่ะ"
+},
+
+"faq_vitamin_c_type": {
+  "question": "วิตามินซีที่ใช้คืออนุพันธ์ตัวไหน",
+  "answer": "ใช้วิตามินซีในรูปแบบ 3-O-Ethyl Ascorbic Acid แบบ Niosome Encapsulation ค่ะ"
+},
+
+"faq_pregnancy_aha": {
+  "question": "ตั้งครรภ์ใช้ได้ไหม เห็นมี AHA",
+  "answer": "สูตรนี้มี AHA ในปริมาณอ่อนโยนและปลอดภัย อย่างไรก็ตามขณะตั้งครรภ์ผิวอาจไวต่อการระคายเคือง แนะนำให้ทดสอบการแพ้ก่อนใช้งานค่ะ"
+},
+
+"faq_aha_percent": {
+  "question": "มี AHA ไหม",
+  "answer": "มี Advance AHA {aha_percent}% ช่วยผลัดเซลล์ผิวอย่างอ่อนโยนค่ะ"
+},
+
+"faq_sensitive_acne_skin": {
+  "question": "ผิวแพ้ง่ายใช้ได้ไหม",
+  "answer": "สามารถใช้ได้ สูตรอ่อนโยนและปราศจากสารระคายเคือง อย่างไรก็ตามหากผิวแพ้ง่ายมาก แนะนำให้ทดสอบการแพ้ก่อนใช้งานค่ะ"
+},
+
+"faq_dryness_after_use": {
+  "question": "ใช้แล้วผิวแห้ง ลอก ควรทำยังไง",
+  "answer": "แนะนำให้ใช้มอยส์เจอร์ร่วมด้วย เพื่อช่วยเพิ่มความชุ่มชื้นและลดอาการแห้งลอกของผิวค่ะ"
+},
+
+"faq_purging": {
+  "question": "ดันสิวไหม",
+  "answer": "อาจเกิดอาการดันสิวได้จากการผลัดเซลล์ผิวของ AHA ซึ่งไม่ใช่สิวใหม่ แต่เป็นสิวที่อยู่ใต้ผิว หากใช้ต่อเนื่องสิวจะค่อยๆ ยุบและหลุดไปเองค่ะ"
+},
+
+"faq_tranexamic_acid_percent": {
+  "question": "มี Tranexamic Acid กี่ %",
+  "answer": "มี Tranexamic Acid {tranexamic_acid_percent}% ค่ะ"
+},
+
+"faq_pregnancy_retinoid": {
+  "question": "ตั้งครรภ์หรือให้นมบุตรใช้ได้ไหม",
+  "answer": "ไม่แนะนำให้ใช้ในระหว่างตั้งครรภ์หรือให้นมบุตรค่ะ เนื่องจากมีส่วนผสมของเรตินอล (Retinoic Ester) ซึ่งอาจก่อให้เกิดอันตรายต่อทารกได้"
+},
+
+
+
+  "faq_coverage_level": {
+    "question": "ปกปิดระดับไหน",
+    "answer": "ปกปิดระดับ {coverage_level} และสามารถบิ้วเพิ่มได้ค่ะ"
+  },
+  "faq_finish_type": {
+    "question": "ฟินิชผิวแบบไหน",
+    "answer": "ให้ฟินิชผิวแบบ {finish_type} ค่ะ"
+  },
+  "faq_mask_transfer": {
+    "question": "ใช้แล้วติดแมสไหม",
+    "answer": "{mask_transfer_answer}"
+  },
+  "faq_need_sunscreen": {
+    "question": "ใช้คุชชั่นต้องทากันแดดอีกไหม",
+    "answer": "แนะนำให้ทากันแดดก่อนค่ะ เนื่องจากคุชชั่นลงเป็นเลเยอร์บาง ไม่เทียบเท่าการทากันแดดโดยตรง"
+  },
+  "faq_refill": {
+    "question": "มีรีฟิลไหม",
+    "answer": "{refill_answer}"
+  },
+  "faq_vegan_makeup": {
+    "question": "Vegan ใช้ได้ไหม",
+    "answer": "{vegan_answer}"
+  },
+  "faq_talc": {
+    "question": "มีส่วนผสมของ talc ไหม",
+    "answer": "{talc_answer}"
+  },
+  "faq_non_comedogenic_silicone": {
+    "question": "ทำไมมีซิลิโคนแต่ไม่อุดตัน",
+    "answer": "{non_comedogenic_silicone_explanation}"
+  },
+  "faq_accessory_puff": {
+    "question": "มีพัฟจำหน่ายแยกไหม",
+    "answer": "{puff_available}"
+  },
+
+
+
+
+  "faq_lip_vs_mask": {
+  "question": "ต่างจากลิปมาสก์ยังไง",
+  "answer": "{lip_vs_mask_answer}"
+},
+"faq_shade_options": {
+  "question": "มีกี่สี",
+  "answer": "{shade_options}"
+},
+"faq_uv_test_type": {
+  "question": "มีผลการทดสอบกันแดดแบบไหน",
+  "answer": "{uv_test_type}"
+},
+"faq_stinging_lip": {
+  "question": "ทาแล้วแสบปากไหม",
+  "answer": "{stinging_lip_answer}"
+},
+"faq_twist_stuck": {
+  "question": "หมุนลิปขึ้นแล้วหมุนลงไม่ได้ ทำยังไง",
+  "answer": "{twist_stuck_solution}"
+},
+"faq_spf": {
+  "question": "มีกันแดดไหมคะ",
+  "answer": "{spf_answer}"
+},
+"faq_cooling_effect": {
+  "question": "ทาแล้วเย็นปากไหม",
+  "answer": "{cooling_effect_answer}"
+},
+"faq_scent": {
+  "question": "มีกลิ่นไหมคะ",
+  "answer": "{scent_answer}"
+},
+"faq_storage": {
+  "question": "วิธีการจัดเก็บ",
+  "answer": "{storage_instruction}"
+},
+"faq_lip_serum_vs_lip_oil": {
+  "question": "ต่างกับลิปออยล์ยังไง",
+  "answer": "{lip_serum_vs_lip_oil_answer}"
+},
+
+
+"faq_sheet_color": {
+  "question": "ทำไมแผ่นมาส์กเป็นสีนี้",
+  "answer": "{sheet_color_explanation}"
+},
+"faq_biodegradable": {
+  "question": "แผ่นมาส์กย่อยสลายได้ไหม",
+  "answer": "{biodegradable_answer}"
+},
+"faq_mask_duration": {
+  "question": "มาส์กกี่นาที",
+  "answer": "{mask_duration_answer}"
+},
+"faq_daily_mask_use": {
+  "question": "มาส์กทุกวันได้ไหม",
+  "answer": "{daily_mask_use_answer}"
+},
+
+
+
+"faq_formula_variants": {
+  "question": "มีกี่สูตรคะ",
+  "answer": "{formula_variants_description}"
+},
+"faq_pad_difference": {
+  "question": "ต่างจากโทนเนอร์แพดทั่วไปยังไง",
+  "answer": "{pad_difference_description}"
+},
+"faq_pad_material": {
+  "question": "Pad ทำมาจากอะไรคะ",
+  "answer": "{pad_material_answer}"
+},
+"faq_pad_tearable": {
+  "question": "ตัว Pad สามารถฉีกได้ไหมคะ",
+  "answer": "{pad_tearable_answer}"
+},
+"faq_pads_quantity": {
+  "question": "1 กระปุกมีกี่แผ่น",
+  "answer": "{pads_quantity_answer}"
+},
+"faq_patch_duration": {
+  "question": "แปะโทนเนอร์แพดได้กี่นาที",
+  "answer": "{patch_duration_answer}"
+},
+"faq_replace_mask": {
+  "question": "ใช้แทนมาส์กได้ไหม",
+  "answer": "{replace_mask_answer}"
+},
+"faq_portable": {
+  "question": "สามารถพกพาได้ไหม",
+  "answer": "{portable_answer}"
+},
+"faq_serum_color_change": {
+  "question": "ทำไมน้ำเซรั่มในกระปุกสีเปลี่ยน",
+  "answer": "{serum_color_change_explanation}"
+},
+"faq_pad_not_aligned": {
+  "question": "ทำไมโทนเนอร์แพดไม่เรียงกัน",
+  "answer": "{pad_not_aligned_explanation}"
+},
+"faq_active_percentage": {
+  "question": "มีสาร active อะไรบ้าง กี่ %",
+  "answer": "{active_percentage_description}"
+},
+"faq_compare_with_mask": {
+  "question": "ต่างจากมาสก์ยังไง",
+  "answer": "{compare_with_mask_answer}"
+},
+"faq_compare_pad_series": {
+  "question": "ต่างกันยังไงระหว่าง Invisible Pad กับ Black Nova Pad",
+  "answer": "{compare_pad_series_answer}"
+},
+"faq_pore_type": {
+  "question": "เหมาะกับปัญหารูขุมขนแบบไหน",
+  "answer": "{pore_type_answer}"
+},
+"faq_post_mask_skincare": {
+  "question": "มาสก์เสร็จแล้วต้องทาสกินแคร์ต่อไหม",
+  "answer": "{post_mask_skincare_answer}"
+},
+"faq_pdrn_source": {
+  "question": "PDRN จากอะไรคะ",
+  "answer": "PDRN ที่ใช้เป็น PDRN {pdrn_source} ความเข้มข้น {pdrn_concentration} ค่ะ"
+},
+"faq_difference_tiger_mask": {
+  "question": "ต่างจากมาสก์เสือยังไง",
+  "answer": "มาสก์ดำจะเน้นการบำรุงล้ำลึก ฟื้นฟูผิวและลดเลือนริ้วรอย ส่วนมาสก์เสือจะเน้นการปลอบประโลมผิว ลดการระคายเคืองค่ะ"
+}
+
+
+
+
+
+
+
+
+
+
+}

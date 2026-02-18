@@ -1,0 +1,215 @@
+{
+  "กันแดดฟ้า": "FG-MZ-SUN-WSR040",
+  "ฝาสีฟ้า": "FG-MZ-SUN-WSR040",
+  "กันแดดมิซึมิสีฟ้า": "FG-MZ-SUN-WSR040",
+  
+  "กันแดดส้ม": "FG-MZ-SUN-DFP040",
+  "รุ่นโปรสีส้ม": "FG-MZ-SUN-DFP040",
+  "ฝาสีส้ม": "FG-MZ-SUN-DFP040",
+
+  "กันแดดสปอร์ต": "FG-MZ-SUN-SPT040",
+  "กันแดดเขียวเข้ม": "FG-MZ-SUN-SPT040",
+  "รุ่นสปอร์ตสีเขียว": "FG-MZ-SUN-SPT040",
+
+  "กันแดดชมพู": "FG-MZ-SUN-JLA040",
+  "เจลลี่อควา": "FG-MZ-SUN-JLA040",
+  "กันแดดเจลลี่": "FG-MZ-SUN-JLA040",
+
+  "กันแดดฝาเขียวอ่อน": "FG-MZ-SUN-MOC040",
+  "กันแดดคุมมัน": "FG-MZ-SUN-MOC040",
+  "กันแดดแมตต์": "FG-MZ-SUN-MOC040",
+  "กันแดดผิวมันเป็นสิว": "FG-MZ-SUN-MOC040",
+  "ultimate matte sunscreen": "FG-MZ-SUN-MOC040",
+  "mizumi matte oil control": "FG-MZ-SUN-MOC040",
+
+  "กันแดดตลับ": "FG-MZ-SUN-MWS010",
+  "ซันแพคท์": "FG-MZ-SUN-MWS010",
+  "กันแดดซันแพคท์": "FG-MZ-SUN-MWS010",
+  "mizumi sun pact": "FG-MZ-SUN-MWS010",
+
+  "กันแดดสติ๊ก": "FG-MZ-SUN-AST020",
+  "กันแดดแท่ง": "FG-MZ-SUN-AST020",
+  "กันแดดแท่งพกพา": "FG-MZ-SUN-AST020",
+
+  "กันแดดส้มมิมิ": "FG-MZ-ACN-MAT013",
+  "acne matte sunscreen": "FG-MZ-ACN-MAT013",
+
+  "กันแดดตัวสีชมพู": "FG-MZ-SUN-UBS*",
+  "กันแดดตัวสูตรมีน้ำหอม": "FG-MZ-SUN-UBS*",
+  "uv bright body serum": "FG-MZ-SUN-UBS*",
+
+  "กันแดดตัวสีขาว": "FG-MZ-SUN-FGN*",
+  "กันแดดตัวสูตรไม่มีน้ำหอม": "FG-MZ-SUN-FGN*",
+  "uv bright body serum fragrance free": "FG-MZ-SUN-FGN*",
+
+  "กันแดดโทนอัพเบจ": "FG-MZ-SUN-UBB120",
+  "กันแดดเบจ": "FG-MZ-SUN-UBB120",
+  "กันแดดโทนอัพสีเหลือง": "FG-MZ-SUN-UBB120",
+  "beige body sunscreen": "FG-MZ-SUN-UBB120",
+
+  "กันแดดตัวสีฟ้า": "FG-MZ-SUN-UCL165",
+  "กันแดดตัวคลูลิ่ง": "FG-MZ-SUN-UCL165",
+  "กันแดดตัวสูตรเย็น": "FG-MZ-SUN-UCL165",
+  "uv cooling body serum": "FG-MZ-SUN-UCL165",
+
+  "กันแดดโทนอัพม่วง": "FG-MZ-SUN-UBL120",
+  "กันแดดตัวสีม่วง": "FG-MZ-SUN-UBL120",
+  "uv bright body serum lilac": "FG-MZ-SUN-UBL120",
+
+  "วิตซีกลูต้า": "FG-MZ-SUN-UCG180",
+  "vit c gluta": "FG-MZ-SUN-UCG180",
+
+  "วิตซีไฮยา": "FG-MZ-SUN-UCH180",
+  "vit c hya": "FG-MZ-SUN-UCH180",
+
+  "คลีนซิ่งวอเตอร์": "FG-MZ-CLS-SMT*",
+  "คลีนซิ่งน้ำ": "FG-MZ-CLS-SMT*",
+
+  "คลีนซิ่งอาย&ลิป": "FG-MZ-CLS-EYE100",
+  "คลีนซิ่งขวดฟ้าสำหรับปากและตา": "FG-MZ-CLS-EYE100",
+
+  "คลีนซิ่งออยล์" : "FG-MZ-CLS-RDO150",
+
+  "คลีนซิ่งบาล์มกระปุกขาว" : "FG-MZ-CLS-BLM060",
+
+  "คลีนซิ่ง บาล์ม ชาร์โคล" : "FG-MZ-CLS-BLC060",
+  "คลีนซิ่งบาล์มกระปุกดำ" : "FG-MZ-CLS-BLC060",
+
+  "คลีนซิ่ง บาล์ม วอร์ม" : "FG-MZ-CLS-BLW060",
+  "คลีนซิ่งบาล์มแดง" : "FG-MZ-CLS-BLW060",
+
+  "เจลล้างหน้าขาว" : "FG-MZ-CLS-EXM*",
+  "เอ็กตร้ามายด์ " : "FG-MZ-CLS-EXM*",
+
+  "เจลล้างหน้าขวดเขียว" : "FG-MZ-CLS-GAW*",
+  "เจลเทิลแอคเน่วอช" :  "FG-MZ-CLS-GAW*",
+
+  "โฟมล้างหน้าสูตรสิว" : "FG-MZ-CLS-EZA100",
+  "โฟมล้างหน้าสีเขียว" : "FG-MZ-CLS-EZA100",
+
+  "โฟมล้างหน้าสูตรไบร์ท" : "FG-MZ-CLS-EZB100",
+  "โฟมล้างหน้าสีชมพู" : "FG-MZ-CLS-EZB100",
+
+  "โฟมล้างหน้าสูตรคอลลาเจน" : "FG-MZ-CLS-EZC100",
+  "โฟมล้างหน้าสีฟ้า" : "FG-MZ-CLS-EZC100",
+
+  "เจลล้างหน้าพีเอส" : "FG-MZ-CLS-PHC100",
+  "เจลล้างหน้าหลอดฟ้า" : "FG-MZ-CLS-PHC100",
+
+  "เซรั่มไฮยาเรสคิว" : "FG-MZ-FCC-HYA",
+  "เซรั่มไฮยาขวดฟ้า" :"FG-MZ-FCC-HYA",
+  "แอดวานซ์ไฮยา" : "FG-MZ-FCC-HYA",
+
+  "เซรั่มส้ม" : "FG-MZ-FCC-NOS",
+  "นีโอโซม" : "FG-MZ-FCC-NOS",
+  "วิตามินซี" :"FG-MZ-FCC-NO",
+
+  "ไนอะซินาไมด์" : "FG-MZ-FCC-NIA",
+  "เซรั่มชมพู" : "FG-MZ-FCC-NIA",
+
+  "เซรั่มม่วง" : "FG-MZ-FCC-TXB",
+  "เซรั่มลดฝ้า" : "FG-MZ-FCC-TXB",
+
+  "เรติรอล" : "FG-MZ-FCC-RTN030",
+  "เรติโนอิก" : "FG-MZ-FCC-RTN030",
+
+  "มอยส์ฟ้า" : "FG-MZ-FCC-DRY",
+  "มอยส์เจอร์ไรเซอร์สีฟ้า" : "FG-MZ-FCC-DRY",
+
+  "มอยส์เขียว " : "FG-MZ-FCC-CIC",
+  "มอยส์เจอร์ไรเซอร์เขียว " : "FG-MZ-FCC-CIC",
+  "ซิก้า" : "FG-MZ-FCC-CIC",
+
+  "สกินแบริเออร์" : "FG-MZ-FCC-SKB045",
+  "มอยส์หลอดฟ้า" : "FG-MZ-FCC-SKB045",
+
+  "มิมิม่วง" : "FG-MZ-ACN-HYA",
+  "เซรั่มไฮยาม่วง" : "FG-MZ-ACN-HYA",
+  "เซรั่มไฮยามิมิ" : "FG-MZ-ACN-HYA",
+
+  "มิมิหลอดฟ้า" : "FG-MZ-ACN-PAG",
+  "เจลแต้มสิวเปปไทด์แบบหลอด" : "FG-MZ-ACN-PAG",
+
+  "มิมิหลอดชมพู" : "FG-MZ-ACN-AHA",
+  "เซรั่มมิมิหลอดชมพู" : "FG-MZ-ACN-AHA",
+
+  "มิมิหลอดเขียว" : "FG-MZ-ACN-BBB",
+  "บีทรีแอคเน่หลอดเขียว" : "FG-MZ-ACN-BBB",
+
+  "มิมิหลอดดำ" : "FG-MZ-ACN-SUL",
+  "โคลนพอกสิวแบบหลอด" : "FG-MZ-ACN-SUL",
+
+  "มิซึมิ อโล พลัส ซี บูสเตอร์" : "FG-MZ-ACN-ALO005",
+  "อโลเจล" : "FG-MZ-ACN-ALO005",
+  "อโลเจลสีเขียว" : "FG-MZ-ACN-ALO005",
+
+  "บูสเตอร์" : "FG-MZ-BDC-BST250",
+  "ครีมบีทรีเอเอชเอ" : "FG-MZ-BDC-BST250",
+  "โลชั่น AHA" : "FG-MZ-BDC-BST250",
+
+  "โลชั่นทาตัวสีม่วง" : "FG-MZ-BDC-PHA250",
+  "โลชั่น PHA" : "FG-MZ-BDC-PHA250",
+
+  "ยูเรีย ไนน์ สูทติ้ง ดราย เรสคิว โลชั่น" : "FG-MZ-BDC-URE250",
+  "โลชั่นยูเรีย" : "FG-MZ-BDC-URE250",
+  "โลชั่นขวดฟ้า" : "FG-MZ-BDC-URE250",
+
+  "ครีมทาจักแร้" : "FG-MZ-BDC-ARM030",
+
+  "คุชชั่นฟิลเตอร์" : "FG-MZ-FMU-FIL",
+
+  "ลิปบาล์ม" : "FG-MZ-LIP-LPB",
+
+  "ลิปมาร์ก" : "FG-MZ-LIP-LPM",
+
+  "ลิปออยล์เซรั่ม" : "FG-MZ-LIP-LPO016",
+
+  "ซิก้ามาสก์แอคเน่" : "FG-MZ-STM-CFA030",
+  "มาสก์เสือสีเขียว" : "FG-MZ-STM-CFA030",
+  "มาสก์สูตรสิว" : "FG-MZ-STM-CFA030",
+
+  "ซิก้ามาสก์ซูททิง" : "FG-MZ-STM-CFS030",
+  "มาสก์เสือสีฟ้า" : "FG-MZ-STM-CFS030",
+  "มาสก์สูตรสีฟ้า" : "FG-MZ-STM-CFS030",
+
+  "ซิก้ามาสก์ไวท์": "FG-MZ-STM-CFW030",
+  "มาสก์เสือสีขาว" : "FG-MZ-STM-CFW030",
+  "มาสก์สูตรไวท์" : "FG-MZ-STM-CFW030",
+
+  "ซิก้ามาสก์ไบรท์" : "FG-MZ-STM-CFB031",
+  "มาสก์เสือสีชมพู" : "FG-MZ-STM-CFB031",
+
+  "แอคเน่อินวิซิเบิล แพด" : "FG-MZ-STM-AIP130",
+  "โทนเนอร์แพดสีเขียว" : "FG-MZ-STM-AIP130",
+  "โทนเนอร์แพดสูตรสิว" : "FG-MZ-STM-AIP130",
+
+  "ไบรท์อินวิซิเบิล แพด" : "FG-MZ-STM-BIP130",
+  "โทนเนอร์แพดสีชมพู" : "FG-MZ-STM-BIP130",
+  "โทนเนอร์แพดสูตรไบร์ท" :  "FG-MZ-STM-BIP130",
+
+  "ซูตติ้งอินวิซิเบิล แพด" : "FG-MZ-STM-SIP130",
+  "โทนเนอร์แพดสีฟ้า" : "FG-MZ-STM-SIP130",
+  "โทนเนอร์แพดสูตรชูตติ้ง" : "FG-MZ-STM-SIP130",
+
+  "โทเนอร์แพดสีดำกระปุกสีเขียว" : "FG-MZ-STM-BPC170",
+  "โนวาแพดสีเขียว" : "FG-MZ-STM-BPC170",
+
+  "โทเนอร์แพดสีดำกระปุกสีม่วง" : "FG-MZ-STM-BPT170",
+  "โนวาแพดสีม่วง" : "FG-MZ-STM-BPT170",
+
+  "โทเนอร์แพดสีดำกระปุกสีฟ้า" : "FG-MZ-STM-BPB170",
+  " โนวาแพดสีฟ้า" :  "FG-MZ-STM-BPB170"
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
