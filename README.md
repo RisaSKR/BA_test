@@ -100,7 +100,7 @@ python AI/app/ingest/faq_ingest.py
 # Start the API Server
 python AI/server.py
 ```
-The server defaults to `http://localhost:8001`.
+The server defaults to `http://localhost:3171`.
 
 ---
 
@@ -143,6 +143,15 @@ Primary endpoint for sending user messages and receiving agent responses.
 ### Updating Knowledge
 1. Drop new source files (PDF, CSV, XLSX) into `AI/faq_data/`.
 2. Re-run the ingestion script to refresh the vector store.
+
+---
+
+## 📖 Extended Documentation
+
+For a deeper dive into the system and how to manage it, refer to these guides:
+
+- [🏗️ Architecture Guide](file:///c:/Users/sirisa/BA_test/docs/architecture_guide.md): Deep dive into the multi-agent orchestration and RAG system.
+- [🚀 Brand Onboarding Guide](file:///c:/Users/sirisa/BA_test/docs/brand_onboarding.md): Step-by-step guide on adding new brands and knowledge documentation.
 
 ---
 

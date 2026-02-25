@@ -709,8 +709,8 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
-      "water_resistant": true,
-      "sweat_resistant": true,
+      "water_resistant": false,
+      "sweat_resistant": false,
       "oil_control_hours": 10,
       "tone_up": false,
       "anti_acne": true,
@@ -780,97 +780,8 @@
 },
     "information_context": "กันแดดสูตรเฉพาะสำหรับผิวมันเป็นสิวง่าย เน้นคุมมันยาวนาน ลดการอักเสบของสิว"
   },
-  "FG-MZ-SUN-UBS": {
-    "product_code": "FG-MZ-SUN-UBS*",
-    "canonical_name": "MizuMi UV Bright Body Serum SPF50+ PA++++",
-    "variant": "กันแดดตัวสีชมพู สูตรมีน้ำหอม",
-    "category": "กันแดดผิวตัว",
-    "facts": {
-      "sunscreen_type": "Hybrid",
-      "spf": 50,
-      "pa": "++++",
-      "sun_protection_hours": "3-4",
-      "water_resistant": false,
-      "sweat_resistant": false,
-      "tested_method": "in_vitro_only",
-      "brightening": true,
-      "contains_fragrance": true,
-      "contains_avobenzone": true
-    },
-    "skin_benefits": {
-      "antioxidant": true,
-      "brightening": true,
-      "dark_spot_reduction": true
-    },
-    "suitability": {
-      "use_area": "body",
-      "skin_types": [
-        "Normal",
-        "Dry",
-        "Combination"
-      ],
-      "age_min_years": 12,
-      "pregnancy_safe": true,
-      "alcohol_denat_free": true,
-      "preservative_free": true,
-      "coral_safe": true
-    },
-    "experience": {
-      "texture": "Light body serum",
-      "finish": "Lightweight, non-sticky",
-      "scent": "Soft floral fragrance"
-    },
-    "usage": {
-      "recommended_reapply_hours": 2,
-      "apply_before_clothing": "wait until fully absorbed",
-      "clothing_stain_risk": "possible yellow stain"
-    },
-    "warnings": {
-      "yellow_stain_notice": "อาจเกิดคราบเหลืองบนเสื้อผ้าเนื่องจากมี Avobenzone"
-    },
-    "ingredients": {
-  "list": [
-    "Aqua (Water)",
-    "Octocrylene",
-    "Propylene Glycol",
-    "Ethylhexyl Salicylate",
-    "Butyl Methoxydibenzoylmethane",
-    "Isohexadecane",
-    "C12-15 Alkyl Benzoate",
-    "Dipropylene Glycol",
-    "Dicaprylyl Carbonate",
-    "Niacinamide",
-    "Phenoxyethanol",
-    "Cetearyl Alcohol",
-    "Glyceryl Stearate",
-    "Methyl Methacrylate Crosspolymer",
-    "PEG-100 Stearate",
-    "Titanium Dioxide",
-    "Potassium Cetyl Phosphate",
-    "Polyacrylamide",
-    "Parfum (Fragrance)",
-    "C13-14 Isoparaffin",
-    "Chlorphenesin",
-    "Disodium EDTA",
-    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-    "Sodium Hydroxide",
-    "Carbomer",
-    "Laureth-7",
-    "1,2-Hexanediol",
-    "Tocopheryl Acetate",
-    "Glycerin",
-    "Biosaccharide Gum-4",
-    "Butylene Glycol",
-    "Tocopherol",
-    "Terminalia Ferdinandiana Fruit Extract",
-    "Oryza Sativa (Rice) Lees Extract",
-    "Prunus Lannesiana Flower Extract"
-  ]
-},
-    "information_context": "กันแดดผิวตัวสูตรมีน้ำหอม เนื้อบางเบา ช่วยให้ผิวดูกระจ่างใส เหมาะสำหรับใช้ในชีวิตประจำวัน ไม่เหมาะกับกิจกรรมทางน้ำ"
-  },
-  "FG-MZ-SUN-FGN*": {
-    "product_code": "FG-MZ-SUN-FGN*",
+  "FG-MZ-SUN-FGN": {
+    "product_code": "FG-MZ-SUN-FGN",
     "canonical_name": "MizuMi UV Bright Body Serum Fragrance Free SPF50+ PA++++",
     "variant": "กันแดดตัวสีขาว สูตรไม่มีน้ำหอม",
     "category": "กันแดดผิวตัว",
@@ -1433,10 +1344,10 @@
 },
     "information_context": "สูตรใหม่นี้มีการปรับปรุงให้เนื้อบางเบา เกลี่ยง่าย และไม่เป็นคราบ พร้อมเพิ่ม Sodium Hyaluronate เพื่อช่วยเติมความชุ่มชื้นให้ผิว สูตรนี้ผ่านการทดสอบแล้วว่าช่วยลดโอกาสการเกิดคราบเหลืองเมื่อเทียบกับสูตรทั่วไป อย่างไรก็ตาม แนะนำให้รอให้เนื้อกันแดดเซ็ตตัวและซึมแห้งก่อนสวมใส่เสื้อผ้า เพื่อผลลัพธ์ที่ดีที่สุด"
   },
-  "FG-MZ-CLS-SMT500": {
-    "product_code": "FG-MZ-CLS*",
+  "FG-MZ-CLS-SMT": {
+    "product_code": "FG-MZ-CLS-SMT",
     "canonical_name": "MizuMi Smooth Cleansing Water",
-    "variant": "500 ml",
+    "variant": "100ml, 500 ml",
     "category": "คลีนซิ่ง",
     "facts": {
       "cleansing_type": "cleansing_water",
@@ -1530,6 +1441,408 @@
   ]
 },
     "information_context": "คลีนซิ่งวอเตอร์สูตรอ่อนโยน ช่วยลดแรงเสียดสีผิว สลายคราบเครื่องสำอางและกันแดดกันน้ำได้อย่างมีประสิทธิภาพ ผิวสะอาดโดยไม่แห้งตึง เหมาะกับผิวแพ้ง่ายและเป็นสิว อย่างไรก็ตาม สำหรับบริเวณรอบดวงตาและริมฝีปาก แนะนำให้ใช้ Eye & Lip Remover โดยเฉพาะ และเพื่อความสะอาดล้ำลึก แนะนำทำ Double Cleansing ร่วมกับผลิตภัณฑ์ล้างหน้า"
+  },
+  "FG-MZ-CLS-MSA": {
+    "product_code": "FG-MZ-CLS-MSA",
+    "canonical_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Acne",
+    "variant": "100 ml / 500 ml",
+    "category": "คลีนซิ่ง",
+    "facts": {
+      "cleansing_type": "cleansing_water",
+      "micellar_technology": "4X micellar",
+      "makeup_removal": true,
+      "waterproof_makeup_removal": true,
+      "reduces_friction": true,
+      "non_foaming": true,
+      "contains_oil": false,
+      "contains_fragrance": false,
+      "contains_alcohol": false,
+      "contains_paraben": false,
+      "contains_synthetic_color": false,
+      "acne_control_support": true
+    },
+    "skin_benefits": {
+      "gentle_cleansing": true,
+      "helps_reduce_clogging": true,
+      "soothing": true,
+      "oil_balance": true,
+      "non_drying": true
+    },
+    "key_ingredients": {
+      "salicylic_acid": true,
+      "zinc_pca": true,
+      "centella_extract": true,
+      "glycerin": true,
+      "sodium_hyaluronate": true
+    },
+    "suitability": {
+      "use_area": "face",
+      "skin_types": [
+        "Oily",
+        "Combination",
+        "Sensitive",
+        "Acne-prone"
+      ],
+      "pregnancy_safe": false,
+      "oil_free": true,
+      "fragrance_free": true,
+      "alcohol_free": true
+    },
+    "experience": {
+      "texture": "Light micellar cleansing water",
+      "finish": "Fresh, clean, non-sticky",
+      "after_feel": "Skin feels clean, oil-balanced and comfortable"
+    },
+    "usage": {
+      "can_use_for_sunscreen_only": true,
+      "double_cleansing_recommended": true,
+      "eye_lip_use": "not_recommended"
+    },
+    "warnings": {
+      "eye_lip_makeup": "recommend_eye_lip_remover",
+      "contains_bha": "use_sunscreen_daily"
+    },
+    "ingredients": {
+      "list": [
+         "Water",
+    "Dipropylene Glycol",
+    "Poloxamer 184",
+    "Sorbitol",
+    "PEG-6 Caprylic/Capric Glycerides",
+    "Glycerine",
+    "Butylene Glycol",
+    "Sodium Chloride",
+    "1,2-Hexanediol",
+    "Coco-Glucoside",
+    "Betaine",
+    "Caprylhydroxamic Acid",
+    "Disodium EDTA",
+    "Squalane",
+    "Sodium Polyacrylate",
+    "Sodium Citrate",
+    "Sodium Hyaluronate",
+    "Anthemis Nobilis Flower Water",
+    "Citrus Limon Fruit Water",
+    "Propanediol",
+    "Sodium Surfactin",
+    "Inulin",
+    "Bioflavonoids",
+    "Alteromonas Ferment Extract",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "Lecithin",
+    "Xanthan Gum",
+    "Magnesium PCA",
+    "Sodium Lactate",
+    "Copper Tripeptide-1",
+    "Serine",
+    "Sucrose",
+    "Urea",
+    "Glycine",
+    "Calcium Chloride",
+    "Potassium Hydroxide",
+    "Ornithine",
+    "Sea Salt",
+    "Alanine",
+    "Magnesium Chloride",
+    "Threonine",
+    "Histidine",
+    "Aspartic Acid",
+    "Valine",
+    "Proline",
+    "Dipotassium Phosphate",
+    "Lysine",
+    "Leucine",
+    "Tyrosine",
+    "Isoleucine",
+    "Magnesium Citrate",
+    "Glucosamine HCl",
+    "Phenylalanine",
+    "Glutamic Acid",
+    "Arginine",
+    "1-Methylhydantoin-2-Imide",
+    "Asparagine",
+    "Citrulline",
+    "Uric Acid",
+    "Methionine",
+    "Taurine",
+    "Tryptophan",
+    "Formic Acid",
+    "Ammonia",
+    "Glutamine",
+    "Cysteine"
+      ]
+    },
+    "information_context": "คลีนซิ่งสูตรลดสิว ช่วยควบคุมความมันและลดการอุดตัน ด้วย 4X Micellar Technology สลายคราบเมคอัพและกันแดดกันน้ำได้อย่างมีประสิทธิภาพ อ่อนโยนต่อผิวเป็นสิวง่าย ควรใช้กันแดดเป็นประจำเมื่อใช้ผลิตภัณฑ์ที่มี BHA และแนะนำทำ Double Cleansing"
+  },
+
+  "FG-MZ-CLS-MSB": {
+    "product_code": "FG-MZ-CLS-MSB",
+    "canonical_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Bright",
+    "variant": "100 ml / 500 ml",
+    "category": "คลีนซิ่ง",
+    "facts": {
+      "cleansing_type": "cleansing_water",
+      "micellar_technology": "4X micellar",
+      "makeup_removal": true,
+      "waterproof_makeup_removal": true,
+      "reduces_friction": true,
+      "non_foaming": true,
+      "contains_oil": false,
+      "contains_fragrance": false,
+      "contains_alcohol": false,
+      "contains_paraben": false,
+      "contains_synthetic_color": false,
+      "brightening_support": true
+    },
+    "skin_benefits": {
+      "gentle_cleansing": true,
+      "brightening": true,
+      "radiance": true,
+      "hydration": true,
+      "non_drying": true
+    },
+    "key_ingredients": {
+      "niacinamide": true,
+      "vitamin_c_derivative": true,
+      "glycerin": true,
+      "sodium_hyaluronate": true
+    },
+    "suitability": {
+      "use_area": "face",
+      "skin_types": [
+        "Normal",
+        "Dry",
+        "Combination",
+        "Sensitive"
+      ],
+      "pregnancy_safe": true,
+      "oil_free": true,
+      "fragrance_free": true,
+      "alcohol_free": true
+    },
+    "experience": {
+      "texture": "Light micellar cleansing water",
+      "finish": "Fresh, soft, radiant-looking skin",
+      "after_feel": "Skin feels clean, hydrated and brighter"
+    },
+    "usage": {
+      "can_use_for_sunscreen_only": true,
+      "double_cleansing_recommended": true,
+      "eye_lip_use": "not_recommended"
+    },
+    "warnings": {
+      "eye_lip_makeup": "recommend_eye_lip_remover"
+    },
+    "ingredients": {
+      "list": [
+         "Water",
+    "Dipropylene Glycol",
+    "Poloxamer 184",
+    "Sorbitol",
+    "PEG-6 Caprylic/Capric Glycerides",
+    "Glycerine",
+    "Butylene Glycol",
+    "Sodium Chloride",
+    "1,2-Hexanediol",
+    "Coco-Glucoside",
+    "Betaine",
+    "Caprylhydroxamic Acid",
+    "Disodium EDTA",
+    "Squalane",
+    "Sodium Polyacrylate",
+    "Sodium Citrate",
+    "Sodium Hyaluronate",
+    "Citrus Limon Fruit Water",
+    "Propylene Glycol",
+    "Sodium Surfactin",
+    "Prunus Persica Leaf Extract",
+    "Inulin",
+    "Ascorbic Acid",
+    "Rubus Idaeus Fruit Extract",
+    "Pyrus Malus Fruit Extract",
+    "Alteromonas Ferment Extract",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "Lecithin",
+    "Xanthan Gum",
+    "Magnesium PCA",
+    "Sodium Lactate",
+    "Copper Tripeptide-1",
+    "Serine",
+    "Sucrose",
+    "Urea",
+    "Glycine",
+    "Calcium Chloride",
+    "Potassium Hydroxide",
+    "Ornithine",
+    "Sea Salt",
+    "Alanine",
+    "Magnesium Chloride",
+    "Threonine",
+    "Histidine",
+    "Aspartic Acid",
+    "Valine",
+    "Proline",
+    "Dipotassium Phosphate",
+    "Lysine",
+    "Leucine",
+    "Tyrosine",
+    "Isoleucine",
+    "Magnesium Citrate",
+    "Glucosamine HCl",
+    "Phenylalanine",
+    "Glutamic Acid",
+    "Arginine",
+    "1-Methylhydantoin-2-Imide",
+    "Asparagine",
+    "Citrulline",
+    "Uric Acid",
+    "Methionin",
+    "Taurine",
+    "Tryptophan",
+    "Formic Acid",
+    "Ammonia",
+    "Glutamine",
+    "Cysteine"
+      ]
+    },
+    "information_context": "คลีนซิ่งสูตรผิวกระจ่างใส ช่วยทำความสะอาดพร้อมบำรุงให้ผิวดูไบรท์ขึ้น ด้วย 4X Micellar Technology สลายคราบเมคอัพและกันแดดกันน้ำได้อย่างมีประสิทธิภาพ ผิวสะอาดไม่แห้งตึง เหมาะสำหรับผิวหมองคล้ำ ต้องการความกระจ่างใส"
+  },
+
+  "FG-MZ-CLS-MSH": {
+    "product_code": "FG-MZ-CLS-MSH",
+    "canonical_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Hydrating",
+    "variant": "100 ml / 500 ml",
+    "category": "คลีนซิ่ง",
+    "facts": {
+      "cleansing_type": "cleansing_water",
+      "micellar_technology": "4X micellar",
+      "makeup_removal": true,
+      "waterproof_makeup_removal": true,
+      "reduces_friction": true,
+      "non_foaming": true,
+      "contains_oil": false,
+      "contains_fragrance": false,
+      "contains_alcohol": false,
+      "contains_paraben": false,
+      "contains_synthetic_color": false,
+      "intense_hydration_support": true
+    },
+    "skin_benefits": {
+      "gentle_cleansing": true,
+      "deep_hydration": true,
+      "plumping": true,
+      "non_drying": true,
+      "soothing": true
+    },
+    "key_ingredients": {
+      "hyaluronic_acid_complex": true,
+      "polyglutamic_acid": true,
+      "glycerin": true,
+      "betaine": true
+    },
+    "suitability": {
+      "use_area": "face",
+      "skin_types": [
+        "Dry",
+        "Normal",
+        "Sensitive",
+        "Dehydrated"
+      ],
+      "pregnancy_safe": true,
+      "oil_free": true,
+      "fragrance_free": true,
+      "alcohol_free": true
+    },
+    "experience": {
+      "texture": "Light hydrating micellar water",
+      "finish": "Fresh, soft, moisturized",
+      "after_feel": "Skin feels clean, hydrated and supple"
+    },
+    "usage": {
+      "can_use_for_sunscreen_only": true,
+      "double_cleansing_recommended": true,
+      "eye_lip_use": "not_recommended"
+    },
+    "warnings": {
+      "eye_lip_makeup": "recommend_eye_lip_remover"
+    },
+    "ingredients": {
+      "list": [
+        "Water",
+    "Dipropylene Glycol",
+    "Poloxamer 184",
+    "Sorbitol",
+    "PEG-6 Caprylic/Capric Glycerides",
+    "Glycerine",
+    "Butylene Glycol",
+    "Sodium Chloride",
+    "1,2-Hexanediol",
+    "Coco-Glucoside",
+    "Betaine",
+    "Caprylhydroxamic Acid",
+    "Disodium EDTA",
+    "Squalane",
+    "Sodium Polyacrylate",
+    "Sodium Citrate",
+    "Sodium Hyaluronate",
+    "Citrus Limon Fruit Water",
+    "Sea Water",
+    "Sodium Surfactin",
+    "Pentylene glycol",
+    "Inulin",
+    "Codium Tomentosum Extract",
+    "Phenoxyethanol",
+    "Aloe Barbadensis Leaf Extract",
+    "Alteromonas Ferment Extract",
+    "Cellulose Gum",
+    "Propanediol",
+    "Ethylhexylglycerin",
+    "Lecithin",
+    "Xanthan Gum",
+    "Magnesium PCA",
+    "Sodium Lactate",
+    "Copper Tripeptide-1",
+    "Serine",
+    "Sucrose",
+    "Urea",
+    "Glycine",
+    "Calcium Chloride",
+    "Potassium Hydroxide",
+    "Ornithine",
+    "Sea Salt",
+    "Alanine",
+    "Magnesium Chloride",
+    "Threonine",
+    "Histidine",
+    "Aspartic Acid",
+    "Valine",
+    "Proline",
+    "Dipotassium Phosphate",
+    "Lysine",
+    "Leucine",
+    "Tyrosine",
+    "Isoleucine",
+    "Magnesium Citrate",
+    "Glucosamine HCl",
+    "Phenylalanine",
+    "Glutamic Acid",
+    "Arginine",
+    "1-Methylhydantoin-2-Imide",
+    "Asparagine",
+    "Citrulline",
+    "Uric Acid",
+    "Methionine",
+    "Taurine",
+    "Tryptophan",
+    "Formic Acid",
+    "Ammonia",
+    "Glutamine",
+    "Cysteine"
+      ]
+    },
+    "information_context": "คลีนซิ่งสูตรเติมความชุ่มชื้น เหมาะสำหรับผิวแห้งและผิวขาดน้ำ ช่วยทำความสะอาดพร้อมบำรุงให้ผิวไม่แห้งตึง ด้วย 4X Micellar Technology สลายคราบเมคอัพและกันแดดกันน้ำได้อย่างมีประสิทธิภาพ แนะนำทำ Double Cleansing เพื่อความสะอาดล้ำลึก"
   },
   "FG-MZ-CLS-EYE100": {
     "product_code": "FG-MZ-CLS-EYE100",
@@ -5604,8 +5917,34 @@
         "FG-MZ-FCC-CIC",
         "FG-MZ-FCC-DRY",
         "FG-MZ-FCC-SKB045"
-      ]
-    },
+      ],
+"ingredients": {
+  "list": [
+    "Water/Aqua",
+    "Dipropylene Glycol",
+    "Panthenol",
+    "Niacinamide",
+    "Hydroxyacetophenone",
+    "PEG-8",
+    "Dimethicone",
+    "Hydroxyethyl Urea",
+    "Phenoxyethanol",
+    "Arginine",
+    "Sodium Hyaluronate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Xanthan Gum",
+    "Brassica Campestris (Rapeseed) Seed Oil",
+    "Sodium Polyacrylate",
+    "Carbomer",
+    "Hydroxyethylcellulose",
+    "Dipotassium Glycyrrhizate",
+    "Disodium EDTA",
+    "Glycyrrhiza Glabra (Licorice) Root Extract",
+    "Polyglyceryl-3 Diisostearate",
+    "Oryza Sativa (Rice) Bran Extract",
+    "Althaea Officinalis Root Extract"
+  ]
+},
     "information_context": "มาส์กสูตรอินสแตนท์ ไบรท์ ช่วยให้ผิวดูกระจ่างใสทันทีหลังใช้ เหมาะสำหรับมาส์กก่อนแต่งหน้า พร้อมปลอบประโลมผิวและเติมความชุ่มชื้น ให้ผิวดูสดใส สุขภาพดี"
   },
   "FG-MZ-STM-AIP130": {
@@ -6079,18 +6418,6 @@
     "free_from": [
       "Fragrance"
     ],
-    "ingredients": [
-      "Water",
-      "Glycerin",
-      "Salicylic Acid",
-      "Beta-Glucan",
-      "Centella Asiatica Extract",
-      "Madecassoside",
-      "Hamamelis Virginiana Water",
-      "Charcoal",
-      "Sodium Hyaluronate",
-      "Betaine"
-    ],
     "upsell": {
       "recommended_pair": [
         "FG-MZ-ACN-HYA",
@@ -6098,7 +6425,8 @@
         "FG-MZ-FCC-NIA",
         "FG-MZ-FCC-SKB045"
       ]
-    },
+    }
+  },
     "ingredients": {
   "list": [
     "Aqua",
@@ -6908,3 +7236,4 @@
     "information_context": "มาสก์บำรุงผิวสูตรเข้มข้น ช่วยเติมความชุ่มชื้นให้ผิวอย่างล้ำลึก ผิวดูอิ่มน้ำ สุขภาพดี เหมาะสำหรับผิวแห้งหรือผิวที่ต้องการการบำรุงเป็นพิเศษ พร้อมเทคโนโลยีชาร์โคลและแพลทตินัม และ PDRN จากแซลมอน เหมาะสำหรับการบำรุงผิวช่วงกลางคืน"
   }
 }
+  

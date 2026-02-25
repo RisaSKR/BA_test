@@ -12,15 +12,21 @@ from app.prompt_loader import PromptLoader
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
 
-def build_base_agent():
-    instruction = PromptLoader().load("base.yaml")
-    return LlmAgent(
-        name="MiMi",
-        model=GEMINI_MODEL,
-        instruction=instruction,
-        description="Thai customer service agent with RAG (Gemini embeddings)",
-        tools=[retrieve_tool],
-    )
+# ── Cache agent at module level (built once, reused for all requests) ──────────
+_base_agent: LlmAgent | None = None
+
+def build_base_agent() -> LlmAgent:
+    global _base_agent
+    if _base_agent is None:
+        instruction = PromptLoader().load("base.yaml")
+        _base_agent = LlmAgent(
+            name="MiMi",
+            model=GEMINI_MODEL,
+            instruction=instruction,
+            description="Thai customer service agent with RAG (Gemini embeddings)",
+            tools=[retrieve_tool],
+        )
+    return _base_agent
 
 ss = InMemorySessionService()
 
@@ -33,7 +39,11 @@ async def chat_once(user_text: str, session_id: str) -> dict:
 
         user_id = "demo-user"
 
-        s = await ss.create_session(app_name="cs-app", user_id= user_id, session_id= session_id)
+        # Reuse existing session if it already exists (avoids redundant ADK overhead)
+        try:
+            s = await ss.create_session(app_name="cs-app", user_id=user_id, session_id=session_id)
+        except Exception:
+            s = await ss.get_session(app_name="cs-app", user_id=user_id, session_id=session_id)
 
         runner = Runner(agent=agent, app_name="cs-app", session_service=ss)
         msg = types.Content(role="user", parts=[types.Part(text=user_text)])

@@ -55,14 +55,14 @@
     "faq_water_resistant",
     "faq_pregnancy"
   ],
-  "FG-MZ-SUN-UBS*": [
+  "FG-MZ-SUN-UBS": [
     "faq_body_use",
     "faq_fragrance",
     "faq_water_resistant",
     "faq_yellow_stain",
     "faq_pregnancy"
   ],
-  "FG-MZ-SUN-FGN*": [
+  "FG-MZ-SUN-FGN": [
     "faq_body_use",
     "faq_fragrance",
     "faq_water_resistant",
@@ -96,7 +96,40 @@
     "faq_yellow_stain",
     "faq_pregnancy"
   ],
-  "FG-MZ-CLS*": [
+  "FG-MZ-CLS-SMT": [
+    "faq_product_feature",
+    "faq_sensitive_acne_skin",
+    "faq_eye_lip_use",
+    "faq_waterproof_makeup",
+    "faq_sunscreen_only",
+    "faq_size_options",
+    "faq_pregnancy",
+    "faq_recommend_pair",
+    "faq_ingredients"
+  ],
+   "FG-MZ-CLS-MSA": [
+    "faq_product_feature",
+    "faq_sensitive_acne_skin",
+    "faq_eye_lip_use",
+    "faq_waterproof_makeup",
+    "faq_sunscreen_only",
+    "faq_size_options",
+    "faq_pregnancy",
+    "faq_recommend_pair",
+    "faq_ingredients"
+  ],
+  "FG-MZ-CLS-MSB": [
+    "faq_product_feature",
+    "faq_sensitive_acne_skin",
+    "faq_eye_lip_use",
+    "faq_waterproof_makeup",
+    "faq_sunscreen_only",
+    "faq_size_options",
+    "faq_pregnancy",
+    "faq_recommend_pair",
+    "faq_ingredients"
+  ],
+  "FG-MZ-CLS-MSH": [
     "faq_product_feature",
     "faq_sensitive_acne_skin",
     "faq_eye_lip_use",

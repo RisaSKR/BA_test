@@ -10,6 +10,7 @@ This document provides a detailed map of the **MiMi AI** codebase. This project 
 | :--- | :--- | :--- |
 | **`.env`** | Config | Essential secrets: `GOOGLE_API_KEY`, `GEMINI_MODEL`. |
 | **`AI/`** | Core | The primary source code for the AI engine. |
+| **`docs/`** | Docs | Extended guides: `architecture_guide.md`, `brand_onboarding.md`. |
 | **`README.md`** | Docs | High-level project overview and setup guide. |
 | **`PROJECT_STRUCTURE.md`** | Docs | This file; a comprehensive architectural map. |
 | **`.venv/`** | Environment | Python virtual environment with all core dependencies. |

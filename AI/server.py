@@ -32,5 +32,5 @@ async def chat(message: UserMessage):
     return response_data
 
 if __name__ == "__main__":
-    print("Starting MiMi API Server on port 8001...")
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    print("Starting MiMi API Server on port 3171...")
+    uvicorn.run(app, host="0.0.0.0", port=3171)

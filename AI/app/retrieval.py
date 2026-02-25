@@ -5,8 +5,12 @@ from langchain_core.documents import Document
 from app.embeddings_gemini import GeminiEmbeddings
 
 INDEX_BASE_DIR = Path("index")
+_indices = {}
 
 def load_index(brand: str = "mizumi"):
+    if brand in _indices:
+        return _indices[brand]
+        
     emb = GeminiEmbeddings()
     # Dynamic path based on brand name
     index_path = INDEX_BASE_DIR / f"{brand}_faiss"
@@ -14,8 +18,9 @@ def load_index(brand: str = "mizumi"):
     if not index_path.exists():
         raise FileNotFoundError(f"No FAISS index found for brand: {brand} at {index_path}")
         
-    return FAISS.load_local(str(index_path), embeddings=emb, allow_dangerous_deserialization=True)
-
+    index = FAISS.load_local(str(index_path), embeddings=emb, allow_dangerous_deserialization=True)
+    _indices[brand] = index
+    return index
 def search_kb(query: str, brand: str = "mizumi", k: int = 10)-> dict:
     """
     Search the local FAISS index for relevant chunks of a specific brand.

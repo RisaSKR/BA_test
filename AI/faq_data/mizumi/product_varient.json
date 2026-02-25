@@ -230,22 +230,42 @@
   "mizumi_pdrn_platinum_black_mask_variants": [
     {
       "product_code": "FG-MZ-STM-PMB030",
-      "variant": "Instant Bright",
+      "variant_name": "MizuMi PDRN Platinum Black Mask Instant Bright",
       "best_for": "ผิวหมองคล้ำ / จุดด่างดำ",
       "key_result": "ผิวดูกระจ่างใส สีผิวสม่ำเสมอ"
     },
     {
       "product_code": "FG-MZ-STM-PMG030",
-      "variant": "Instant Glow",
+      "variant_name": "MizuMi PDRN Platinum Black Mask Instant Glow",
       "best_for": "ผิวอ่อนล้า / อยากผิวโกลว์",
       "key_result": "ผิวดูอิ่มน้ำ โกลว์ กระชับ"
     },
     {
       "product_code": "FG-MZ-STM-PMM030",
-      "variant": "Instant Moist",
+      "variant_name": "MizuMi PDRN Platinum Black Mask Instant Moist",
       "best_for": "ผิวแห้ง / ขาดน้ำ",
       "key_result": "ผิวชุ่มชื้น สุขภาพดี"
     }
-  ]
+  ],
+  "mizumi_multi_micellar_4x_smooth_cleansing_water_variants": [
+  {
+    "product_code": "FG-MZ-CLS-MSA",
+    "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Acne",
+    "best_for": "ผิวมัน / ผิวเป็นสิว / อุดตันง่าย",
+    "key_result": "ช่วยลดความมัน ลดการอุดตัน ผิวสะอาดไม่แห้งตึง"
+  },
+  {
+    "product_code": "FG-MZ-CLS-MSB",
+    "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Bright",
+    "best_for": "ผิวหมองคล้ำ / สีผิวไม่สม่ำเสมอ",
+    "key_result": "ผิวดูกระจ่างใสขึ้น ดูสดใสหลังล้างหน้า"
+  },
+  {
+    "product_code": "FG-MZ-CLS-MSH",
+    "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Hydrating",
+    "best_for": "ผิวแห้ง / ผิวขาดน้ำ / ผิวแพ้ง่าย",
+    "key_result": "ผิวชุ่มชื้น ไม่แห้งตึงหลังเช็ด"
+  }
+]
   
 }

@@ -45,6 +45,12 @@ def format_product_text(p: dict) -> str:
     lines = []
     lines.append(f"Product: {p.get('canonical_name', 'Unknown')} ({p.get('variant', '')})")
     lines.append(f"Category: {p.get('category', 'N/A')}")
+    if p.get("product_code"):
+        lines.append(f"Product Code: {p['product_code']}")
+    if p.get("thai_name"):
+        lines.append(f"Thai Name: {p['thai_name']}")
+    if p.get("short_name"):
+        lines.append(f"Short Name: {p['short_name']}")
     if p.get("aliases"):
         lines.append(f"Aliases/Search Terms: {', '.join(p['aliases'])}")
     
@@ -53,18 +59,37 @@ def format_product_text(p: dict) -> str:
         fact_str = ", ".join([f"{k.replace('_', ' ').capitalize()}: {v}" for k, v in facts.items()])
         lines.append(f"Key Facts: {fact_str}")
     
+    tech = p.get("key_technology", {})
+    if tech:
+        tech_str = ", ".join([f"{k.replace('_', ' ').capitalize()}: {v}" for k, v in tech.items()])
+        lines.append(f"Key Technology: {tech_str}")
+
+    benefits = p.get("skin_benefits", {})
+    if benefits:
+        benefit_str = ", ".join([f"{k.replace('_', ' ').capitalize()}: {v}" for k, v in benefits.items()])
+        lines.append(f"Skin Benefits: {benefit_str}")
+
     suitability = p.get("suitability", {})
     if suitability:
         skin_types = ", ".join(suitability.get("skin_types", []))
         lines.append(f"Suitable for: {skin_types} skin.")
-        if "age_min_months" in suitability:
-            lines.append(f"Age: {suitability.get('age_min_months')} months+")
+        if "age_min_years" in suitability:
+            lines.append(f"Age: {suitability.get('age_min_years')} years+")
         if "pregnancy_safe" in suitability:
             lines.append(f"Pregnancy Safe: {'Yes' if suitability.get('pregnancy_safe') else 'No'}")
         if "vegan" in suitability:
             lines.append(f"Vegan: {'Yes' if suitability.get('vegan') else 'No'}")
         if "coral_safe" in suitability:
             lines.append(f"Coral Safe: {'Yes' if suitability.get('coral_safe') else 'No'}")
+
+    usage = p.get("usage", {})
+    if usage:
+        usage_str = ", ".join([f"{k.replace('_', ' ').capitalize()}: {v}" for k, v in usage.items()])
+        lines.append(f"Usage Info: {usage_str}")
+
+    info_ctx = p.get("information_context", "")
+    if info_ctx:
+        lines.append(f"Description: {info_ctx}")
 
     faq = p.get("faq", {})
     if faq:
@@ -74,10 +99,13 @@ def format_product_text(p: dict) -> str:
     
     ingredients = p.get("ingredients", {})
     if ingredients:
-        if "list" in ingredients:
-            lines.append(f"Ingredients: {', '.join(ingredients['list'])}")
-        elif "inci_raw" in ingredients:
-            lines.append(f"Ingredients: {ingredients['inci_raw']}")
+        if isinstance(ingredients, list):
+            lines.append(f"Ingredients: {', '.join(ingredients)}")
+        elif isinstance(ingredients, dict):
+            if "list" in ingredients:
+                lines.append(f"Ingredients: {', '.join(ingredients['list'])}")
+            elif "inci_raw" in ingredients:
+                lines.append(f"Ingredients: {ingredients['inci_raw']}")
     
     return "\n".join(lines)
 

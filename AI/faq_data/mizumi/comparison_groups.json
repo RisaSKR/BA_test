@@ -45,7 +45,10 @@
   "group_name": "MizuMi First-Step Cleansing Comparison",
   "description": "เปรียบเทียบคลีนซิ่ง MizuMi สำหรับล้างเครื่องสำอางและกันแดด",
   "products": [
-    "FG-MZ-CLS-SMT500",
+    "FG-MZ-CLS-SMT",
+    "FG-MZ-CLS-MSA",
+    "FG-MZ-CLS-MSB",
+    "FG-MZ-CLS-MSH",
     "FG-MZ-CLS-RDO150",
     "FG-MZ-CLS-BLM060",
     "FG-MZ-CLS-BLC060",
