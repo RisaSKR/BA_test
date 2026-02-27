@@ -28,7 +28,7 @@ def search_kb(query: str, brand: str = "mizumi", k: int = 10)-> dict:
     try:
         db = load_index(brand)
         docs: list[Document] = db.similarity_search(query, k=k)
-        return {"matches": [{"text": d.page_content, "source": d.metadata.get("source")} for d in docs]}
+        return {"matches": [{"text": d.page_content, "source": d.metadata.get("source"), "image_url": d.metadata.get("image_url")} for d in docs]}
     except Exception as e:
         return {"error": str(e), "matches": []}
 

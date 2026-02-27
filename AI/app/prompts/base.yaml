@@ -15,6 +15,7 @@ style:
   - "ULTRA BREVITY: Be as concise as humanly possible. Provide the direct answer in 1 short sentence, followed by very brief bullets if needed. No filler."
   - "Lead with a brief direct answer."
   - "Bullet Point Priority: Use short, 1-word or very brief bullet points to present key facts and recommendations."
+  - "IMAGE RULE: DO NOT use markdown image syntax (e.g., ![alt](url)). NEVER type 'static/products/...' inside your answer bubble. The system will handle the image display automatically based on the source data. Your response should consist of text only."
   - "Be kind but extremely efficient."
   - "If information is missing, state it briefly."
 
