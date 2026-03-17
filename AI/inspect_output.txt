@@ -1,0 +1,106 @@
+Event type: <class 'google.adk.events.event.Event'>
+Attributes: ['actions', 'author', 'branch', 'construct', 'content', 'copy', 'create', 'custom_metadata', 'dict', 'error_code', 'error_message', 'from_orm', 'get_function_calls', 'get_function_responses', 'grounding_metadata', 'has_trailing_code_execution_result', 'id', 'interrupted', 'invocation_id', 'is_final_response', 'json', 'long_running_tool_ids', 'model_computed_fields', 'model_config', 'model_construct', 'model_copy', 'model_dump', 'model_dump_json', 'model_extra', 'model_fields', 'model_fields_set', 'model_json_schema', 'model_parametrized_name', 'model_post_init', 'model_rebuild', 'model_validate', 'model_validate_json', 'model_validate_strings', 'new_id', 'parse_file', 'parse_obj', 'parse_raw', 'partial', 'schema', 'schema_json', 'timestamp', 'turn_complete', 'update_forward_refs', 'usage_metadata', 'validate']
+Content: parts=[Part(
+  function_call=FunctionCall(
+    args={
+      'query': 'MizuMi UV Water Serum'
+    },
+    id='adk-1274d650-0942-46af-9b41-fb5fe4b69fb7',
+    name='retrieve_tool'
+  ),
+  thought_signature=b'\x12\x9b\x06\n\x98\x06\x01\xbe>\xf6\xfb\xde\xd4\x86\x9e\t\xad@F.\xee\x1d\xb3A\xca\x16\xd4#\xbeu\x16\xe3\x8cOP\x90\xbc\x1fq\xfc\xca\x0e\xa9\xa4\x89\x86lK>\xe4\xea\xdaN\xbb\x98\xb1"\x8c\xf4\xce=\x9fs\xb5E\x13Y\x82\xf23\x83L\xbd\xfc\xf7\ne\x80H n\xcd\xeb\x93\xb3O"\xf9d\xe8\xb7\xef\xf6 7\xd4\x9b...'
+)] role='model'
+Event type: <class 'google.adk.events.event.Event'>
+Attributes: ['actions', 'author', 'branch', 'construct', 'content', 'copy', 'create', 'custom_metadata', 'dict', 'error_code', 'error_message', 'from_orm', 'get_function_calls', 'get_function_responses', 'grounding_metadata', 'has_trailing_code_execution_result', 'id', 'interrupted', 'invocation_id', 'is_final_response', 'json', 'long_running_tool_ids', 'model_computed_fields', 'model_config', 'model_construct', 'model_copy', 'model_dump', 'model_dump_json', 'model_extra', 'model_fields', 'model_fields_set', 'model_json_schema', 'model_parametrized_name', 'model_post_init', 'model_rebuild', 'model_validate', 'model_validate_json', 'model_validate_strings', 'new_id', 'parse_file', 'parse_obj', 'parse_raw', 'partial', 'schema', 'schema_json', 'timestamp', 'turn_complete', 'update_forward_refs', 'usage_metadata', 'validate']
+Content: parts=[Part(
+  function_response=FunctionResponse(
+    id='adk-1274d650-0942-46af-9b41-fb5fe4b69fb7',
+    name='retrieve_tool',
+    response={
+      'matches': [
+        {
+          'image_url': 'https://mizumi.com/wp-content/uploads/2021/02/UV-Water-Serum.png',
+          'source': 'products.json',
+          'text': """Product: MizuMi UV Water Serum SPF50+ PA++++ (ฝาสีฟ้า)
+Category: กันแดด
+Product Code: FG-MZ-SUN-WSR040
+Key Facts: Sunscreen type: Physical, Spf: 50, Pa: ++++, Ppd: {'in_vitro': 37.66, 'in_vivo': 27.6}, Water resistant: False, Sweat resistant: False, Oil control: medium, Can apply immediately: True, Blue light protection: True, Infrared protection: True
+Suitable for: Sensitive, Acne-prone, All skin types skin.
+Pregnancy Safe: Yes
+Vegan: Yes
+Usage Info: Sun protection hours: 3-4, Recommended reapply hours: 2, After laser: True, Reapply method: tap gently, do not rub
+Description: สูตรนี้ออกแบบมาเพื่อการใช้ทุกวัน เน้นความบางเบาและอ่อนโยน เหมาะกับผิวบอบบางและเด็กเล็ก"""
+        },
+        {
+          'image_url': None,
+          'source': 'products.json',
+          'text': """Product: MizuMi UV Cooling Body Serum SPF50+ PA++++ (กันแดดตัวสีฟ้า สูตรเย็น)
+Category: กันแดดผิวตัว
+Product Code: FG-MZ-SUN-UCL165
+Key Facts: Sunscreen type: Hybrid, Spf: 50, Pa: ++++, Sun protection hours: 3-4, Water resistant: False, Sweat resistant: False, Tested method: in_vitro_only, Cooling effect: True, Contains fragrance: False, Contains avobenzone: True
+Skin Benefits: Antioxidant: True, Soothing: True, Hydrating: True
+Suitable for: Sensitive, Normal, Dry skin.
+Age: 12 years+
+Pregnancy Safe: Yes
+Coral Safe: Yes
+Usage Info: Recommended reapply hours: 2, Apply before clothing: wait until fully absorbed
+Description: กันแดดผิวตัวสูตรเย็น เนื้อบางเบา ให้ความรู้สึกเย็นทันทีเมื่อทา เหมาะสำหรับผิวแพ้ง่ายและอากาศร้อน ไม่เหมาะกับกิจกรรมทางน้ำ"""
+        },
+        {
+          'image_url': None,
+          'source': 'products.json',
+          'text': """Product: MizuMi UV Bright Body Serum Fragrance Free SPF50+ PA++++ (กันแดดตัวสีขาว สูตรไม่มีน้ำหอม)
+Category: กันแดดผิวตัว
+Product Code: FG-MZ-SUN-FGN
+Key Facts: Sunscreen type: Hybrid, Spf: 50, Pa: ++++, Sun protection hours: 3-4, Water resistant: False, Sweat resistant: False, Tested method: in_vitro_only, Brightening: True, Contains fragrance: False, Contains avobenzone: True
+Skin Benefits: Antioxidant: True, Brightening: True, Dark spot reduction: True
+Suitable for: Sensitive, Normal, Dry skin.
+Age: 3 years+
+Pregnancy Safe: Yes
+Coral Safe: Yes
+Usage Info: Recommended reapply hours: 2, Apply before clothing: wait until fully absorbed
+Description: กันแดดผิวตัวสูตรไม่มีน้ำหอม เหมาะสำหรับผิวแพ้ง่ายและเด็ก เนื้อบางเบา ใช้ได้ทุกวัน ไม่เหมาะกับกิจกรรมทางน้ำ"""
+        },
+        {
+          'image_url': None,
+          'source': 'products.json',
+          'text': """Product: MizuMi UV Acne Matte Serum SPF50+ PA++++ (กันแดดส้มมิมิ)
+Category: กันแดด
+Product Code: FG-MZ-ACN-MAT013
+Key Facts: Sunscreen type: Hybrid, Spf: 50, Pa: ++++, Water resistant: False, Sweat resistant: False, Oil control hours: 10, Tone up: False, Anti acne: True, Anti inflammation: True, Reduce new acne: True
+Suitable for: Oily, Acne-prone skin.
+Pregnancy Safe: Yes
+Usage Info: Apply before sun minutes: 15, Recommended reapply hours: 2-4, Can reapply during day: True
+Description: กันแดดสูตรเฉพาะสำหรับผิวมันเป็นสิวง่าย เน้นคุมมันยาวนาน ลดการอักเสบของสิว"""
+        },
+        {
+          'image_url': None,
+          'source': 'products.json',
+          'text': """Product: MizuMi UV Bright Body Serum Lilac SPF50+ PA++++ (โทนอัพสีม่วง Lilac)
+Category: กันแดดผิวตัว
+Product Code: FG-MZ-SUN-UBL120
+Key Facts: Sunscreen type: Hybrid, Spf: 50, Pa: ++++, Sun protection hours: 3-4, Water resistant: True, Water resistant minutes: 40, Tone up: True, Tone up color: lilac, Tone up level: 1, Contains fragrance: False, Contains avobenzone: False
+Skin Benefits: Brightening: True, Even skin tone: True, Antioxidant: True
+Suitable for: Normal, Dry, Combination skin.
+Age: 12 years+
+Pregnancy Safe: Yes
+Coral Safe: Yes
+Usage Info: Recommended reapply hours: 2, Apply before clothing: wait until fully absorbed, Layering: apply normal sunscreen first, tone-up after if needed
+Description: ปกป้องผิวจากรังสียูวี พร้อมโทนอัพผิวดูไบร์ทขึ้น 1 ระดับ ผสานด้วยวิตามินซี และไนอะซินาไมด์ พร้อมบำรุงผิวให้ดูกระจ่างใสขึ้นอย่างเป็นธรรมชาติ กันน้ำ กันเหงื่อ ไม่คราบ ไม่ติดเบาะนะคะ"""
+        },
+      ]
+    }
+  )
+)] role='user'
+Event type: <class 'google.adk.events.event.Event'>
+Attributes: ['actions', 'author', 'branch', 'construct', 'content', 'copy', 'create', 'custom_metadata', 'dict', 'error_code', 'error_message', 'from_orm', 'get_function_calls', 'get_function_responses', 'grounding_metadata', 'has_trailing_code_execution_result', 'id', 'interrupted', 'invocation_id', 'is_final_response', 'json', 'long_running_tool_ids', 'model_computed_fields', 'model_config', 'model_construct', 'model_copy', 'model_dump', 'model_dump_json', 'model_extra', 'model_fields', 'model_fields_set', 'model_json_schema', 'model_parametrized_name', 'model_post_init', 'model_rebuild', 'model_validate', 'model_validate_json', 'model_validate_strings', 'new_id', 'parse_file', 'parse_obj', 'parse_raw', 'partial', 'schema', 'schema_json', 'timestamp', 'turn_complete', 'update_forward_refs', 'usage_metadata', 'validate']
+Content: parts=[Part(
+  text="""Hello! I'm MiMi, your skincare assistant today. MizuMi UV Water Serum is a 100% physical sunscreen designed for daily use on sensitive and acne-prone skin.
+
+*   SPF50+ PA++++
+*   Lightweight water-based
+*   Blue light protection
+*   No chemical filters
+*   Pregnancy safe""",
+  thought_signature=b"\x12\xa3\x10\n\xa0\x10\x01\xbe>\xf6\xfb\xed\x90hK\xdf?H\x9e\xf8l\xb9>\xbe\xc4Y\xa3\xb1\xb5\xb9\x13<\xdf\x9b'\x8a,\xed\xdd]_`\xc6Z\xb0_\x96\xe73\x86\x05\xaf\xc2\xb6y\xc0\x80+\xd2!/\x93\xabN\x85\xe9\x11\xac\xe8A\x8b5\xb2\x17\xfdQ+}o\xc1\x8b\x1f\xf4\xb5r\xf8\xc4\xe0\x94\x85Jd\x05H\xf8>\xa3...'
+)] role='model'

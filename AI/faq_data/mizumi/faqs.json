@@ -310,5 +310,15 @@
   "faq_difference_tiger_mask": {
     "question": "ต่างจากมาสก์เสือยังไง",
     "answer": "มาสก์ดำจะเน้นการบำรุงล้ำลึก ฟื้นฟูผิวและลดเลือนริ้วรอย ส่วนมาสก์เสือจะเน้นการปลอบประโลมผิว ลดการระคายเคืองค่ะ"
+  },
+  "faq_mask_duration_minutes": {
+    "question": "มาสก์กี่นาที",
+    "answer": "มาสก์ {mask_duration_minutes} นาทีค่ะ"
+  },
+ "faq_usage_method": {
+    "question": "วิธีใช้",
+    "answer": "{usage_method}"
   }
+
+
 }

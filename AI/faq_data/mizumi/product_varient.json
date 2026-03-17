@@ -2,7 +2,6 @@
   "FG-MZ-FMU-FIL": {
     "base_product_name": "MizuMi Filter Effect Airy Skincare Cushion",
     "category": "cushion",
-
     "variants": [
       {
         "variant_code": "FG-MZ-FMU-FIL001",
@@ -54,11 +53,9 @@
       }
     ]
   },
-
   "FG-MZ-LIP-LPB": {
     "base_product_name": "MizuMi Skincare UV Lip Glassy Balm",
     "category": "lip_care",
-
     "variants": [
       {
         "variant_code": "FG-MZ-LIP-LPB001",
@@ -90,11 +87,9 @@
       }
     ]
   },
-
   "FG-MZ-LIP-LPM": {
     "base_product_name": "MizuMi Skincare UV Lip Glassy Mask",
     "category": "lip_care",
-
     "variants": [
       {
         "variant_code": "FG-MZ-LIP-LPM001",
@@ -112,11 +107,9 @@
       }
     ]
   },
-
   "FG-MZ-LIP-LPO": {
     "base_product_name": "MizuMi UV Plumping Lip Oil",
     "category": "lip_care",
-
     "variants": [
       {
         "variant_code": "FG-MZ-LIP-LPO001",
@@ -148,11 +141,9 @@
       }
     ]
   },
-
   "FG-MZ-LIP-LOS": {
     "base_product_name": "MizuMi Lip Oil Serum",
     "category": "lip_care",
-
     "variants": [
       {
         "variant_code": "FG-MZ-LIP-LOS016",
@@ -163,11 +154,9 @@
       }
     ]
   },
-  
   "FG-MZ-CHK-UVB": {
     "base_product_name": "MizuMi UV Blush Stick",
     "category": "makeup_blush",
-
     "variants": [
       {
         "variant_code": "FG-MZ-CHK-UVB001",
@@ -248,24 +237,23 @@
     }
   ],
   "mizumi_multi_micellar_4x_smooth_cleansing_water_variants": [
-  {
-    "product_code": "FG-MZ-CLS-MSA",
-    "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Acne",
-    "best_for": "ผิวมัน / ผิวเป็นสิว / อุดตันง่าย",
-    "key_result": "ช่วยลดความมัน ลดการอุดตัน ผิวสะอาดไม่แห้งตึง"
-  },
-  {
-    "product_code": "FG-MZ-CLS-MSB",
-    "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Bright",
-    "best_for": "ผิวหมองคล้ำ / สีผิวไม่สม่ำเสมอ",
-    "key_result": "ผิวดูกระจ่างใสขึ้น ดูสดใสหลังล้างหน้า"
-  },
-  {
-    "product_code": "FG-MZ-CLS-MSH",
-    "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Hydrating",
-    "best_for": "ผิวแห้ง / ผิวขาดน้ำ / ผิวแพ้ง่าย",
-    "key_result": "ผิวชุ่มชื้น ไม่แห้งตึงหลังเช็ด"
-  }
-]
-  
+    {
+      "product_code": "FG-MZ-CLS-MSA",
+      "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Acne",
+      "best_for": "ผิวมัน / ผิวเป็นสิว / อุดตันง่าย",
+      "key_result": "ช่วยลดความมัน ลดการอุดตัน ผิวสะอาดไม่แห้งตึง"
+    },
+    {
+      "product_code": "FG-MZ-CLS-MSB",
+      "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Bright",
+      "best_for": "ผิวหมองคล้ำ / สีผิวไม่สม่ำเสมอ",
+      "key_result": "ผิวดูกระจ่างใสขึ้น ดูสดใสหลังล้างหน้า"
+    },
+    {
+      "product_code": "FG-MZ-CLS-MSH",
+      "variant_name": "MizuMi Multi-Micellar 4X Smooth Cleansing Water Hydrating",
+      "best_for": "ผิวแห้ง / ผิวขาดน้ำ / ผิวแพ้ง่าย",
+      "key_result": "ผิวชุ่มชื้น ไม่แห้งตึงหลังเช็ด"
+    }
+  ]
 }

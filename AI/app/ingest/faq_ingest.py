@@ -41,12 +41,36 @@ def read_xlsx_text(path: Path) -> list:
                 docs.append(Document(page_content=str(val), metadata={"source": path.name}))
     return docs
 
-def format_product_text(p: dict) -> str:
+def format_product_text(p: dict, variant: dict = None) -> str:
     lines = []
-    lines.append(f"Product: {p.get('canonical_name', 'Unknown')} ({p.get('variant', '')})")
+    base_name = p.get('canonical_name', 'Unknown')
+    if variant:
+        lines.append(f"Product: {base_name} - Shade: {variant.get('shade_name', 'N/A')}")
+        if variant.get('variant_name'):
+            lines.append(f"Variant Name: {variant['variant_name']}")
+        if variant.get('shade_description'):
+            lines.append(f"Shade Description: {variant['shade_description']}")
+    else:
+        var = p.get('variant')
+        if var:
+            if isinstance(var, dict):
+                # Extract a readable name if it's a dict, e.g. from 'code' or 'name'
+                v_str = var.get('variant_name') or var.get('name') or var.get('code') or ""
+                if v_str:
+                    lines.append(f"Product: {base_name} ({v_str})")
+                else:
+                    lines.append(f"Product: {base_name}")
+            else:
+                lines.append(f"Product: {base_name} ({var})")
+        else:
+            lines.append(f"Product: {base_name}")
+    
     lines.append(f"Category: {p.get('category', 'N/A')}")
-    if p.get("product_code"):
-        lines.append(f"Product Code: {p['product_code']}")
+    
+    code = variant.get('variant_code') if variant else (p.get('product_code') or p.get('code'))
+    if code:
+        lines.append(f"Product Code: {code}")
+        
     if p.get("thai_name"):
         lines.append(f"Thai Name: {p['thai_name']}")
     if p.get("short_name"):
@@ -79,13 +103,30 @@ def format_product_text(p: dict) -> str:
             lines.append(f"Pregnancy Safe: {'Yes' if suitability.get('pregnancy_safe') else 'No'}")
         if "vegan" in suitability:
             lines.append(f"Vegan: {'Yes' if suitability.get('vegan') else 'No'}")
-        if "coral_safe" in suitability:
-            lines.append(f"Coral Safe: {'Yes' if suitability.get('coral_safe') else 'No'}")
+        
+        # Corrected field access based on context
+        if p.get("vegan"): lines.append("Vegan: Yes")
+        if p.get("coral_safe"): lines.append("Coral Safe: Yes")
 
     usage = p.get("usage", {})
     if usage:
         usage_str = ", ".join([f"{k.replace('_', ' ').capitalize()}: {v}" for k, v in usage.items()])
         lines.append(f"Usage Info: {usage_str}")
+
+    usage_method = p.get("usage_method", {})
+    if usage_method:
+        if isinstance(usage_method, dict):
+            summary = usage_method.get("instruction_summary")
+            if summary:
+                lines.append(f"Usage Instruction: {summary}")
+            duration = usage_method.get("mask_duration_minutes")
+            if duration:
+                lines.append(f"Mask Duration: {duration} minutes")
+            steps = usage_method.get("steps")
+            if steps and isinstance(steps, list):
+                lines.append(f"Usage Steps: {' -> '.join(steps)}")
+        else:
+            lines.append(f"Usage Method: {usage_method}")
 
     info_ctx = p.get("information_context", "")
     if info_ctx:
@@ -114,37 +155,53 @@ def read_json_products(path: Path) -> list:
         data = json.load(f)
     
     docs = []
+    
+    def process_item(key, val, source):
+        # Handle variants if they exist
+        variants = val.get("variants", [])
+        if variants:
+            for v in variants:
+                text = format_product_text(val, variant=v)
+                # Use variant image_url if available, else fallback to product image_url
+                img_url = v.get("image_url") or val.get("image_url")
+                docs.append(Document(
+                    page_content=text, 
+                    metadata={
+                        "source": source, 
+                        "product_code": v.get("variant_code") or key, 
+                        "image_url": img_url
+                    }
+                ))
+        else:
+            text = format_product_text(val)
+            docs.append(Document(
+                page_content=text, 
+                metadata={
+                    "source": source, 
+                    "product_code": val.get("product_code") or key, 
+                    "image_url": val.get("image_url")
+                }
+            ))
+
     if isinstance(data, list):
         for item in data:
-            text = format_product_text(item)
-            docs.append(Document(page_content=text, metadata={"source": path.name, "product_code": item.get("product_code")}))
+            process_item(item.get("product_code", "unknown"), item, path.name)
     elif isinstance(data, dict):
-        # check if it's a product mapping (keys are codes, values are dicts)
         has_sub_dicts = any(isinstance(v, dict) for v in data.values())
         if has_sub_dicts:
             for key, val in data.items():
                 if isinstance(val, dict):
-                    # If it looks like a product (has canonical_name or variant), format it nicely
-                    if "canonical_name" in val or "variant" in val:
-                        if "product_code" not in val:
-                            val["product_code"] = key
-                        text = format_product_text(val)
-                        docs.append(Document(page_content=text, metadata={"source": path.name, "product_code": key}))
+                    if "canonical_name" in val or "variant" in val or "product_code" in val:
+                        process_item(key, val, path.name)
                     else:
-                        # Just a generic nested dict (like faqs.json)
                         text = f"{key}:\n{json.dumps(val, ensure_ascii=False, indent=2)}"
                         docs.append(Document(page_content=text, metadata={"source": path.name}))
                 else:
-                    # Simple key-value (like aliases.json maybe)
                     text = f"{key}: {val}"
                     docs.append(Document(page_content=text, metadata={"source": path.name}))
         else:
-            # Single flat dictionary
             text = format_product_text(data)
-            # Check if this worked or returned "Unknown"
-            if "Unknown" in text and len(data) > 3: # heuristics
-                 text = json.dumps(data, ensure_ascii=False, indent=2)
-            docs.append(Document(page_content=text, metadata={"source": path.name}))
+            docs.append(Document(page_content=text, metadata={"source": path.name, "image_url": data.get("image_url")}))
     
     return docs
 

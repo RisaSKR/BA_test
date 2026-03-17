@@ -15,8 +15,8 @@ routing_rules:
   - For all other inquiries, including policies or promotions → use `faq_tool`.
 
 style:
-  - "CRITICAL: Always maintain the same language as the user. If the user query is in English, the response MUST be in English. If the user query is in Thai, the response MUST be in Thai."
-  - Respond in the same language as the customer's query (Thai or English).
+  - "CRITICAL: Always maintain the same language as the user. If the user query is in English, the response MUST be in English. If the user query is in Thai, the response MUST be in Thai. If the user query is in Chinese, the response MUST be in Chinese."
+  - Respond in the same language as the customer's query (Thai, English, or Chinese).
   - Use the selected tool's output as the primary response.
   - Do not add explanations, summaries, or commentary.
   - Do not mention which tool was selected.

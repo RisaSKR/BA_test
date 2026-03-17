@@ -4,7 +4,7 @@
     "canonical_name": "MizuMi UV Water Serum SPF50+ PA++++",
     "variant": "ฝาสีฟ้า",
     "category": "กันแดด",
-    "image_url": "/static/products/mizumi_uv_water_serum.png",
+    "image_url": "/static/products/mizumi_uv_water_serum.jpg",
     "facts": {
       "sunscreen_type": "Physical",
       "spf": 50,
@@ -81,7 +81,7 @@
     "canonical_name": "MizuMi UV Water Defense Pro SPF50+ PA++++",
     "variant": "รุ่นโปร ฝาสีส้ม",
     "category": "Sunscreen",
-    "image_url": "/static/products/mizumi_uv_water_defense.jpg",
+    "image_url": "/static/products/mizumi_uv_water_defense_pro.jpg",
     "facts": {
       "sunscreen_type": "Physical",
       "spf": 50,
@@ -259,7 +259,7 @@
   "FG-MZ-SUN-JLA040": {
     "product_code": "FG-MZ-SUN-JLA040",
     "canonical_name": "MizuMi UV Jelly Aqua Fresh SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_jelly_aqua_fresh_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_jelly_aqua_fresh.jpg",
     "variant": "เจลลี่ อควา (ชมพู)",
     "category": "กันแดด",
     "facts": {
@@ -368,7 +368,7 @@
   "FG-MZ-SUN-MOC040": {
     "product_code": "FG-MZ-SUN-MOC040",
     "canonical_name": "MizuMi UV Ultimate Matte & Oil Control Sunscreen",
-    "image_url": "/static/products/mizumi_uv_ultimate_matte_oil_control_sunscreen.png",
+    "image_url": "/static/products/mizumi_uv_ultimate_matte_oil_control_sunscreen.jpg",
     "variant": "Matte & Oil Control 40 g",
     "category": "กันแดดผิวหน้า",
     "facts": {
@@ -492,7 +492,7 @@
   "FG-MZ-SUN-MWS010": {
     "product_code": "FG-MZ-SUN-MWS010",
     "canonical_name": "MizuMi Waterful Sun Pact SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_waterful_sun_pact_spf50_pa.png",
+    "image_url": "/static/products/mizumi_waterful_sun_pact.jpg",
     "variant": "กันแดดซันแพคท์ (ตลับ)",
     "category": "กันแดด",
     "facts": {
@@ -620,7 +620,7 @@
   "FG-MZ-SUN-AST020": {
     "product_code": "FG-MZ-SUN-AST020",
     "canonical_name": "MizuMi UV Airy Sun Stick SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_airy_sun_stick_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_airy_sun_stick.jpg",
     "variant": "กันแดดสติ๊ก",
     "category": "กันแดด",
     "facts": {
@@ -710,7 +710,7 @@
   "FG-MZ-ACN-MAT013": {
     "product_code": "FG-MZ-ACN-MAT013",
     "canonical_name": "MizuMi UV Acne Matte Serum SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_acne_matte_serum_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_acne_matte_serum.jpg",
     "variant": "กันแดดส้มมิมิ",
     "category": "กันแดด",
     "facts": {
@@ -791,7 +791,7 @@
   "FG-MZ-SUN-UBS": {
     "product_code": "FG-MZ-SUN-UBS",
     "canonical_name": "MizuMi UV Bright Body Serum SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_bright_body_serum_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_bright_body_serum.jpg",
     "variant": "กันแดดตัวสีชมพู สูตรมีน้ำหอม",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -886,7 +886,7 @@
   "FG-MZ-SUN-FGN": {
     "product_code": "FG-MZ-SUN-FGN",
     "canonical_name": "MizuMi UV Bright Body Serum Fragrance Free SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_bright_body_serum_fragrance_free_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_bright_body_serum_fragrance_free.jpg",
     "variant": "กันแดดตัวสีขาว สูตรไม่มีน้ำหอม",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -977,7 +977,7 @@
   "FG-MZ-SUN-UCL165": {
     "product_code": "FG-MZ-SUN-UCL165",
     "canonical_name": "MizuMi UV Cooling Body Serum SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_cooling_body_serum_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_cooling_body_serum.jpg",
     "variant": "กันแดดตัวสีฟ้า สูตรเย็น",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -1069,7 +1069,7 @@
   "FG-MZ-SUN-UBB120": {
     "product_code": "FG-MZ-SUN-UBB120",
     "canonical_name": "MizuMi UV Bright Body Serum Beige SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_bright_body_serum_beige_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_bright_body_serum_beige.jpg",
     "variant": "โทนอัพสีเบจ Beige",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -1167,7 +1167,7 @@
   "FG-MZ-SUN-UBL120": {
     "product_code": "FG-MZ-SUN-UBL120",
     "canonical_name": "MizuMi UV Bright Body Serum Lilac SPF50+ PA++++",
-    "image_url": "/static/products/mizumi_uv_bright_body_serum_lilac_spf50_pa.png",
+    "image_url": "/static/products/mizumi_uv_bright_body_serum_lilac.jpg",
     "variant": "โทนอัพสีม่วง Lilac",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -1263,7 +1263,7 @@
   "FG-MZ-SUN-UCG180": {
     "product_code": "FG-MZ-SUN-UCG180",
     "canonical_name": "MizuMi UV Bright Body Serum Vit C Gluta",
-    "image_url": "/static/products/mizumi_uv_bright_body_serum_vit_c_gluta.png",
+    "image_url": "/static/products/mizumi_uv_bright_body_serum_vit_c_gluta.jpg",
     "variant": "Vit C Gluta 180 ml",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -1360,7 +1360,7 @@
   "FG-MZ-SUN-UCH180": {
     "product_code": "FG-MZ-SUN-UCH180",
     "canonical_name": "MizuMi UV Bright Body Serum Vit C Hya",
-    "image_url": "/static/products/mizumi_uv_bright_body_serum_vit_c_hya.png",
+    "image_url": "/static/products/mizumi_uv_bright_body_serum_vit_c_hya.jpg",
     "variant": "Vit C Hya 180 ml",
     "category": "กันแดดผิวตัว",
     "facts": {
@@ -1456,7 +1456,7 @@
   "FG-MZ-CLS-SMT": {
     "product_code": "FG-MZ-CLS-SMT",
     "canonical_name": "MizuMi Smooth Cleansing Water",
-    "image_url": "/static/products/mizumi_smooth_cleansing_water.png",
+    "image_url": "/static/products/mizumi_smooth_cleansing_water.jpg",
     "variant": "100ml, 500 ml",
     "category": "คลีนซิ่ง",
     "facts": {
@@ -1958,7 +1958,7 @@
   "FG-MZ-CLS-EYE100": {
     "product_code": "FG-MZ-CLS-EYE100",
     "canonical_name": "MizuMi Eye & Lip Aqua-Touch Remover",
-    "image_url": "/static/products/mizumi_eye_lip_aqua-touch_remover.png",
+    "image_url": "/static/products/mizumi_eye_lip_aqua-touch_remover.jpg",
     "variant": "100 ml",
     "category": "คลีนซิ่ง",
     "facts": {
@@ -2033,7 +2033,7 @@
   "FG-MZ-CLS-RDO150": {
     "product_code": "FG-MZ-CLS-RDO150",
     "canonical_name": "MizuMi 4 Red Miracle Cleansing Oil",
-    "image_url": "/static/products/mizumi_4_red_miracle_cleansing_oil.png",
+    "image_url": "/static/products/mizumi_4_red_miracle_cleansing_oil.jpg",
     "variant": "150 ml",
     "category": "คลีนซิ่งออยล์",
     "facts": {
@@ -2115,7 +2115,7 @@
   "FG-MZ-CLS-BLM060": {
     "product_code": "FG-MZ-CLS-BLM060",
     "canonical_name": "MizuMi 3-In-1 Melt Away Cleansing Balm",
-    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm.png",
+    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm.jpg",
     "variant": "Original (White Jar) 60 ml",
     "category": "คลีนซิ่งบาล์ม",
     "facts": {
@@ -2229,7 +2229,7 @@
   "FG-MZ-CLS-BLC060": {
     "product_code": "FG-MZ-CLS-BLC060",
     "canonical_name": "MizuMi 3-In-1 Melt Away Cleansing Balm Charcoal",
-    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm_charcoal.png",
+    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm_charcoal.jpg",
     "variant": "Charcoal (Black Jar) 60 ml",
     "category": "คลีนซิ่งบาล์ม",
     "facts": {
@@ -2336,7 +2336,7 @@
   "FG-MZ-CLS-BLW060": {
     "product_code": "FG-MZ-CLS-BLW060",
     "canonical_name": "MizuMi 3-In-1 Melt Away Cleansing Balm Warm",
-    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm_warm.png",
+    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm_warm.jpg",
     "variant": "Warm (Red Jar) 60 ml",
     "category": "คลีนซิ่งบาล์ม",
     "facts": {
@@ -2444,7 +2444,7 @@
   "FG-MZ-CLS-EXM": {
     "product_code": "FG-MZ-CLS-EXM",
     "canonical_name": "MizuMi Extra Mild Facial Cleanser",
-    "image_url": "/static/products/mizumi_extra_mild_facial_cleanser.png",
+    "image_url": "/static/products/mizumi_extra_mild_facial_cleanser.jpg",
     "variant": "White Bottle",
     "category": "คลีนเซอร์ล้างหน้า",
     "facts": {
@@ -2619,8 +2619,8 @@
   },
   "FG-MZ-CLS-EZA100": {
     "product_code": "FG-MZ-CLS-EZA100",
-    "canonical_name": "Enzyme Reju Facial Cleanser Acne",
-    "image_url": "/static/products/enzyme_reju_facial_cleanser_acne.png",
+    "canonical_name": "MizuMi Enzyme Reju Facial Cleanser Acne",
+    "image_url": "/static/products/enzyme_reju_facial_cleanser_acne.jpg",
     "variant": "Acne Formula 100 ml",
     "category": "คลีนเซอร์ล้างหน้า",
     "facts": {
@@ -2728,8 +2728,8 @@
   },
   "FG-MZ-CLS-EZB100": {
     "product_code": "FG-MZ-CLS-EZB100",
-    "canonical_name": "Enzyme Reju Facial Cleanser Bright",
-    "image_url": "/static/products/enzyme_reju_facial_cleanser_bright.png",
+    "canonical_name": "MizuMi Enzyme Reju Facial Cleanser Bright",
+    "image_url": "/static/products/enzyme_reju_facial_cleanser_bright.jpg",
     "variant": "Bright Formula 100 ml",
     "category": "คลีนเซอร์ล้างหน้า",
     "facts": {
@@ -2824,8 +2824,8 @@
   },
   "FG-MZ-CLS-EZC100": {
     "product_code": "FG-MZ-CLS-EZC100",
-    "canonical_name": "Enzyme Reju Facial Cleanser Collagen",
-    "image_url": "/static/products/enzyme_reju_facial_cleanser_collagen.png",
+    "canonical_name": "MizuMi Enzyme Reju Facial Cleanser Collagen",
+    "image_url": "/static/products/enzyme_reju_facial_cleanser_collagen.jpg",
     "variant": "Collagen Formula 100 ml",
     "category": "คลีนเซอร์ล้างหน้า",
     "facts": {
@@ -2922,7 +2922,7 @@
   "FG-MZ-CLS-PHC100": {
     "product_code": "FG-MZ-CLS-PHC100",
     "canonical_name": "MizuMi pH Balancing Facial Cleanser",
-    "image_url": "/static/products/mizumi_ph_balancing_facial_cleanser.png",
+    "image_url": "/static/products/mizumi_ph_balancing_facial_cleanser.jpg",
     "variant": "Blue Tube 100 ml",
     "category": "คลีนเซอร์ล้างหน้า",
     "facts": {
@@ -3111,7 +3111,7 @@
   "FG-MZ-FCC-NOS": {
     "product_code": "FG-MZ-FCC-NOS",
     "canonical_name": "MizuMi Advance Niosome C3 Concentrate Serum",
-    "image_url": "/static/products/mizumi_advance_niosome_c3_concentrate_serum.png",
+    "image_url": "/static/products/mizumi_advance_niosome_c3_concentrate_serum.jpg",
     "variant": "Niosome C3",
     "category": "เซรั่ม",
     "facts": {
@@ -3210,7 +3210,7 @@
   "FG-MZ-FCC-NIA": {
     "product_code": "FG-MZ-FCC-NIA",
     "canonical_name": "MizuMi Advance Niacinamide 15 Serum",
-    "image_url": "/static/products/mizumi_advance_niacinamide_15_serum.png",
+    "image_url": "/static/products/mizumi_advance_niacinamide_15_serum.jpg",
     "variant": "Niacinamide 15%",
     "category": "เซรั่ม",
     "facts": {
@@ -3312,7 +3312,7 @@
   "FG-MZ-FCC-TXB": {
     "product_code": "FG-MZ-FCC-TXB",
     "canonical_name": "MizuMi Advance Nio-TXB3 Serum",
-    "image_url": "/static/products/mizumi_advance_nio-txb3_serum.png",
+    "image_url": "/static/products/mizumi_advance_nio-txb3_serum.jpg",
     "variant": "Nio-TXB3",
     "category": "เซรั่ม",
     "facts": {
@@ -3418,7 +3418,7 @@
   "FG-MZ-FCC-RTN030": {
     "product_code": "FG-MZ-FCC-RTN030",
     "canonical_name": "MizuMi Retinoic Ester Serum",
-    "image_url": "/static/products/mizumi_retinoic_ester_serum.png",
+    "image_url": "/static/products/mizumi_retinoic_ester_serum.jpg",
     "variant": "Retinoic",
     "category": "เซรั่ม",
     "facts": {
@@ -3507,7 +3507,7 @@
   "FG-MZ-FCC-DRY": {
     "product_code": "FG-MZ-FCC-DRY",
     "canonical_name": "MizuMi Dry Rescue Intense Melt-In Cream",
-    "image_url": "/static/products/mizumi_dry_rescue_intense_melt-in_cream.png",
+    "image_url": "/static/products/mizumi_dry_rescue_intense_melt-in_cream.jpg",
     "variant": "Dry Rescue (Blue)",
     "category": "moisturizer",
     "facts": {
@@ -3597,7 +3597,7 @@
   "FG-MZ-FCC-CIC": {
     "product_code": "FG-MZ-FCC-CIC",
     "canonical_name": "MizuMi Cica Soothing Moisture Gel",
-    "image_url": "/static/products/mizumi_cica_soothing_moisture_gel.png",
+    "image_url": "/static/products/mizumi_cica_soothing_moisture_gel.jpg",
     "variant": "Cica (Green)",
     "category": "moisturizer",
     "facts": {
@@ -3685,7 +3685,7 @@
   "FG-MZ-FCC-SKB045": {
     "product_code": "FG-MZ-FCC-SKB045",
     "canonical_name": "MizuMi Skin Barrier Soothing Cream",
-    "image_url": "/static/products/mizumi_skin_barrier_soothing_cream.png",
+    "image_url": "/static/products/mizumi_skin_barrier_soothing_cream.jpg",
     "variant": "Skin Barrier (Blue Tube)",
     "category": "moisturizer",
     "facts": {
@@ -3796,7 +3796,7 @@
   "FG-MZ-ACN-HYA": {
     "product_code": "FG-MZ-ACN-HYA",
     "canonical_name": "MizuMi Hya Acne Repair Serum",
-    "image_url": "/static/products/mizumi_hya_acne_repair_serum.png",
+    "image_url": "/static/products/mizumi_hya_acne_repair_serum.jpg",
     "variant": "Hya Acne Repair (Purple)",
     "category": "mimi_serum",
     "facts": {
@@ -3897,7 +3897,7 @@
   "FG-MZ-ACN-PAG": {
     "product_code": "FG-MZ-ACN-PAG",
     "canonical_name": "MizuMi Peptide Acne Gel",
-    "image_url": "/static/products/mizumi_peptide_acne_gel.png",
+    "image_url": "/static/products/mizumi_peptide_acne_gel.jpg",
     "variant": "Peptide Acne Gel (Blue Tube)",
     "category": "mimi_serum",
     "facts": {
@@ -4002,7 +4002,7 @@
   "FG-MZ-ACN-AHA": {
     "product_code": "FG-MZ-ACN-AHA",
     "canonical_name": "MizuMi AHA BHA Acne Serum",
-    "image_url": "/static/products/mizumi_aha_bha_acne_serum.png",
+    "image_url": "/static/products/mizumi_aha_bha_acne_serum.jpg",
     "variant": "AHA BHA Acne Serum (Pink Tube)",
     "category": "mimi_serum",
     "facts": {
@@ -4113,7 +4113,7 @@
   "FG-MZ-ACN-BBB": {
     "product_code": "FG-MZ-ACN-BBB",
     "canonical_name": "MizuMi B3 Acne Concentrate Serum",
-    "image_url": "/static/products/mizumi_b3_acne_concentrate_serum.png",
+    "image_url": "/static/products/mizumi_b3_acne_concentrate_serum.jpg",
     "variant": "B3 Acne Concentrate Serum (Green Tube)",
     "category": "mimi_serum",
     "facts": {
@@ -4219,7 +4219,7 @@
   "FG-MZ-ACN-SUL": {
     "product_code": "FG-MZ-ACN-SUL",
     "canonical_name": "MizuMi Sulfur Acne Clay",
-    "image_url": "/static/products/mizumi_sulfur_acne_clay.png",
+    "image_url": "/static/products/mizumi_sulfur_acne_clay.jpg",
     "variant": "Sulfur Acne Clay (Black Tube)",
     "category": "mimi_serum",
     "facts": {
@@ -4441,7 +4441,7 @@
   "FG-MZ-BDC-BST250": {
     "product_code": "FG-MZ-BDC-BST250",
     "canonical_name": "MizuMi B3 AHA Intense White Body Booster",
-    "image_url": "/static/products/mizumi_b3_aha_intense_white_body_booster.png",
+    "image_url": "/static/products/mizumi_b3_aha_intense_white_body_booster.jpg",
     "thai_name": "มิซึมิ บี3 เอเอชเอ อินเทนซ์ ไวท์ บอดี้ บูสเตอร์",
     "short_name": "โลชั่น B3 AHA",
     "category": "body_care",
@@ -4569,7 +4569,7 @@
   "FG-MZ-BDC-PHA250": {
     "product_code": "FG-MZ-BDC-PHA250",
     "canonical_name": "MizuMi PHA 10 Smooth Body Serum",
-    "image_url": "/static/products/mizumi_pha_10_smooth_body_serum.png",
+    "image_url": "/static/products/mizumi_pha_10_smooth_body_serum.jpg",
     "thai_name": "มิซึมิ พีเอชเอ 10 สมูท บอดี้ เซรั่ม",
     "short_name": "โลชั่น PHA 10",
     "category": "body_care",
@@ -4702,7 +4702,7 @@
   "FG-MZ-BDC-URE250": {
     "product_code": "FG-MZ-BDC-URE250",
     "canonical_name": "MizuMi Urea 9 Soothing Dry Rescue Lotion",
-    "image_url": "/static/products/mizumi_urea_9_soothing_dry_rescue_lotion.png",
+    "image_url": "/static/products/mizumi_urea_9_soothing_dry_rescue_lotion.jpg",
     "thai_name": "มิซึมิ ยูเรีย 9 ซูทติ้ง ดราย เรสคิว โลชั่น",
     "short_name": "โลชั่น Urea 9.99",
     "category": "body_care",
@@ -4830,7 +4830,7 @@
     "brand": "MizuMi",
     "product_name_en": "MizuMi Underarm White Booster",
     "product_name_th": "ครีมรักแร้ MizuMi Underarm White Booster",
-    "image_url": "/static/products/mizumi_underarm_white_booster.png",
+    "image_url": "/static/products/mizumi_underarm_white_booster.jpg",
     "category": "underarm",
     "short_name": "Underarm White Booster",
     "main_function": [
@@ -4914,6 +4914,7 @@
     "product_code": "FG-MZ-FMU-FIL",
     "canonical_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
     "thai_name": "มิซึมิ ฟิลเตอร์ เอฟเฟกต์ แอร์รี่ สกินแคร์ คุชชั่น",
+    "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion.jpg",
     "short_name": "คุชชั่นฟิลเตอร์",
     "category": "cushion",
     "variants": [
@@ -4921,42 +4922,42 @@
         "variant_code": "FG-MZ-FMU-FIL001",
         "variant_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
         "shade_name": "Vanilla",
-        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_vanilla_spf50_pa.png",
+        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_vanilla.png",
         "shade_description": "โทนกลาง (Neutral) เหมาะสำหรับผิวขาว"
       },
       {
         "variant_code": "FG-MZ-FMU-FIL01P",
         "variant_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
         "shade_name": "Pink Vanilla",
-        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_pink_vanilla_spf50_pa.png",
+        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_pink_vanilla.png",
         "shade_description": "โทนชมพู (Pink) เหมาะสำหรับผิวขาวอมชมพู"
       },
       {
         "variant_code": "FG-MZ-FMU-FIL002",
         "variant_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
         "shade_name": "Custard",
-        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_custard_spf50_pa.png",
+        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_custard.png",
         "shade_description": "โทนกลาง (Neutral) เหมาะสำหรับผิวขาวถึงผิวกลาง"
       },
       {
         "variant_code": "FG-MZ-FMU-FIL003",
         "variant_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
         "shade_name": "Honey",
-        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_honey_spf50_pa.png",
+        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_honey.png",
         "shade_description": "โทนอุ่น (Warm) เหมาะสำหรับผิวกลาง"
       },
       {
         "variant_code": "FG-MZ-FMU-FIL004",
         "variant_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
         "shade_name": "Mocha",
-        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_mocha_spf50_pa.png",
+        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_mocha.png",
         "shade_description": "โทนอุ่น (Warm) เหมาะสำหรับผิวแทน"
       },
       {
         "variant_code": "FG-MZ-FMU-FIL005",
         "variant_name": "MizuMi Filter Effect Airy Skincare Cushion SPF50+ PA++++",
         "shade_name": "Cocoa",
-        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_cocoa_spf50_pa.png",
+        "image_url": "/static/products/mizumi_filter_effect_airy_skincare_cushion_cocoa.png",
         "shade_description": "โทนเข้ม (Neutral-Deep) เหมาะสำหรับผิวเข้ม"
       }
     ],
@@ -5096,6 +5097,7 @@
     "product_code": "FG-MZ-LIP-LPB ",
     "canonical_name": "MizuMi Skincare UV Lip Glassy Balm",
     "thai_name": "มิซึมิ ยูวี ลิป กลาสซี่ บาล์ม",
+    "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm.jpg",
     "short_name": "ลิปบาล์มกันแดด",
     "category": "lip_care",
     "variants": [
@@ -5103,7 +5105,7 @@
         "variant_code": "FG-MZ-LIP-LPB001",
         "variant_name": "MizuMi Skincare UV Lip Glassy Balm Clear",
         "shade_name": "Clear",
-        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_clear.png",
+        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_clear.jpg",
         "shade_description": "ไม่มีสี ให้ลุคใสเป็นธรรมชาติ",
         "size_gram": 3.5
       },
@@ -5111,7 +5113,7 @@
         "variant_code": "FG-MZ-LIP-LPB002",
         "variant_name": "MizuMi Skincare UV Lip Glassy Balm Seoul Kiss",
         "shade_name": "Seoul Kiss",
-        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_seoul_kiss.png",
+        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_seoul_kiss.jpg",
         "shade_description": "สีแดงอมชมพู สดใส",
         "size_gram": 3.5
       },
@@ -5119,7 +5121,7 @@
         "variant_code": "FG-MZ-LIP-LPB003",
         "variant_name": "MizuMi Skincare UV Lip Glassy Balm Paris Pink",
         "shade_name": "Paris Pink",
-        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_paris_pink.png",
+        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_paris_pink.jpg",
         "shade_description": "สีชมพูหวาน ดูสุขภาพดี",
         "size_gram": 3.5
       },
@@ -5127,7 +5129,7 @@
         "variant_code": "FG-MZ-LIP-LPB004",
         "variant_name": "MizuMi Skincare UV Lip Glassy Balm Boston Brick",
         "shade_name": "Boston Brick",
-        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_boston_brick.png",
+        "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm_boston_brick.jpg",
         "shade_description": "สีน้ำตาลอมส้ม สุภาพ ดูแพง",
         "size_gram": 3.5
       }
@@ -5261,6 +5263,7 @@
     "product_code": "FG-MZ-LIP-LPM",
     "canonical_name": "MizuMi Skincare UV Lip Glassy Mask",
     "thai_name": "มิซึมิ สกินแคร์ ยูวี ลิป กลาสซี่ มาส์ก",
+     "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_mask.jpg",
     "short_name": "ลิปกลาสซี่มาส์ก",
     "category": "lip_care",
     "variants": [
@@ -5393,6 +5396,7 @@
     "product_code": "FG-MZ-LIP-LPO",
     "canonical_name": "MizuMi UV Plumping Lip Oil",
     "thai_name": "มิซึมิ ยูวี พลัมพิ่ง ลิป ออยล์",
+    "image_url": "/static/products/mizumi_uv_plumping_lip_oil.jpg",
     "short_name": "ลิปออยล์พลัมพิ่ง",
     "category": "lip_care",
     "variants": [
@@ -5400,7 +5404,7 @@
         "variant_code": "FG-MZ-LIP-LPO001",
         "variant_name": "MizuMi UV Plumping Lip Oil Clear",
         "shade_name": "Clear",
-        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_clear.jpg",
+        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_clear.png",
         "shade_description": "ไม่มีสี ให้ลุคใสเป็นธรรมชาติ",
         "size_gram": 4
       },
@@ -5408,7 +5412,7 @@
         "variant_code": "FG-MZ-LIP-LPO002",
         "variant_name": "MizuMi UV Plumping Lip Oil Rouge",
         "shade_name": "Rouge",
-        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_rouge.jpg",
+        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_rouge.png",
         "shade_description": "สีแดง ช่วยให้ริมฝีปากดูสดใส",
         "size_gram": 4
       },
@@ -5416,7 +5420,7 @@
         "variant_code": "FG-MZ-LIP-LPO003",
         "variant_name": "MizuMi UV Plumping Lip Oil Champagne",
         "shade_name": "Champagne",
-        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_champagne.jpg",
+        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_champagne.png",
         "shade_description": "สีชมพูอ่อน ดูสุภาพ เป็นธรรมชาติ",
         "size_gram": 4
       },
@@ -5424,7 +5428,7 @@
         "variant_code": "FG-MZ-LIP-LPO004",
         "variant_name": "MizuMi UV Plumping Lip Oil Sand",
         "shade_name": "Sand",
-        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_sand.jpg",
+        "image_url": "/static/products/mizumi_uv_plumping_lip_oil_sand.png",
         "shade_description": "สีน้ำตาลอ่อน ให้ลุคสุภาพ ดูแพง",
         "size_gram": 4
       }
@@ -5548,7 +5552,7 @@
   "FG-MZ-LIP-LOS016": {
     "product_code": "FG-MZ-LIP-LOS016",
     "canonical_name": "MizuMi Lip Oil Serum",
-    "image_url": "/static/products/mizumi_lip_oil_serum.png",
+    "image_url": "/static/products/mizumi_lip_oil_serum.jpg",
     "thai_name": "มิซึมิ ลิปออยล์ เซรั่ม",
     "short_name": "ลิปออยล์เซรั่ม",
     "category": "lip_care",
@@ -5672,7 +5676,7 @@
   "FG-MZ-STM-CFA030": {
     "product_code": "FG-MZ-STM-CFA030",
     "canonical_name": "MizuMi CICAFuse Calming Mask Acne",
-    "image_url": "/static/products/mizumi_cicafuse_calming_mask_acne.png",
+    "image_url": "/static/products/mizumi_cicafuse_calming_mask_acne.jpg",
     "thai_name": "มิซึมิ ซิก้าฟิวส์ คาล์มมิ่ง มาส์ก สูตรแอคเน่",
     "short_name": "ซิก้ามาสก์ แอคเน่",
     "category": "sheet_mask",
@@ -5760,7 +5764,7 @@
   "FG-MZ-STM-CFS030": {
     "product_code": "FG-MZ-STM-CFS030",
     "canonical_name": "MizuMi CICAFuse Calming Mask Soothing",
-    "image_url": "/static/products/mizumi_cicafuse_calming_mask_soothing.png",
+    "image_url": "/static/products/mizumi_cicafuse_calming_mask_soothing.jpg",
     "thai_name": "มิซึมิ ซิก้าฟิวส์ คาล์มมิ่ง มาส์ก สูตรซูททิง",
     "short_name": "มาส์กเสือสีฟ้า",
     "category": "sheet_mask",
@@ -5888,7 +5892,7 @@
   "FG-MZ-STM-CFW030": {
     "product_code": "FG-MZ-STM-CFW030",
     "canonical_name": "MizuMi CICAFuse Calming Mask White",
-    "image_url": "/static/products/mizumi_cicafuse_calming_mask_white.png",
+    "image_url": "/static/products/mizumi_cicafuse_calming_mask_white.jpg",
     "thai_name": "มิซึมิ ซิก้าฟิวส์ คาล์มมิ่ง มาส์ก สูตรไวท์",
     "short_name": "มาส์กเสือสีขาว",
     "category": "sheet_mask",
@@ -6002,7 +6006,7 @@
   "FG-MZ-STM-CFB030": {
     "product_code": "FG-MZ-STM-CFB031",
     "canonical_name": "MizuMi CICAFuse Calming Mask Instant Bright",
-    "image_url": "/static/products/mizumi_cicafuse_calming_mask_instant_bright.png",
+    "image_url": "/static/products/mizumi_cicafuse_calming_mask_instant_bright.jpg",
     "thai_name": "มิซึมิ ซิก้าฟิวส์ คาล์มมิ่ง มาส์ก สูตรอินสแตนท์ ไบรท์",
     "short_name": "มาส์กเสือสีชมพู",
     "category": "sheet_mask",
@@ -6469,7 +6473,7 @@
     "FG-MZ-STM-BPC170": {
       "product_code": "FG-MZ-STM-BPC170",
       "canonical_name": "MizuMi Black Nova Pad Pore Clarifying",
-      "image_url": "/static/products/mizumi_black_nova_pad_pore_clarifying.png",
+      "image_url": "/static/products/mizumi_black_nova_pad_pore_clarifying.jpg",
       "thai_name": "โนวาแพดสีเขียว",
       "short_name": "โทนเนอร์แพดสีดำ กระปุกเขียว",
       "category": "toner_pad",
@@ -6595,7 +6599,7 @@
   "FG-MZ-STM-BPT170": {
     "product_code": "FG-MZ-STM-BPT170",
     "canonical_name": "MizuMi Black Nova Pad Pore Tightening",
-    "image_url": "/static/products/mizumi_black_nova_pad_pore_tightening.png",
+    "image_url": "/static/products/mizumi_black_nova_pad_pore_tightening.jpg",
     "thai_name": "โนวาแพดสีม่วง",
     "short_name": "โทนเนอร์แพดสีดำ กระปุกม่วง",
     "category": "toner_pad",
@@ -6852,6 +6856,7 @@
     "product_code": "FG-MZ-CHK-UVB",
     "canonical_name": "MizuMi UV Blush Stick",
     "thai_name": "มิซึมิ ยูวี บลัช สติ๊ก",
+     "image_url": "/static/products/mizumi_uv_blush_stick.jpg",
     "short_name": "บลัชสติ๊กกันแดด",
     "category": "makeup_blush",
     "variants": [
@@ -6859,6 +6864,7 @@
         "variant_code": "FG-MZ-CHK-UVB001",
         "variant_name": "MizuMi UV Blush Stick Peach Mojito",
         "shade_name": "PEACH MOJITO",
+        "image_url": "/static/products/mizumi_uv_blush_stick_peach_mojito.jpg",
         "shade_description": "สีพีชอมส้ม ให้ลุคสดใส สุขภาพดี",
         "size_gram": 4
       },
@@ -6866,6 +6872,7 @@
         "variant_code": "FG-MZ-CHK-UVB002",
         "variant_name": "MizuMi UV Blush Stick Coco Martini",
         "shade_name": "COCO MARTINI",
+        "image_url": "/static/products/mizumi_uv_blush_stick_coco_martini.jpg",
         "shade_description": "สีเบจน้ำตาล โทน Neutral สุภาพ ใช้ได้ทุกวัน",
         "size_gram": 4
       },
@@ -6873,6 +6880,7 @@
         "variant_code": "FG-MZ-CHK-UVB003",
         "variant_name": "MizuMi UV Blush Stick Sunset Punch",
         "shade_name": "SUNSET PUNCH",
+        "image_url": "/static/products/mizumi_uv_blush_stick_sunset_punch.jpg",
         "shade_description": "สีน้ำตาลอมชมพูตุ่นๆ ให้ลุคอบอุ่น",
         "size_gram": 4
       },
@@ -6880,6 +6888,7 @@
         "variant_code": "FG-MZ-CHK-UVB004",
         "variant_name": "MizuMi UV Blush Stick Rosy Sangria",
         "shade_name": "ROSY SANGRIA",
+        "image_url": "/static/products/mizumi_uv_blush_stick_rosy_sangria.jpg",
         "shade_description": "สีน้ำตาลอมแดงตุ่นๆ ลุคสวยคม",
         "size_gram": 4
       },
@@ -6887,6 +6896,7 @@
         "variant_code": "FG-MZ-CHK-UVB005",
         "variant_name": "MizuMi UV Blush Stick Pink Spritz",
         "shade_name": "PINK SPRITZ",
+        "image_url": "/static/products/mizumi_uv_blush_stick_pink_spritz.jpg",
         "shade_description": "สีชมพูนม ให้ลุคหวานละมุน",
         "size_gram": 4
       },
@@ -6894,6 +6904,7 @@
         "variant_code": "FG-MZ-CHK-UVB006",
         "variant_name": "MizuMi UV Blush Stick Bloody Berry",
         "shade_name": "BLOODY BERRY",
+        "image_url": "/static/products/mizumi_uv_blush_stick_bloody_berry.jpg",
         "shade_description": "สีแดงเบอร์รี่ ช่วยให้แก้มดูโดดเด่น",
         "size_gram": 4
       },
@@ -6901,6 +6912,7 @@
         "variant_code": "FG-MZ-CHK-UVB007",
         "variant_name": "MizuMi UV Blush Stick Roseberry Vodka",
         "shade_name": "ROSEBERRY VODKA",
+        "image_url": "/static/products/mizumi_uv_blush_stick_roseberry_vodka.jpg",
         "shade_description": "สีชมพูพีช ให้ลุคสุภาพ สดใส",
         "size_gram": 4
       },
@@ -6908,6 +6920,7 @@
         "variant_code": "FG-MZ-CHK-UVB008",
         "variant_name": "MizuMi UV Blush Stick Devil's Margarita",
         "shade_name": "DEVIL'S MARGARITA",
+        "image_url": "/static/products/mizumi_uv_blush_stick_devil_margarita.jpg",
         "shade_description": "สีแดงอมม่วงโทนไวน์ ให้ลุคมั่นใจ",
         "size_gram": 4
       }
@@ -7105,13 +7118,19 @@
       "application_area": "face"
     },
     "usage_method": {
-      "steps": [
-        "Apply cream evenly over face",
-        "Place grey side of mask onto face (black side facing outward)",
-        "Leave on for 20–40 minutes",
-        "Remove mask and gently massage remaining serum into skin"
-      ]
-    },
+  "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
+  "steps": [
+    "Apply the cream evenly over the face.",
+    "Place the grey side of the mask sheet onto the face (black side facing outward).",
+    "Leave the mask on for 20 to 40 minutes.",
+    "Remove the mask.",
+    "Gently massage the remaining serum into the skin."
+  ],
+  "mask_duration_minutes": "20-40",
+  "remove_after_use": true,
+  "massage_remaining_serum": true,
+  "rinse_required": false
+},
     "storage": {
       "refrigerator_allowed": true,
       "freezer_allowed": false,
@@ -7276,13 +7295,19 @@
       "application_area": "face"
     },
     "usage_method": {
-      "steps": [
-        "Apply cream evenly over face",
-        "Place grey side of mask onto face (black side facing outward)",
-        "Leave on for 20–40 minutes",
-        "Remove mask and gently massage remaining serum into skin"
-      ]
-    },
+  "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
+  "steps": [
+    "Apply the cream evenly over the face.",
+    "Place the grey side of the mask sheet onto the face (black side facing outward).",
+    "Leave the mask on for 20 to 40 minutes.",
+    "Remove the mask.",
+    "Gently massage the remaining serum into the skin."
+  ],
+   "mask_duration_minutes": "20-40",
+  "remove_after_use": true,
+  "massage_remaining_serum": true,
+  "rinse_required": false
+},
     "storage": {
       "refrigerator_allowed": true,
       "freezer_allowed": false,
@@ -7449,13 +7474,20 @@
       "application_area": "face"
     },
     "usage_method": {
-      "steps": [
-        "Apply cream evenly over face",
-        "Place grey side of mask onto face (black side facing outward)",
-        "Leave on for 20–40 minutes",
-        "Remove mask and gently massage remaining serum into skin"
-      ]
-    },
+  "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
+  "steps": [
+    "Apply the cream evenly over the face.",
+    "Place the grey side of the mask sheet onto the face (black side facing outward).",
+    "Leave the mask on for 20 to 40 minutes.",
+    "Remove the mask.",
+    "Gently massage the remaining serum into the skin."
+  ],
+   "mask_duration_minutes": "20-40",
+  "remove_after_use": true,
+  "massage_remaining_serum": true,
+  "rinse_required": false
+},
+ 
     "storage": {
       "refrigerator_allowed": true,
       "freezer_allowed": false,
@@ -7473,9 +7505,114 @@
       "calming_skin": "Tiger_Mask",
       "deep_repair": "Platinum_Black_Mask"
     },
+  "ingredients": {
+    "cream": {
+      "list": [
+        "Water",
+        "Propylene Glycol",
+        "Ethylhexyl Palmitate",
+        "Butylene Glycol Dicaprylate/Dicaprate",
+        "Cetearyl Alcohol",
+        "Coco-Caprylate/Caprate",
+        "Cetearyl Olivate",
+        "Isononyl Isononanoate",
+        "1,2-Hexanediol",
+        "Sodium DNA",
+        "Dimethicone",
+        "Sorbitan Olivate",
+        "Cetearyl Glucoside",
+        "Tocopheryl Acetate",
+        "Niacinamide",
+        "Betaine",
+        "Ammonium Acryloyldimethyltaurate/VP Copolymer",
+        "Chamomilla Recutita (Matricaria) Flower Water",
+        "Hydroxypropyl Tetrahydropyrantriol",
+        "Ammonium Polyacrylate",
+        "Xanthan Gum",
+        "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+        "Paraffinum Liquidum",
+        "Butylene Glycol",
+        "Laureth-7",
+        "Platinum Powder",
+        "Gentiana Scabra Root Extract",
+        "Stephania Tetrandra Root Extract",
+        "Centella Asiatica Flower/Leaf/Stem Extract",
+        "Aloe Barbadensis Leaf Water",
+        "Mannitol",
+        "Ganoderma Sinense Extract",
+        "Saccharide Isomerate",
+        "Collagen",
+        "Lactobionic Acid",
+        "Phytosteryl Oleate",
+        "Ceramide NP",
+        "Polyglyceryl-10 Stearate",
+        "Sodium Stearoyl Glutamate",
+        "Ethylhexylglycerin",
+        "Hydroxyacetophenone",
+        "Ceramide AP",
+        "Tetraacetylphytosphingosine",
+        "Ceramide NS",
+        "Tocophersolan",
+        "Phytosphingosine",
+        "Carbomer",
+        "Ceramide EOP"
+      ]
+    },
+    "mask": {
+      "list": [
+        "Water",
+        "Propylene Glycol",
+        "Nymphaea Caerulea Flower Water",
+        "Rosa Damascena Flower Water",
+        "1,2-Hexanediol",
+        "Hydroxyethylcellulose",
+        "Aloe Barbadensis Leaf Water",
+        "Chlorphenesin",
+        "Saccharide Isomerate",
+        "Dipotassium Glycyrrhizate",
+        "Sodium Hyaluronate",
+        "Phenoxyethanol",
+        "Tetrahydroxypropyl Ethylenediamine",
+        "PEG-12 Dimethicone",
+        "Carbomer",
+        "Piper Methysticum Root Extract",
+        "Lactobionic Acid",
+        "Butylene Glycol",
+        "Panthenol",
+        "Centella Asiatica Flower/Leaf/Stem Extract",
+        "Tremella Fuciformis Polysaccharide",
+        "Madecassoside",
+        "Hydroxyacetophenone",
+        "Asiaticoside",
+        "Centella Asiatica Extract",
+        "Phytosteryl Oleate",
+        "Ceramide NP",
+        "Polygonum Cuspidatum Root Extract",
+        "Scutellaria Baicalensis Root Extract",
+        "Polyglyceryl-10 Stearate",
+        "Polysorbate 80",
+        "Portulaca Oleracea Extract",
+        "Camellia Sinensis Leaf Extract",
+        "Glycyrrhiza Glabra (Licorice) Root Extract",
+        "Ethylhexylglycerin",
+        "Sodium Stearoyl Glutamate",
+        "Sodium DNA",
+        "Rosmarinus Officinalis (Rosemary) Leaf Extract",
+        "Chamomilla Recutita (Matricaria) Flower Extract",
+        "Ceramide AP",
+        "Tetraacetylphytosphingosine",
+        "Ceramide NS",
+        "Xanthan Gum",
+        "Tocophersolan",
+        "Phytosphingosine",
+        "Ceramide EOP"
+      ]
+    },
+
     "upsell": {
       "recommended_pair": []
     },
     "information_context": "มาสก์บำรุงผิวสูตรเข้มข้น ช่วยเติมความชุ่มชื้นให้ผิวอย่างล้ำลึก ผิวดูอิ่มน้ำ สุขภาพดี เหมาะสำหรับผิวแห้งหรือผิวที่ต้องการการบำรุงเป็นพิเศษ พร้อมเทคโนโลยีชาร์โคลและแพลทตินัม และ PDRN จากแซลมอน เหมาะสำหรับการบำรุงผิวช่วงกลางคืน"
   }
+}
 }

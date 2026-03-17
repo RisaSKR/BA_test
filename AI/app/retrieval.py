@@ -7,11 +7,19 @@ from app.embeddings_gemini import GeminiEmbeddings
 INDEX_BASE_DIR = Path("index")
 _indices = {}
 
+_emb_instance = None
+
+def _get_embeddings():
+    global _emb_instance
+    if _emb_instance is None:
+        _emb_instance = GeminiEmbeddings()
+    return _emb_instance
+
 def load_index(brand: str = "mizumi"):
     if brand in _indices:
         return _indices[brand]
         
-    emb = GeminiEmbeddings()
+    emb = _get_embeddings()
     # Dynamic path based on brand name
     index_path = INDEX_BASE_DIR / f"{brand}_faiss"
     
@@ -21,7 +29,7 @@ def load_index(brand: str = "mizumi"):
     index = FAISS.load_local(str(index_path), embeddings=emb, allow_dangerous_deserialization=True)
     _indices[brand] = index
     return index
-def search_kb(query: str, brand: str = "mizumi", k: int = 10)-> dict:
+def search_kb(query: str, brand: str = "mizumi", k: int = 3)-> dict:
     """
     Search the local FAISS index for relevant chunks of a specific brand.
     """

@@ -34,23 +34,23 @@
   "กันแดดส้มมิมิ": "FG-MZ-ACN-MAT013",
   "acne matte sunscreen": "FG-MZ-ACN-MAT013",
 
-  "กันแดดตัวสีชมพู": "FG-MZ-SUN-UBS*",
-  "กันแดดตัวสูตรมีน้ำหอม": "FG-MZ-SUN-UBS*",
-  "uv bright body serum": "FG-MZ-SUN-UBS*",
+  "กันแดดตัวสีชมพู": "FG-MZ-SUN-UBS",
+  "กันแดดตัวสูตรมีน้ำหอม": "FG-MZ-SUN-UBS",
+  "uv bright body serum": "FG-MZ-SUN-UBS",
 
-  "กันแดดตัวสีขาว": "FG-MZ-SUN-FGN*",
-  "กันแดดตัวสูตรไม่มีน้ำหอม": "FG-MZ-SUN-FGN*",
-  "uv bright body serum fragrance free": "FG-MZ-SUN-FGN*",
+  "กันแดดตัวสีขาว": "FG-MZ-SUN-FGN",
+  "กันแดดตัวสูตรไม่มีน้ำหอม": "FG-MZ-SUN-FGN",
+  "uv bright body serum fragrance free": "FG-MZ-SUN-FGN",
+
+   "กันแดดตัวสีฟ้า": "FG-MZ-SUN-UCL165",
+  "กันแดดตัวคลูลิ่ง": "FG-MZ-SUN-UCL165",
+  "กันแดดตัวสูตรเย็น": "FG-MZ-SUN-UCL165",
+  "uv cooling body serum": "FG-MZ-SUN-UCL165",
 
   "กันแดดโทนอัพเบจ": "FG-MZ-SUN-UBB120",
   "กันแดดเบจ": "FG-MZ-SUN-UBB120",
   "กันแดดโทนอัพสีเหลือง": "FG-MZ-SUN-UBB120",
   "beige body sunscreen": "FG-MZ-SUN-UBB120",
-
-  "กันแดดตัวสีฟ้า": "FG-MZ-SUN-UCL165",
-  "กันแดดตัวคลูลิ่ง": "FG-MZ-SUN-UCL165",
-  "กันแดดตัวสูตรเย็น": "FG-MZ-SUN-UCL165",
-  "uv cooling body serum": "FG-MZ-SUN-UCL165",
 
   "กันแดดโทนอัพม่วง": "FG-MZ-SUN-UBL120",
   "กันแดดตัวสีม่วง": "FG-MZ-SUN-UBL120",
@@ -84,11 +84,11 @@
   "คลีนซิ่ง บาล์ม วอร์ม" : "FG-MZ-CLS-BLW060",
   "คลีนซิ่งบาล์มแดง" : "FG-MZ-CLS-BLW060",
 
-  "เจลล้างหน้าขาว" : "FG-MZ-CLS-EXM*",
-  "เอ็กตร้ามายด์ " : "FG-MZ-CLS-EXM*",
+  "เจลล้างหน้าขาว" : "FG-MZ-CLS-EXM",
+  "เอ็กตร้ามายด์ " : "FG-MZ-CLS-EXM",
 
-  "เจลล้างหน้าขวดเขียว" : "FG-MZ-CLS-GAW*",
-  "เจลเทิลแอคเน่วอช" :  "FG-MZ-CLS-GAW*",
+  "เจลล้างหน้าขวดเขียว" : "FG-MZ-CLS-GAW",
+  "เจลเทิลแอคเน่วอช" :  "FG-MZ-CLS-GAW",
 
   "โฟมล้างหน้าสูตรสิว" : "FG-MZ-CLS-EZA100",
   "โฟมล้างหน้าสีเขียว" : "FG-MZ-CLS-EZA100",

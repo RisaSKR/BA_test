@@ -22,6 +22,7 @@ def test_search(query):
     for i, res in enumerate(results):
         print(f"\nMatch {i+1}:")
         print(f"Source: {res.metadata.get('source')}")
+        print(f"Image: {res.metadata.get('image_url')}")
         print(f"Content:\n{res.page_content}")
 
 if __name__ == "__main__":
