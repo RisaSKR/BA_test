@@ -30,12 +30,18 @@ def _clean_name(raw: str) -> str:
     c = re.sub(r'\s+SPF\d+\+?\s*PA\+{1,4}', '', c, flags=re.IGNORECASE)
     return c.strip().lower()
 
+def _get_display_name(raw: str) -> str:
+    """Gets a nice display name by removing brackets and SPF specs, but keeping case."""
+    c = raw.split("(")[0].split(" - ")[0]
+    c = re.sub(r'\s+SPF\d+\+?\s*PA\+{1,4}', '', c, flags=re.IGNORECASE)
+    return c.strip()
+
 def _load_catalog(brand: str = "mizumi") -> dict:
-    """Return {clean_name: image_url} for every product in products.json."""
+    """Return {normalized_name: {"image": url, "name": display_name}} for every product."""
     if brand in _catalog_cache:
         return _catalog_cache[brand]
 
-    catalog: dict[str, str] = {}
+    catalog: dict[str, dict] = {}
     faq_dir = Path("faq_data") / brand
     products_file = faq_dir / "products.json"
 
@@ -49,10 +55,30 @@ def _load_catalog(brand: str = "mizumi") -> dict:
                 img = val.get("image_url")
                 if not img:
                     continue
-                # Index by canonical_name (the name MiMi uses in responses)
+                
                 canon = val.get("canonical_name", "")
                 if canon:
-                    catalog[_clean_name(canon)] = img
+                    display = _get_display_name(canon)
+                    catalog[_clean_name(canon)] = {
+                        "name": display,
+                        "image": img
+                    }
+            
+            # Also integrate aliases into the image-detection catalog
+            # this ensures that if MiMi mentions an alias (e.g. from aliases.json), 
+            # we can still show the product image.
+            aliases_file = faq_dir / "aliases.json"
+            if aliases_file.exists():
+                with open(aliases_file, "r", encoding="utf-8") as f:
+                    aliases_data = json.load(f)
+                for alias, code in aliases_data.items():
+                    p_info = data.get(code)
+                    if p_info and p_info.get("image_url"):
+                        disp = _get_display_name(p_info.get("canonical_name", alias))
+                        catalog[alias.lower().strip()] = {
+                            "name": disp,
+                            "image": p_info["image_url"]
+                        }
         except Exception as e:
             logging.warning(f"Could not load product catalog for {brand}: {e}")
 
@@ -162,7 +188,7 @@ async def chat_once(user_text: str, session_id: str, brand: str = "mizumi", stor
                                     # Check if we already have this product by image OR normalized name
                                     if not any(p["image"] == img_url or p["_base"] == base_name for p in found_products):
                                         found_products.append({
-                                            "name": name,
+                                            "name": _get_display_name(name),
                                             "image": img_url,
                                             "_base": base_name,    # e.g. "mizumi uv water serum"
                                             "_short": short_name,  # e.g. "uv water serum"
@@ -182,38 +208,49 @@ async def chat_once(user_text: str, session_id: str, brand: str = "mizumi", stor
                     except:
                         token_usage = {"total_token_count": getattr(ev.usage_metadata, "total_token_count", 0)}
 
-                # ── Smart image filtering ─────────────────────────────────────
-                # Only show images for products that MiMi actually mentioned in her response. We compare each candidate product's base name
-                # against the response text (case-insensitive) so accidental RAG hits from unrelated chunks don't produce stray cards.
+                # ── Smart image filtering & Ordering ──────────────────────────
+                # Only show images for products that MiMi actually mentioned in her response.
+                # We also track the mention position to sort images in the order they appear in text.
                 response_lower = text_content.lower() if text_content else ""
 
                 mentioned_products = []
-                # Pre-load the catalog for fallback matching
                 catalog = _load_catalog(brand)
 
-                # 1. Try matching from found_products (those retrieved by tools in this turn)
+                # 1. Match from found_products (those retrieved by tools in this turn)
                 for p in found_products:
                     base  = p.get("_base", "")
                     short = p.get("_short", "")
-                    matched = (
-                        (base  and base  in response_lower) or
-                        (short and len(short) >= 8 and short in response_lower)
-                    )
-                    if matched:
+                    
+                    # Find earliest mention position
+                    pos = 999999
+                    found = False
+                    
+                    if base and base in response_lower:
+                        pos = min(pos, response_lower.find(base))
+                        found = True
+                    
+                    if short and len(short) >= 8 and short in response_lower:
+                        pos = min(pos, response_lower.find(short))
+                        found = True
+                        
+                    if found:
+                        p["_pos"] = pos
                         mentioned_products.append(p)
 
-                # 2. Fallback: If MiMi mentioned products that weren't in tool results (e.g. from her prompt memory)
-                # search the catalog for matches in her response text
+                # 2. Fallback: catalog products mentioned but not in tool results
                 existing_bases = {p["_base"] for p in mentioned_products}
-                for clean_name, img_url in catalog.items():
+                for clean_name, info in catalog.items():
                     if clean_name in response_lower and clean_name not in existing_bases:
-                        # Find a display name (try to find uppercase version in the text or use catalog key)
-                        display_name = clean_name.title()
+                        pos = response_lower.find(clean_name)
                         mentioned_products.append({
-                            "name": display_name,
-                            "image": img_url,
-                            "_base": clean_name
+                            "name": info["name"],
+                            "image": info["image"],
+                            "_base": clean_name,
+                            "_pos": pos
                         })
+
+                # ── Sort by mention order (earliest first) ────────────────────
+                mentioned_products.sort(key=lambda x: x.get("_pos", 999999))
 
                 # Final cleaning and hard cap
                 final_products = []
@@ -224,7 +261,7 @@ async def chat_once(user_text: str, session_id: str, brand: str = "mizumi", stor
                         product_data = {k: v for k, v in p.items() if not k.startswith("_")}
                         final_products.append(product_data)
                         seen_images.add(img)
-                    if len(final_products) >= 5:
+                    if len(final_products) >= 10:
                         break
 
                 all_images = [p["image"] for p in final_products]

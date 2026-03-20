@@ -1,0 +1,240 @@
+{
+    "best_seller_recommendations": {
+        "title": "MizuMi Top Sellers - สินค้าตัวท็อปขายดีที่สุด",
+        "categories": [
+            {
+                "category_id": "face_sunscreen",
+                "category_name": "กันแดดหน้า (Face Sunscreen)",
+                "top_3_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-SUN-WSR040",
+                        "product_name": "MizuMi UV Water Serum SPF50+ PA++++",
+                        "highlight": "สูตรน้ำ บางเบาสบายผิวที่สุด สำหรับใช้ทุกวัน"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-SUN-MOC040",
+                        "product_name": "MizuMi UV Ultimate Matte & Oil Control Sunscreen",
+                        "highlight": "เนื้อแมตต์ คุมมันยาวนาน ไม่ทำให้หน้าเยิ้ม"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-SUN-ALS040",
+                        "product_name": "MizuMi UV Aqua Lock Serum SPF50+ PA++++",
+                        "highlight": "กันแดดเนื้อเซรั่มบางเบา ให้ความชุ่มชื้นสูงด้วย Aqua Gel Lock Technology"
+                    }
+                ]
+            },
+            {
+                "category_id": "body_sunscreen",
+                "category_name": "กันแดดตัว (Body Sunscreen)",
+                "top_3_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-SUN-UBS",
+                        "product_name": "MizuMi UV Bright Body Serum SPF50+ PA++++",
+                        "highlight": "เซรั่มกันแดดตัวยอดนิยม ผิวกระจ่างใส มีกลิ่นหอม"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-SUN-FGN",
+                        "product_name": "MizuMi UV Bright Body Serum Fragrance Free SPF50+ PA++++",
+                        "highlight": "สูตรไม่มีน้ำหอม อ่อนโยนสำหรับผิวแพ้ง่าย"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-SUN-UCL165",
+                        "product_name": "MizuMi UV Cooling Body Serum SPF50+ PA++++",
+                        "highlight": "สูตรเย็นสบายผิว ลดอุณหภูมิผิวทันที"
+                    }
+                ]
+            },
+            {
+                "category_id": "cleansing",
+                "category_name": "คลีนซิ่ง (Cleansing)",
+                "top_3_products": [
+                    {
+                        "rank": 1,
+                        "product_name": "MizuMi Smooth Cleansing Water & 4X Multi-Micellar",
+                        "highlight": "คลีนซิ่งน้ำยอดนิยม สูตรอ่อนโยนและสูตรลดสิว สลายเมคอัพเกลี้ยง"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-CLS-BLM060",
+                        "product_name": "MizuMi 3-In-1 Melt Away Cleansing Balm",
+                        "highlight": "เนื้อบาล์มละลายเป็นน้ำนม สลายเมคอัพกันน้ำและกันแดดได้ล้ำลึก"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-CLS-RDO150",
+                        "product_name": "MizuMi 4 Red Miracle Cleansing Oil",
+                        "highlight": "ออยล์ล้างหน้า เนื้อบางเบาพิเศษ ล้างออกง่าย ไม่ทิ้งความมัน"
+                    }
+                ]
+            },
+            {
+                "category_id": "cleanser",
+                "category_name": "เจลล้างหน้า (Cleanser)",
+                "top_3_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-CLS-EXM",
+                        "product_name": "MizuMi Extra Mild Facial Cleanser",
+                        "highlight": "สูตรอ่อนโยนพิเศษ ค่า pH สมดุล ไม่ทำให้ผิวแห้งตึง"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-CLS-PHC100",
+                        "product_name": "MizuMi pH Balancing Facial Cleanser",
+                        "highlight": "เจลล้างหน้าเพื่อสมดุลผิว เสริมปราการผิวให้แข็งแรง"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-CLS-EZA100",
+                        "product_name": "MizuMi Enzyme Reju Facial Cleanser Acne",
+                        "highlight": "วิปโฟมสูตรลดสิว ช่วยผลัดเซลล์ผิวอย่างอ่อนโยน"
+                    }
+                ]
+            },
+            {
+                "category_id": "body_care",
+                "category_name": "บำรุงผิวกาย (Body Care)",
+                "top_3_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-BDC-BST250",
+                        "product_name": "MizuMi B3 AHA Intense White Body Booster",
+                        "highlight": "บูสเตอร์ผิวใส จัดการจุดด่างดำ"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-BDC-PHA250",
+                        "product_name": "MizuMi PHA 10 Smooth Body Serum",
+                        "highlight": "ช่วยลดผิวหยาบกร้านและขนคุด"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-BDC-URE250",
+                        "product_name": "MizuMi Urea 9 Soothing Dry Rescue Lotion",
+                        "highlight": "ช่วยกักเก็บความชุ่มชื้น ฟื้นฟูผิวแห้ง"
+                    }
+                ]
+            },
+            {
+                "category_id": "moisturiser",
+                "category_name": "มอยส์เจอไรเซอร์ (Moisturizer)",
+                "top_3_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-FCC-DRY",
+                        "product_name": "MizuMi Dry Rescue Intense Melt-In Cream",
+                        "highlight": "เหมาะสำหรับผิวแห้งขาดน้ำ ต้องการบำรุงเป็นพิเศษ"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-FCC-CIC",
+                        "product_name": "MizuMi Cica Soothing Moisture Gel",
+                        "highlight": " ช่วยปลอบประโลมผิว ลดโอกาสการเกิดสิว"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-FCC-SKB045",
+                        "product_name": "MizuMi Skin Barrier Soothing Cream",
+                        "highlight": "ช่วยลดอาการแห้ง คัน และเสริมความแข็งแรงให้ผิว"
+                    }
+                ]
+            },
+            {
+                "category_id": "toner_pad",
+                "category_name": "โทนเนอร์แพด (Toner Pad)",
+                "top_6_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-STM-BPC170",
+                        "product_name": "MizuMi Black Nova Pad Pore Clarifying",
+                        "highlight": "ผลัดเซลล์ผิว กระชับรูขุมขน (สูตรสีเขียว)"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-STM-BPT170",
+                        "product_name": "MizuMi Black Nova Pad Pore Tightening",
+                        "highlight": "ช่วยให้รูขุมขนแลดูเล็กลง (สูตรสีชมพู)"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-STM-BPB170",
+                        "product_name": "MizuMi Black Nova Pad Pore Balancing",
+                        "highlight": "ปรับสมดุลผิว คุมมัน (สูตรสีฟ้า)"
+                    },
+                    {
+                        "rank": 4,
+                        "product_code": "FG-MZ-STM-AIP130",
+                        "product_name": "MizuMi Acne Skin Fit Invisible Pad",
+                        "highlight": "โทนเนอร์แพดล่องหน สูตรสำหรับผิวเป็นสิว"
+                    },
+                    {
+                        "rank": 5,
+                        "product_code": "FG-MZ-STM-BIP130",
+                        "product_name": "MizuMi Bright Skin Fit Invisible Pad",
+                        "highlight": "โทนเนอร์แพดล่องหน สูตรผิวขาวกระจ่างใส"
+                    },
+                    {
+                        "rank": 6,
+                        "product_code": "FG-MZ-STM-SIP130",
+                        "product_name": "MizuMi Soothing Skin Fit Invisible Pad",
+                        "highlight": "โทนเนอร์แพดล่องหน สูตรปลอบประโลมผิว"
+                    }
+                ]
+            },
+            {
+                "category_id": "sheet_mask",
+                "category_name": "มาส์กหน้า (Sheet Mask)",
+                "top_7_products": [
+                    {
+                        "rank": 1,
+                        "product_code": "FG-MZ-STM-CFA030",
+                        "product_name": "MizuMi CICAFuse Calming Mask Acne",
+                        "highlight": "มาส์กเสือสูตรลดสิว ปลอบประโลมผิวอักเสบ"
+                    },
+                    {
+                        "rank": 2,
+                        "product_code": "FG-MZ-STM-CFS030",
+                        "product_name": "MizuMi CICAFuse Calming Mask Soothing",
+                        "highlight": "มาส์กเสือสูตรซูททิง เติมความชุ่มชื้น ลดระคายเคือง"
+                    },
+                    {
+                        "rank": 3,
+                        "product_code": "FG-MZ-STM-CFW030",
+                        "product_name": "MizuMi CICAFuse Calming Mask White",
+                        "highlight": "มาส์กเสือสูตรไวท์ ลดจุดด่างดำ ผิวกระจ่างใส"
+                    },
+                    {
+                        "rank": 4,
+                        "product_code": "FG-MZ-STM-CFB031",
+                        "product_name": "MizuMi CICAFuse Calming Mask Instant Bright",
+                        "highlight": "มาส์กเสือสูตรอินสแตนท์ไบรท์ ผิวใสทันทีหลังใช้"
+                    },
+                    {
+                        "rank": 5,
+                        "product_code": "FG-MZ-STM-PBI010",
+                        "product_name": "MizuMi PDRN Platinum Black Mask Instant Bright",
+                        "highlight": "มาส์กดำ PDRN สูตรหน้าใส อัพผิวไบรท์"
+                    },
+                    {
+                        "rank": 6,
+                        "product_code": "FG-MZ-STM-PBG010",
+                        "product_name": "MizuMi PDRN Platinum Black Mask Instant Glow",
+                        "highlight": "มาส์กดำ PDRN สูตรหน้าเงาฉ่ำวาว เสมือนฉีดรีจูรัน"
+                    },
+                    {
+                        "rank": 7,
+                        "product_code": "FG-MZ-STM-PBM010",
+                        "product_name": "MizuMi PDRN Platinum Black Mask Instant Moist",
+                        "highlight": "มาส์กดำ PDRN สูตรหน้าอิ่มน้ำ ล็อคความชุ่มชื้น"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -376,8 +376,8 @@
       "spf": 50,
       "pa": "++++",
       "ppd": {
-        "in_vitro_uva_pf": ">27.41",
-        "in_vivo_ppd": ">22.5"
+        "in_vitro": "27.41",
+        "in_vivo": "22.5"
       },
       "water_resistant": false,
       "sweat_resistant": "light",
@@ -388,6 +388,7 @@
     },
     "oil_acne_control": {
       "oil_control": true,
+      "oil_control_hours": 16,
       "finish": "matte",
       "non_comedogenic": true,
       "bha_percent": 0.05
@@ -487,7 +488,123 @@
         "Sodium Succinate"
       ]
     },
-    "information_context": "กันแดดสูตรแมตต์คุมมัน เหมาะสำหรับผิวผสมถึงผิวมันและผิวเป็นสิว ไม่โทนอัพผิว ไม่กันน้ำ แต่กันเหงื่อซึมๆ ได้ สูตรนี้ไม่มี Avobenzone จึงไม่ทำให้เสื้อเหลือง มี BHA 0.05% ช่วยลดการเกิดสิวใหม่ อาจมีอาการยิบๆ เล็กน้อยในบางคนซึ่งมักหายได้เอง"
+    "information_context": "กันแดดสูตรแมตต์คุมมัน16ชั่วโมง เหมาะสำหรับผิวผสมถึงผิวมันและผิวเป็นสิว ไม่โทนอัพผิว ไม่กันน้ำ แต่กันเหงื่อซึมๆ ได้ สูตรนี้ไม่มี Avobenzone จึงไม่ทำให้เสื้อเหลือง มี BHA 0.05% ช่วยลดการเกิดสิวใหม่ อาจมีอาการยิบๆ เล็กน้อยในบางคนซึ่งมักหายได้เอง"
+  },
+  "FG-MZ-SUN-ALS040": {
+    "product_code": "FG-MZ-SUN-ALS040",
+    "canonical_name": "MizuMi UV Aqua Lock Serum SPF50+ PA++++",
+    "variant": "Aqua Lock",
+    "category": "กันแดด",
+    "image_url": "/static/products/mizumi_uv_aqua_lock_serum.jpg",
+    "facts": {
+      "sunscreen_type": "Hybrid",
+      "spf": 50,
+      "pa": "++++",
+      "ppd": {
+        "in_vitro": "39.25",
+        "in_vivo": {
+          "value": "16.1",
+          "tested_in": "Australia"
+        }
+     },
+      "water_resistant": null,
+      "sweat_resistant": null,
+      "oil_control": "low",
+      "can_apply_immediately": false,
+      "blue_light_protection": true,
+      "infrared_protection": true,
+      "pollution_protection": true
+    },
+    "suitability": {
+      "skin_types": [
+        "All skin types",
+        "Dry",
+        "Dehydrated",
+        "Sensitive"
+      ],
+      "age_min_months": null,
+      "pregnancy_safe": true,
+      "vegan": null,
+      "fragrance_free": true,
+      "alcohol_free": true,
+      "silicone_free": null
+    },
+    "experience": {
+      "texture": "Serum",
+      "feel": "Lightweight, hydrating, non-sticky",
+      "white_cast": false,
+      "finish": "Fresh, dewy"
+    },
+    "usage": {
+      "sun_protection_hours": "3-4",
+      "recommended_reapply_hours": 2,
+      "after_laser": null,
+      "reapply_method": "apply evenly, reapply every 2 hours"
+    },
+    "ingredients": {
+      "list": [
+        "AQUA",
+        "DIBUTYL ADIPATE",
+        "DIETHYLAMINO HYDROXYBENZOYL HEXYL BENZOATE",
+        "ETHYLHEXYL SALICYLATE",
+        "PHENYLBENZIMIDAZOLE SULFONIC ACID",
+        "DIETHYLHEXYL BUTAMIDO TRIAZONE",
+        "BUTYLENE GLYCOL",
+        "TROMETHAMINE",
+        "METHYLENE BIS-BENZOTRIAZOLYL TETRAMETHYLBUTYLPHENOL (NANO)",
+        "BIS-ETHYLHEXYLOXYPHENOL METHOXYPHENYL TRIAZINE",
+        "NEOPENTYL GLYCOL DIHEPTANOATE",
+        "CETEARYL ALCOHOL",
+        "POTASSIUM CETYL PHOSPHATE",
+        "HYDROXYACETOPHENONE",
+        "TITANIUM DIOXIDE",
+        "ETHYLHEXYLGLYCERIN",
+        "PROPANEDIOL",
+        "GLYCERYL STEARATE",
+        "PEG-100 STEARATE",
+        "SILICA",
+        "SODIUM HYDROXIDE",
+        "ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER",
+        "HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER",
+        "GLYCERIN",
+        "CARBOMER",
+        "DECYL GLUCOSIDE",
+        "DISODIUM EDTA",
+        "DEXTRIN PALMITATE",
+        "TOCOPHERYL ACETATE",
+        "BUDDLEJA OFFICINALIS FLOWER EXTRACT",
+        "SODIUM HYALURONATE",
+        "POLYSORBATE 60",
+        "SORBITAN ISOSTEARATE",
+        "CENTELLA ASIATICA EXTRACT",
+        "POLYACRYLATE CROSSPOLYMER-6",
+        "PROPYLENE GLYCOL",
+        "XANTHAN GUM",
+        "1,2-HEXANEDIOL",
+        "POTASSIUM SORBATE",
+        "SODIUM BENZOATE",
+        "BIOSACCHARIDE GUM-4",
+        "DEXTRIN ISOSTEARATE",
+        "CETEARETH-25",
+        "TOCOPHEROL",
+        "CETYL ALCOHOL",
+        "PHENOXYETHANOL",
+        "BEHENIC ACID",
+        "CERAMIDE NP",
+        "CHOLESTEROL",
+        "CERAMIDE NS",
+        "CERAMIDE AP",
+        "CERAMIDE EOP",
+        "CERAMIDE EOS",
+        "CAPROOYL PHYTOSPHINGOSINE",
+        "CAPROOYL SPHINGOSINE",
+        "ASCORBYL PALMITATE",
+        "CITRIC ACID",
+        "GLYCERYL OLEATE",
+        "LECITHIN"
+      ]
+    },
+    "information_context": "กันแดดเนื้อเซรั่มบางเบา ให้ความชุ่มชื้นสูงด้วย Aqua Gel Lock Technology ช่วยล็อกความชุ่มชื้นและลดการสูญเสียน้ำในผิว พร้อมปกป้องผิวจาก UVA/UVB, Blue Light, IR และมลภาวะ เหมาะสำหรับใช้ทุกวัน โดยเฉพาะผิวขาดน้ำ"
   },
   "FG-MZ-SUN-MWS010": {
     "product_code": "FG-MZ-SUN-MWS010",
@@ -2441,6 +2558,126 @@
     },
     "information_context": "คลีนซิ่งบาล์มสูตรวอร์ม ให้ความรู้สึกอุ่นขณะนวดผิว ด้วย Zeolite ซึ่งเมื่อสัมผัสน้ำจะช่วยให้ผิวรู้สึกผ่อนคลายและช่วยดีท็อกซ์ผิว เนื้อบาล์มละลายเป็นออยล์และเปลี่ยนเป็นน้ำนมเมื่อผสมน้ำ สามารถทำความสะอาดกันแดดและเครื่องสำอางกันน้ำได้อย่างล้ำลึก สูตร 12-FREE เหมาะสำหรับการทำความสะอาดผิวพร้อมการดูแลผิวแบบสปา แนะนำให้ปิดตาให้สนิทขณะล้างและทำ Double Cleansing"
   },
+  "FG-MZ-CLS-BCC060": {
+    "product_code": "FG-MZ-CLS-BCC060",
+    "canonical_name": "MizuMi 3-In-1 Melt Away Cleansing Balm Coconut",
+    "image_url": "/static/products/mizumi_3-in-1_melt_away_cleansing_balm_coconut.jpg",
+    "variant": "Coconut",
+    "category": "คลีนซิ่งบาล์ม",
+    "facts": {
+      "cleansing_type": "cleansing_balm",
+      "makeup_removal": true,
+      "waterproof_makeup_removal": true,
+      "emulsifies_with_water": true,
+      "non_greasy_finish": true,
+      "contains_fragrance": true,
+      "natural_scent_from_ingredients": false,
+      "contains_alcohol": false,
+      "contains_paraben": false,
+      "twelve_free_formula": null
+    },
+    "skin_benefits": {
+      "deep_cleansing": true,
+      "nourishing": true,
+      "antioxidant": true,
+      "helps_reduce_clogging": true,
+      "barrier_support": true,
+      "moisturizing": true
+    },
+    "key_ingredients": {
+      "coconut_oil": true,
+      "centella_asiatica": true,
+      "panthenol": true,
+      "squalane": true,
+      "vitamin_e": true,
+      "botanical_oils_complex": true,
+      "amino_acids_complex": true
+    },
+    "suitability": {
+      "use_area": "face",
+      "skin_types": [
+        "Normal",
+        "Dry",
+        "Combination",
+        "Sensitive"
+      ],
+      "age_min_years": 12,
+      "pregnancy_safe": true,
+      "lash_extension_safe": null
+    },
+    "experience": {
+      "texture": "Solid balm that melts into oil",
+      "emulsion": "Transforms into milky texture when mixed with water",
+      "scent": "Coconut fragrance",
+      "after_feel": "Soft, moisturized, non-tight"
+    },
+    "usage": {
+      "recommended_amount": "1 scoop per use",
+      "use_on_dry_skin": true,
+      "double_cleansing_recommended": true,
+      "contact_lens": "remove_before_use"
+    },
+    "warnings": {
+      "eye_irritation": "formulated to minimize irritation",
+      "eye_film": "does_not_leave_film",
+      "mascara": "can_remove_waterproof_but_avoid_direct_eye_contact"
+    },
+    "ingredients": {
+      "list": [
+        "Ethylhexyl Palmitate",
+        "PEG-20 Glyceryl Triisostearate",
+        "Caprylic/Capric Triglyceride",
+        "Cocos Nucifera (Coconut) Oil",
+        "Diisopropyl Sebacate",
+        "Synthetic Wax",
+        "Dicaprylyl Carbonate",
+        "Polyglyceryl-2 Triisostearate",
+        "Brassica Campestris (Rapeseed) Seed Oil",
+        "Corylus Avellana (Hazelnut) Seed Oil",
+        "Camellia Japonica Seed Oil",
+        "Butyrospermum Parkii (Shea) Oil",
+        "Centella Asiatica Extract",
+        "Limnanthes Alba (Meadowfoam) Seed Oil",
+        "Macadamia Ternifolia Seed Oil",
+        "Oryza Sativa (Rice) Germ Oil",
+        "Oenothera Biennis (Evening Primrose) Oil",
+        "Panthenol",
+        "PCA",
+        "Persea Gratissima (Avocado) Oil",
+        "Prunus Amygdalus Dulcis (Sweet Almond) Oil",
+        "Saxifraga Sarmentosa Extract",
+        "Rosa Canina Fruit Oil",
+        "Simmondsia Chinensis (Jojoba) Seed Oil",
+        "Sodium PCA",
+        "Squalane",
+        "Tocopherol",
+        "Vitis Vinifera (Grape) Seed Oil",
+        "Sucrose Tetrastearate Triacetate",
+        "Threonine",
+        "Valine",
+        "Serine",
+        "Sodium Lactate",
+        "Polyglyceryl-2 Tetraisostearate",
+        "PEG-5 Glyceryl Triisostearate",
+        "PEG-7 Caprylic/Capric Glycerides",
+        "Phenoxyethanol",
+        "Phenylalanine",
+        "Proline",
+        "Butylene Glycol",
+        "BHT",
+        "Glycine",
+        "Histidine",
+        "Isoleucine",
+        "Arginine",
+        "Alanine",
+        "Aspartic Acid",
+        "Beeswax",
+        "Water",
+        "Fragrance"
+      ]
+    },
+    "information_context": "คลีนซิ่งบาล์มมะพร้าวสูตร 3-IN-1 ช่วยละลายเมคอัพ กันแดด และสิ่งสกปรกได้อย่างล้ำลึก พร้อมบำรุงผิวด้วยน้ำมันธรรมชาติและกรดอะมิโน 18 ชนิด ช่วยเสริมเกราะผิวและเติมความชุ่มชื้น ผิวสะอาดนุ่ม ไม่แห้งตึง และไม่ทิ้งคราบมันหรือฟิล์มที่ดวงตา"
+  },
   "FG-MZ-CLS-EXM": {
     "product_code": "FG-MZ-CLS-EXM",
     "canonical_name": "MizuMi Extra Mild Facial Cleanser",
@@ -2524,98 +2761,6 @@
       ]
     },
     "information_context": "เจลล้างหน้าสูตรอ่อนโยนพิเศษ เหมาะสำหรับผิวบอบบางและแพ้ง่าย สามารถใช้ร่วมกับยารักษาสิวได้ ค่า pH ใกล้เคียงผิว ช่วยทำความสะอาดโดยไม่ทำให้ผิวแห้งตึง ปราศจากสารที่อาจก่อการระคายเคือง สามารถใช้ได้ตั้งแต่อายุ 6 ปีขึ้นไป และใช้ได้ทั้งผิวหน้าและผิวกาย"
-  },
-  "FG-MZ-CLS-GAW": {
-    "product_code": "FG-MZ-CLS-GAW",
-    "canonical_name": "MizuMi Gentle Acne Wash",
-    "image_url": "/static/products/mizumi_gentle_acne_wash.png",
-    "variant": "Green Bottle",
-    "category": "คลีนเซอร์ล้างหน้า",
-    "facts": {
-      "cleanser_type": "facial_cleanser_gel",
-      "ph_range": "5.0-5.5",
-      "acne_care": true,
-      "antibacterial_acne": true,
-      "contains_bha": true,
-      "bha_percent": 0.5,
-      "contains_fragrance": false,
-      "contains_alcohol": false,
-      "contains_paraben": false,
-      "contains_silicone": false,
-      "contains_mineral_oil": false
-    },
-    "skin_benefits": {
-      "acne_control": true,
-      "oil_control": true,
-      "gentle_cleansing": true
-    },
-    "key_ingredients": {
-      "salicylic_acid_bha": true,
-      "glycerin": true,
-      "amino_acid_surfactants": true,
-      "mushroom_extract": true
-    },
-    "suitability": {
-      "use_area": [
-        "face",
-        "body"
-      ],
-      "skin_types": [
-        "Oily",
-        "Combination",
-        "Acne-prone",
-        "Sensitive"
-      ],
-      "age_min_years": 10,
-      "pregnancy_safe": true
-    },
-    "experience": {
-      "texture": "Gentle cleansing gel",
-      "finish": "Clean, refreshed, not tight"
-    },
-    "usage": {
-      "can_use_body": true,
-      "recommended_cleanse_time_seconds": 60,
-      "tingling_sensation_possible": true
-    },
-    "size_options": [
-      "45 ml",
-      "200 ml"
-    ],
-    "warnings": {
-      "tingling": "mild_tingling_may_occur_due_to_bha",
-      "stop_use_if_irritation": true
-    },
-    "ingredients": {
-      "list": [
-        "Aqua (Water)",
-        "Glycerin",
-        "Coco-Glucoside",
-        "Sodium Lauroyl Sarcosinate",
-        "Sodium Benzoate",
-        "Phenoxyethanol",
-        "Cocamidopropyl Betaine",
-        "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-        "Sodium Cocoyl Apple Amino Acids",
-        "Coco-Betaine",
-        "Disodium EDTA",
-        "Sodium Chloride",
-        "Sodium Cocoyl Isethionate",
-        "Ethylhexylglycerin",
-        "Hexylene Glycol",
-        "Sodium Methyl Cocoyl Taurate",
-        "Polyquaternium-7",
-        "Sasa Kurilensis Water",
-        "Salicylic Acid",
-        "Tetrasodium EDTA",
-        "Tetrasodium Glutamate Diacetate",
-        "Sodium Hydroxide",
-        "Corthellus Shiitake (Mushroom) Extract",
-        "Citric Acid",
-        "Potassium Sorbate"
-      ]
-    },
-    "information_context": "เจลล้างหน้าสำหรับผิวมันและเป็นสิวง่าย ช่วยยับยั้งแบคทีเรียสิวและลดโอกาสการเกิดสิวใหม่ มี BHA 0.5% ช่วยดูแลปัญหาสิวอย่างอ่อนโยน ค่า pH เหมาะสมกับผิว สามารถใช้ได้ทั้งผิวหน้าและผิวกาย หากระหว่างใช้มีอาการยิบๆ เล็กน้อยอาจเกิดจากกรดอ่อนๆ ซึ่งจะหายไปหลังล้าง แต่หากมีอาการระคายเคืองต่อเนื่องควรหยุดใช้"
   },
   "FG-MZ-CLS-EZA100": {
     "product_code": "FG-MZ-CLS-EZA100",
@@ -5263,7 +5408,7 @@
     "product_code": "FG-MZ-LIP-LPM",
     "canonical_name": "MizuMi Skincare UV Lip Glassy Mask",
     "thai_name": "มิซึมิ สกินแคร์ ยูวี ลิป กลาสซี่ มาส์ก",
-     "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_mask.jpg",
+    "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_mask.jpg",
     "short_name": "ลิปกลาสซี่มาส์ก",
     "category": "lip_care",
     "variants": [
@@ -6107,450 +6252,6 @@
       },
       "information_context": "มาส์กสูตรอินสแตนท์ ไบรท์ ช่วยให้ผิวดูกระจ่างใสทันทีหลังใช้ เหมาะสำหรับมาส์กก่อนแต่งหน้า พร้อมปลอบประโลมผิวและเติมความชุ่มชื้น ให้ผิวดูสดใส สุขภาพดี"
     },
-    "FG-MZ-STM-AIP130": {
-      "product_code": "FG-MZ-STM-AIP130",
-      "canonical_name": "MizuMi Acne Skin Fit Invisible Pad",
-      "image_url": "/static/products/mizumi_acne_skin_fit_invisible_pad.jpg",
-      "thai_name": "แอคเน่อินวิซิเบิล แพด",
-      "short_name": "โทนเนอร์แพดสีเขียว",
-      "category": "toner_pad",
-      "facts": {
-        "pad_type": "invisible_pad",
-        "texture": "soft_thin_lightweight",
-        "cooling_effect": true,
-        "essence_absorption_multiplier": 9,
-        "hydration_multiplier": 2,
-        "pad_material": "natural_fiber",
-        "tearable": false,
-        "pads_per_jar": 80,
-        "volume_ml": 130,
-        "max_patch_duration_minutes": 20
-      },
-      "formulas": {
-        "available_variants": [
-          {
-            "variant": "Acne",
-            "key_ingredients": {
-              "Salicylic_Acid_percent": 1,
-              "Niacinamide_percent": 2
-            },
-            "main_benefits": [
-              "reduce_clogging",
-              "acne_care"
-            ]
-          },
-          {
-            "variant": "Bright",
-            "key_ingredients": {
-              "PHA_percent": 3
-            },
-            "main_benefits": [
-              "brightening",
-              "reduce_dark_spots"
-            ]
-          },
-          {
-            "variant": "Soothing",
-            "main_benefits": [
-              "calming",
-              "hydration"
-            ]
-          }
-        ]
-      },
-      "skin_benefits": {
-        "hydration": true,
-        "cooling": true,
-        "calming": true,
-        "daily_care": true
-      },
-      "suitability": {
-        "skin_types": [
-          "Oily",
-          "Acne",
-          "Sensitive"
-        ],
-        "pregnancy_safe": true,
-        "recommended_pregnancy_variant": "Soothing",
-        "age_min_years": 12
-      },
-      "usage": {
-        "routine_step": "toner",
-        "how_to_use": "เช็ดทั่วใบหน้าหลังล้างหน้า หรือแปะเฉพาะจุด เช่น หน้าผาก แก้ม คาง",
-        "can_replace_mask": true,
-        "mask_use_case": "spot_care_or_quick_soothing",
-        "portable": false,
-        "refrigerator_storage": false
-      },
-      "free_from": [
-        "Fragrance",
-        "Mineral Oil",
-        "Paraben",
-        "Alcohol",
-        "SLS",
-        "SLES",
-        "Synthetic Color",
-        "Sulfate",
-        "Microplastics",
-        "Microbeads"
-      ],
-      "upsell": {
-        "recommended_pair": [
-          "FG-MZ-FCC-NIA",
-          "FG-MZ-FCC-TXB",
-          "FG-MZ-FCC-CIC",
-          "FG-MZ-FCC-DRY",
-          "FG-MZ-FCC-SKB045",
-          "FG-MZ-ACN-HYA",
-          "FG-MZ-FCC-RTN030"
-        ]
-      },
-      "ingredients": {
-        "list": [
-          "Water",
-          "Butylene Glycol",
-          "Glycerin",
-          "Betaine",
-          "Niacinamide",
-          "Panthenol",
-          "Dipropylene Glycol",
-          "Hydroxyacetophenone",
-          "Caprylyl Glycol",
-          "PPG-6-Decyltetradeceth-30",
-          "Polyacrylate Crosspolymer-6",
-          "Trisodium Ethylenediamine Disuccinate",
-          "Aloe Barbadensis Leaf Juice Powder",
-          "Citric Acid",
-          "Artemisia Princeps Leaf Extract",
-          "Acacia Senegal Gum",
-          "Xanthan Gum",
-          "Lavandula Angustifolia (Lavender) Oil",
-          "Pelargonium Graveolens Flower Oil",
-          "Centella Asiatica Leaf Extract",
-          "Dipotassium Glycyrrhizate",
-          "1,2-Hexanediol",
-          "Centella Asiatica Extract",
-          "Biosaccharide Gum-2",
-          "Phenoxyethanol",
-          "Chondrus Crispus (Carrageenan) Extract",
-          "Glucose",
-          "Hyaluronic Acid",
-          "Hydrolyzed Hyaluronic Acid",
-          "Hydrolyzed Sodium Hyaluronate",
-          "Hydroxypropyltrimonium Hyaluronate",
-          "Potassium Hyaluronate",
-          "Sodium Acetylated Hyaluronate",
-          "Sodium Hyaluronate",
-          "Sodium Hyaluronate Crosspolymer"
-        ]
-      },
-      "information_context": " toner pad Acne  สูตรสำหรับผิวมัน เป็นสิว ลดการอุดตัน สาเหตุหนึ่งของการเกิดสิวค่ะโทนเนอร์แพดล่องหน สัมผัสนุ่ม บางเบา แผ่นแนบสนิทเนียนไปกับผิว ชุ่มชื้น ฉ่ำน้ำ เสมือนการใช้แผ่นมาส์กค่ะ"
-    },
-    "FG-MZ-STM-BIP130": {
-      "product_code": "FG-MZ-STM-BIP130",
-      "canonical_name": "MizuMi Bright Skin Fit Invisible Pad",
-      "image_url": "/static/products/mizumi_bright_skin_fit_invisible_pad.jpg",
-      "thai_name": "ไบรท์อินวิซิเบิล แพด",
-      "short_name": "โทนเนอร์แพดสีชมพู",
-      "category": "toner_pad",
-      "facts": {
-        "pad_type": "invisible_pad",
-        "texture": "soft_thin_lightweight",
-        "cooling_effect": true,
-        "essence_absorption_multiplier": 9,
-        "hydration_multiplier": 2,
-        "pad_material": "natural_fiber",
-        "tearable": false,
-        "pads_per_jar": 80,
-        "volume_ml": 130,
-        "max_patch_duration_minutes": 20
-      },
-      "formulas": {
-        "available_variants": [
-          {
-            "variant": "Acne",
-            "actives": {
-              "salicylic_acid_percent": 1,
-              "niacinamide_percent": 2
-            }
-          },
-          {
-            "variant": "Bright",
-            "actives": {
-              "pha_percent": 3,
-              "niacinamide_percent": null
-            }
-          },
-          {
-            "variant": "Soothing",
-            "actives": {}
-          }
-        ]
-      },
-      "suitability": {
-        "skin_types": [
-          "Dull",
-          "Normal",
-          "Combination",
-          "Sensitive"
-        ],
-        "pregnancy_safe": true,
-        "recommended_pregnancy_variant": "Soothing",
-        "age_min_years": 12
-      },
-      "usage": {
-        "routine_step": "toner",
-        "how_to_use": "wipe_or_patch",
-        "can_replace_mask": true,
-        "mask_use_case": "spot_or_quick_care",
-        "portable": false,
-        "refrigerator_storage": false
-      },
-      "free_from": [
-        "Fragrance",
-        "Mineral Oil",
-        "Paraben",
-        "Alcohol",
-        "SLS",
-        "SLES",
-        "Synthetic Color",
-        "Sulfate",
-        "Microplastics",
-        "Microbeads"
-      ],
-      "upsell": {
-        "recommended_pair": [
-          "FG-MZ-FCC-NIA",
-          "FG-MZ-FCC-TXB",
-          "FG-MZ-FCC-CIC",
-          "FG-MZ-FCC-DRY",
-          "FG-MZ-FCC-SKB045",
-          "FG-MZ-ACN-HYA",
-          "FG-MZ-FCC-RTN030"
-        ]
-      },
-      "ingredients": {
-        "list": [
-          "Water",
-          "Propylene Glycol",
-          "Niacinamide",
-          "Glycerin",
-          "Gluconolactone",
-          "Panthenol",
-          "Dipropylene Glycol",
-          "Hydroxyacetophenone",
-          "PPG-6-Decyltetradeceth-30",
-          "Sodium Citrate",
-          "Sodium Hydroxide",
-          "Caprylyl Glycol",
-          "Lactobacillus Ferment",
-          "Butylene Glycol",
-          "Polyacrylate Crosspolymer-6",
-          "Prunus Persica (Peach) Juice",
-          "Trisodium Ethylenediamine Disuccinate",
-          "Citric Acid",
-          "Aloe Barbadensis Leaf Juice Powder",
-          "Acacia Senegal Gum",
-          "Xanthan Gum",
-          "Prunus Amygdalus Dulcis (Sweet Almond) Oil",
-          "Citrus Tangerina (Tangerine) Peel Oil",
-          "Pelargonium Graveolens Oil",
-          "Dipotassium Glycyrrhizate"
-        ]
-      },
-      "information_context": " Toner pad Bright สำหรับผิวหมองคล้ำ ช่วยลดจุดด่างดำ ให้ผิวดูสม่ำเสมอค่ะ  โทนเนอร์แพดล่องหน สัมผัสนุ่ม บางเบา แผ่นแนบสนิทเนียนไปกับผิว ชุ่มชื้น ฉ่ำน้ำ เสมือนการใช้แผ่นมาส์กค่ะ"
-    },
-    "FG-MZ-STM-SIP130": {
-      "product_code": "FG-MZ-STM-SIP130",
-      "canonical_name": "MizuMi Soothing Skin Fit Invisible Pad",
-      "image_url": "/static/products/mizumi_soothing_skin_fit_invisible_pad.jpg",
-      "thai_name": "ซูตติ้งอินวิซิเบิล แพด",
-      "short_name": "โทนเนอร์แพดสีฟ้า",
-      "category": "toner_pad",
-      "facts": {
-        "pad_type": "invisible_pad",
-        "texture": "soft_thin_lightweight",
-        "cooling_effect": true,
-        "essence_absorption_multiplier": 9,
-        "hydration_multiplier": 2,
-        "pad_material": "natural_fiber",
-        "tearable": false,
-        "pads_per_jar": 80,
-        "volume_ml": 130,
-        "max_patch_duration_minutes": 20
-      },
-      "formulas": {
-        "available_variants": [
-          {
-            "variant": "Acne",
-            "actives": {
-              "salicylic_acid_percent": 1,
-              "niacinamide_percent": 2
-            }
-          },
-          {
-            "variant": "Bright",
-            "actives": {
-              "pha_percent": 3
-            }
-          },
-          {
-            "variant": "Soothing",
-            "actives": {}
-          }
-        ]
-      },
-      "suitability": {
-        "skin_types": [
-          "Sensitive",
-          "Dry",
-          "Normal",
-          "Combination"
-        ],
-        "pregnancy_safe": true,
-        "recommended_pregnancy_variant": "Soothing",
-        "age_min_years": 12
-      },
-      "usage": {
-        "routine_step": "toner",
-        "how_to_use": "wipe_or_patch",
-        "can_replace_mask": true,
-        "mask_use_case": "spot_or_quick_care",
-        "portable": false,
-        "refrigerator_storage": false
-      },
-      "free_from": [
-        "Fragrance",
-        "Mineral Oil",
-        "Paraben",
-        "Alcohol",
-        "SLS",
-        "SLES",
-        "Synthetic Color",
-        "Sulfate",
-        "Microplastics",
-        "Microbeads"
-      ],
-      "upsell": {
-        "recommended_pair": [
-          "FG-MZ-FCC-CIC",
-          "FG-MZ-FCC-DRY",
-          "FG-MZ-FCC-SKB045",
-          "FG-MZ-ACN-HYA",
-          "FG-MZ-FCC-NIA"
-        ]
-      },
-      "ingredients": {
-        "list": [
-          "Water",
-          "Propylene Glycol",
-          "Glycerin",
-          "Niacinamide",
-          "Ethoxydiglycol",
-          "Panthenol",
-          "Salicylic Acid",
-          "Dipropylene Glycol",
-          "Propanediol",
-          "Hydroxyacetophenone",
-          "Sodium Hydroxide",
-          "Sodium Citrate",
-          "Caprylyl Glycol",
-          "PPG-6-Decyltetradeceth-30",
-          "Hamamelis Virginiana (Witch Hazel) Extract",
-          "Polyacrylate Crosspolymer-6",
-          "Trisodium Ethylenediamine Disuccinate",
-          "Citric Acid",
-          "Aloe Barbadensis Leaf Juice Powder",
-          "Acacia Senegal Gum",
-          "Xanthan Gum",
-          "Melaleuca Alternifolia (Tea Tree) Leaf Oil",
-          "Dipotassium Glycyrrhizate",
-          "Centella Asiatica Leaf Extract"
-        ]
-      },
-      "information_context": " Toner pad Soothing ช่วยปลอบประโลมผิวระคายเคือง เติมความชุ่มชื้น ให้ผิวดูสุขภาพดีค่ะ โทนเนอร์แพดล่องหน สัมผัสนุ่ม บางเบา แผ่นแนบสนิทเนียนไปกับผิว ชุ่มชื้น ฉ่ำน้ำ เสมือนการใช้แผ่นมาส์กค่ะ"
-    },
-    "FG-MZ-STM-BPC170": {
-      "product_code": "FG-MZ-STM-BPC170",
-      "canonical_name": "MizuMi Black Nova Pad Pore Clarifying",
-      "image_url": "/static/products/mizumi_black_nova_pad_pore_clarifying.jpg",
-      "thai_name": "โนวาแพดสีเขียว",
-      "short_name": "โทนเนอร์แพดสีดำ กระปุกเขียว",
-      "category": "toner_pad",
-      "facts": {
-        "pad_type": "black_nova_pad",
-        "pad_color": "black",
-        "key_material": "charcoal",
-        "texture": "elastic_flexible_firm",
-        "cooling_effect": false,
-        "skin_temperature_reduction_celsius": 6.7,
-        "essence_absorption_multiplier": null,
-        "hydration_multiplier": 2,
-        "pads_per_jar": 80,
-        "volume_ml": 170,
-        "max_patch_duration_minutes": 15
-      },
-      "formulas": {
-        "available_variants": [
-          {
-            "variant": "Pore Clarifying",
-            "focus": [
-              "clogged_pores",
-              "excess_sebum",
-              "acne_care"
-            ],
-            "actives": {
-              "salicylic_acid_percent": null
-            }
-          },
-          {
-            "variant": "Pore Balancing",
-            "focus": [
-              "hydration_balance",
-              "sensitive_skin"
-            ],
-            "actives": {}
-          },
-          {
-            "variant": "Pore Tightening",
-            "focus": [
-              "pore_tightening"
-            ],
-            "actives": {}
-          }
-        ]
-      },
-      "suitability": {
-        "skin_types": [
-          "Oily",
-          "Combination",
-          "Acne",
-          "Dry"
-        ],
-        "sensitive_skin_safe": true,
-        "recommended_sensitive_variant": "Pore Balancing",
-        "pregnancy_safe": true,
-        "age_min_years": 12
-      },
-      "usage": {
-        "routine_step": "toner",
-        "how_to_use": "wipe_or_patch",
-        "frequency": "morning_and_evening",
-        "can_replace_mask": true,
-        "mask_use_case": "pore_care_or_spot_care"
-      },
-      "free_from": [
-        "Fragrance"
-      ],
-      "upsell": {
-        "recommended_pair": [
-          "FG-MZ-ACN-HYA",
-          "FG-MZ-FCC-CIC",
-          "FG-MZ-FCC-NIA",
-          "FG-MZ-FCC-SKB045"
-        ]
-      }
-    },
     "ingredients": {
       "list": [
         "Aqua",
@@ -6856,7 +6557,7 @@
     "product_code": "FG-MZ-CHK-UVB",
     "canonical_name": "MizuMi UV Blush Stick",
     "thai_name": "มิซึมิ ยูวี บลัช สติ๊ก",
-     "image_url": "/static/products/mizumi_uv_blush_stick.jpg",
+    "image_url": "/static/products/mizumi_uv_blush_stick.jpg",
     "short_name": "บลัชสติ๊กกันแดด",
     "category": "makeup_blush",
     "variants": [
@@ -7118,19 +6819,19 @@
       "application_area": "face"
     },
     "usage_method": {
-  "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
-  "steps": [
-    "Apply the cream evenly over the face.",
-    "Place the grey side of the mask sheet onto the face (black side facing outward).",
-    "Leave the mask on for 20 to 40 minutes.",
-    "Remove the mask.",
-    "Gently massage the remaining serum into the skin."
-  ],
-  "mask_duration_minutes": "20-40",
-  "remove_after_use": true,
-  "massage_remaining_serum": true,
-  "rinse_required": false
-},
+      "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
+      "steps": [
+        "Apply the cream evenly over the face.",
+        "Place the grey side of the mask sheet onto the face (black side facing outward).",
+        "Leave the mask on for 20 to 40 minutes.",
+        "Remove the mask.",
+        "Gently massage the remaining serum into the skin."
+      ],
+      "mask_duration_minutes": "20-40",
+      "remove_after_use": true,
+      "massage_remaining_serum": true,
+      "rinse_required": false
+    },
     "storage": {
       "refrigerator_allowed": true,
       "freezer_allowed": false,
@@ -7295,19 +6996,19 @@
       "application_area": "face"
     },
     "usage_method": {
-  "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
-  "steps": [
-    "Apply the cream evenly over the face.",
-    "Place the grey side of the mask sheet onto the face (black side facing outward).",
-    "Leave the mask on for 20 to 40 minutes.",
-    "Remove the mask.",
-    "Gently massage the remaining serum into the skin."
-  ],
-   "mask_duration_minutes": "20-40",
-  "remove_after_use": true,
-  "massage_remaining_serum": true,
-  "rinse_required": false
-},
+      "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
+      "steps": [
+        "Apply the cream evenly over the face.",
+        "Place the grey side of the mask sheet onto the face (black side facing outward).",
+        "Leave the mask on for 20 to 40 minutes.",
+        "Remove the mask.",
+        "Gently massage the remaining serum into the skin."
+      ],
+      "mask_duration_minutes": "20-40",
+      "remove_after_use": true,
+      "massage_remaining_serum": true,
+      "rinse_required": false
+    },
     "storage": {
       "refrigerator_allowed": true,
       "freezer_allowed": false,
@@ -7474,20 +7175,19 @@
       "application_area": "face"
     },
     "usage_method": {
-  "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
-  "steps": [
-    "Apply the cream evenly over the face.",
-    "Place the grey side of the mask sheet onto the face (black side facing outward).",
-    "Leave the mask on for 20 to 40 minutes.",
-    "Remove the mask.",
-    "Gently massage the remaining serum into the skin."
-  ],
-   "mask_duration_minutes": "20-40",
-  "remove_after_use": true,
-  "massage_remaining_serum": true,
-  "rinse_required": false
-},
- 
+      "instruction_summary": "Apply the cream evenly over the face. Place the grey side of the mask sheet onto the face (black side facing outward). Leave the mask on for 20–40 minutes. Remove the mask and gently massage the remaining serum into the skin. No rinsing required.",
+      "steps": [
+        "Apply the cream evenly over the face.",
+        "Place the grey side of the mask sheet onto the face (black side facing outward).",
+        "Leave the mask on for 20 to 40 minutes.",
+        "Remove the mask.",
+        "Gently massage the remaining serum into the skin."
+      ],
+      "mask_duration_minutes": "20-40",
+      "remove_after_use": true,
+      "massage_remaining_serum": true,
+      "rinse_required": false
+    },
     "storage": {
       "refrigerator_allowed": true,
       "freezer_allowed": false,
@@ -7505,114 +7205,557 @@
       "calming_skin": "Tiger_Mask",
       "deep_repair": "Platinum_Black_Mask"
     },
-  "ingredients": {
-    "cream": {
-      "list": [
-        "Water",
-        "Propylene Glycol",
-        "Ethylhexyl Palmitate",
-        "Butylene Glycol Dicaprylate/Dicaprate",
-        "Cetearyl Alcohol",
-        "Coco-Caprylate/Caprate",
-        "Cetearyl Olivate",
-        "Isononyl Isononanoate",
-        "1,2-Hexanediol",
-        "Sodium DNA",
-        "Dimethicone",
-        "Sorbitan Olivate",
-        "Cetearyl Glucoside",
-        "Tocopheryl Acetate",
-        "Niacinamide",
-        "Betaine",
-        "Ammonium Acryloyldimethyltaurate/VP Copolymer",
-        "Chamomilla Recutita (Matricaria) Flower Water",
-        "Hydroxypropyl Tetrahydropyrantriol",
-        "Ammonium Polyacrylate",
-        "Xanthan Gum",
-        "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-        "Paraffinum Liquidum",
-        "Butylene Glycol",
-        "Laureth-7",
-        "Platinum Powder",
-        "Gentiana Scabra Root Extract",
-        "Stephania Tetrandra Root Extract",
-        "Centella Asiatica Flower/Leaf/Stem Extract",
-        "Aloe Barbadensis Leaf Water",
-        "Mannitol",
-        "Ganoderma Sinense Extract",
-        "Saccharide Isomerate",
-        "Collagen",
-        "Lactobionic Acid",
-        "Phytosteryl Oleate",
-        "Ceramide NP",
-        "Polyglyceryl-10 Stearate",
-        "Sodium Stearoyl Glutamate",
-        "Ethylhexylglycerin",
-        "Hydroxyacetophenone",
-        "Ceramide AP",
-        "Tetraacetylphytosphingosine",
-        "Ceramide NS",
-        "Tocophersolan",
-        "Phytosphingosine",
-        "Carbomer",
-        "Ceramide EOP"
+    "ingredients": {
+      "cream": {
+        "list": [
+          "Water",
+          "Propylene Glycol",
+          "Ethylhexyl Palmitate",
+          "Butylene Glycol Dicaprylate/Dicaprate",
+          "Cetearyl Alcohol",
+          "Coco-Caprylate/Caprate",
+          "Cetearyl Olivate",
+          "Isononyl Isononanoate",
+          "1,2-Hexanediol",
+          "Sodium DNA",
+          "Dimethicone",
+          "Sorbitan Olivate",
+          "Cetearyl Glucoside",
+          "Tocopheryl Acetate",
+          "Niacinamide",
+          "Betaine",
+          "Ammonium Acryloyldimethyltaurate/VP Copolymer",
+          "Chamomilla Recutita (Matricaria) Flower Water",
+          "Hydroxypropyl Tetrahydropyrantriol",
+          "Ammonium Polyacrylate",
+          "Xanthan Gum",
+          "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+          "Paraffinum Liquidum",
+          "Butylene Glycol",
+          "Laureth-7",
+          "Platinum Powder",
+          "Gentiana Scabra Root Extract",
+          "Stephania Tetrandra Root Extract",
+          "Centella Asiatica Flower/Leaf/Stem Extract",
+          "Aloe Barbadensis Leaf Water",
+          "Mannitol",
+          "Ganoderma Sinense Extract",
+          "Saccharide Isomerate",
+          "Collagen",
+          "Lactobionic Acid",
+          "Phytosteryl Oleate",
+          "Ceramide NP",
+          "Polyglyceryl-10 Stearate",
+          "Sodium Stearoyl Glutamate",
+          "Ethylhexylglycerin",
+          "Hydroxyacetophenone",
+          "Ceramide AP",
+          "Tetraacetylphytosphingosine",
+          "Ceramide NS",
+          "Tocophersolan",
+          "Phytosphingosine",
+          "Carbomer",
+          "Ceramide EOP"
+        ]
+      },
+      "mask": {
+        "list": [
+          "Water",
+          "Propylene Glycol",
+          "Nymphaea Caerulea Flower Water",
+          "Rosa Damascena Flower Water",
+          "1,2-Hexanediol",
+          "Hydroxyethylcellulose",
+          "Aloe Barbadensis Leaf Water",
+          "Chlorphenesin",
+          "Saccharide Isomerate",
+          "Dipotassium Glycyrrhizate",
+          "Sodium Hyaluronate",
+          "Phenoxyethanol",
+          "Tetrahydroxypropyl Ethylenediamine",
+          "PEG-12 Dimethicone",
+          "Carbomer",
+          "Piper Methysticum Root Extract",
+          "Lactobionic Acid",
+          "Butylene Glycol",
+          "Panthenol",
+          "Centella Asiatica Flower/Leaf/Stem Extract",
+          "Tremella Fuciformis Polysaccharide",
+          "Madecassoside",
+          "Hydroxyacetophenone",
+          "Asiaticoside",
+          "Centella Asiatica Extract",
+          "Phytosteryl Oleate",
+          "Ceramide NP",
+          "Polygonum Cuspidatum Root Extract",
+          "Scutellaria Baicalensis Root Extract",
+          "Polyglyceryl-10 Stearate",
+          "Polysorbate 80",
+          "Portulaca Oleracea Extract",
+          "Camellia Sinensis Leaf Extract",
+          "Glycyrrhiza Glabra (Licorice) Root Extract",
+          "Ethylhexylglycerin",
+          "Sodium Stearoyl Glutamate",
+          "Sodium DNA",
+          "Rosmarinus Officinalis (Rosemary) Leaf Extract",
+          "Chamomilla Recutita (Matricaria) Flower Extract",
+          "Ceramide AP",
+          "Tetraacetylphytosphingosine",
+          "Ceramide NS",
+          "Xanthan Gum",
+          "Tocophersolan",
+          "Phytosphingosine",
+          "Ceramide EOP"
+        ]
+      },
+      "upsell": {
+        "recommended_pair": []
+      },
+      "information_context": "มาสก์บำรุงผิวสูตรเข้มข้น ช่วยเติมความชุ่มชื้นให้ผิวอย่างล้ำลึก ผิวดูอิ่มน้ำ สุขภาพดี เหมาะสำหรับผิวแห้งหรือผิวที่ต้องการการบำรุงเป็นพิเศษ พร้อมเทคโนโลยีชาร์โคลและแพลทตินัม และ PDRN จากแซลมอน เหมาะสำหรับการบำรุงผิวช่วงกลางคืน"
+    }
+  },
+  "FG-MZ-STM-BPC170": {
+    "product_code": "FG-MZ-STM-BPC170",
+    "canonical_name": "MizuMi Black Nova Pad Pore Clarifying",
+    "image_url": "/static/products/mizumi_black_nova_pad_pore_clarifying.jpg",
+    "thai_name": "โนวาแพดสีเขียว",
+    "short_name": "โทนเนอร์แพดสีดำ กระปุกเขียว",
+    "category": "toner_pad",
+    "facts": {
+      "pad_type": "black_nova_pad",
+      "pad_color": "black",
+      "key_material": "charcoal",
+      "texture": "elastic_flexible_firm",
+      "cooling_effect": false,
+      "skin_temperature_reduction_celsius": 6.7,
+      "essence_absorption_multiplier": null,
+      "hydration_multiplier": 2,
+      "pads_per_jar": 80,
+      "volume_ml": 170,
+      "max_patch_duration_minutes": 15
+    },
+    "formulas": {
+      "available_variants": [
+        {
+          "variant": "Pore Clarifying",
+          "focus": [
+            "clogged_pores",
+            "excess_sebum",
+            "acne_care"
+          ],
+          "actives": {
+            "salicylic_acid_percent": null
+          }
+        },
+        {
+          "variant": "Pore Balancing",
+          "focus": [
+            "hydration_balance",
+            "sensitive_skin"
+          ],
+          "actives": {}
+        },
+        {
+          "variant": "Pore Tightening",
+          "focus": [
+            "pore_tightening"
+          ],
+          "actives": {}
+        }
       ]
     },
-    "mask": {
-      "list": [
-        "Water",
-        "Propylene Glycol",
-        "Nymphaea Caerulea Flower Water",
-        "Rosa Damascena Flower Water",
-        "1,2-Hexanediol",
-        "Hydroxyethylcellulose",
-        "Aloe Barbadensis Leaf Water",
-        "Chlorphenesin",
-        "Saccharide Isomerate",
-        "Dipotassium Glycyrrhizate",
-        "Sodium Hyaluronate",
-        "Phenoxyethanol",
-        "Tetrahydroxypropyl Ethylenediamine",
-        "PEG-12 Dimethicone",
-        "Carbomer",
-        "Piper Methysticum Root Extract",
-        "Lactobionic Acid",
-        "Butylene Glycol",
-        "Panthenol",
-        "Centella Asiatica Flower/Leaf/Stem Extract",
-        "Tremella Fuciformis Polysaccharide",
-        "Madecassoside",
-        "Hydroxyacetophenone",
-        "Asiaticoside",
-        "Centella Asiatica Extract",
-        "Phytosteryl Oleate",
-        "Ceramide NP",
-        "Polygonum Cuspidatum Root Extract",
-        "Scutellaria Baicalensis Root Extract",
-        "Polyglyceryl-10 Stearate",
-        "Polysorbate 80",
-        "Portulaca Oleracea Extract",
-        "Camellia Sinensis Leaf Extract",
-        "Glycyrrhiza Glabra (Licorice) Root Extract",
-        "Ethylhexylglycerin",
-        "Sodium Stearoyl Glutamate",
-        "Sodium DNA",
-        "Rosmarinus Officinalis (Rosemary) Leaf Extract",
-        "Chamomilla Recutita (Matricaria) Flower Extract",
-        "Ceramide AP",
-        "Tetraacetylphytosphingosine",
-        "Ceramide NS",
-        "Xanthan Gum",
-        "Tocophersolan",
-        "Phytosphingosine",
-        "Ceramide EOP"
-      ]
+    "suitability": {
+      "skin_types": [
+        "Oily",
+        "Combination",
+        "Acne",
+        "Dry"
+      ],
+      "sensitive_skin_safe": true,
+      "recommended_sensitive_variant": "Pore Balancing",
+      "pregnancy_safe": true,
+      "age_min_years": 12
     },
-
+    "usage": {
+      "routine_step": "toner",
+      "how_to_use": "wipe_or_patch",
+      "frequency": "morning_and_evening",
+      "can_replace_mask": true,
+      "mask_use_case": "pore_care_or_spot_care"
+    },
+    "free_from": [
+      "Fragrance"
+    ],
     "upsell": {
-      "recommended_pair": []
+      "recommended_pair": [
+        "FG-MZ-ACN-HYA",
+        "FG-MZ-FCC-CIC",
+        "FG-MZ-FCC-NIA",
+        "FG-MZ-FCC-SKB045"
+      ]
+    }
+  },
+  "FG-MZ-STM-AIP130": {
+    "product_code": "FG-MZ-STM-AIP130",
+    "canonical_name": "MizuMi Acne Skin Fit Invisible Pad",
+    "image_url": "/static/products/mizumi_acne_skin_fit_invisible_pad.jpg",
+    "thai_name": "แอคเน่อินวิซิเบิล แพด",
+    "short_name": "โทนเนอร์แพดสีเขียว",
+    "category": "toner_pad",
+    "facts": {
+      "pad_type": "invisible_pad",
+      "texture": "soft_thin_lightweight",
+      "cooling_effect": true,
+      "essence_absorption_multiplier": 9,
+      "hydration_multiplier": 2,
+      "pad_material": "natural_fiber",
+      "tearable": false,
+      "pads_per_jar": 80,
+      "volume_ml": 130,
+      "max_patch_duration_minutes": 20
     },
-    "information_context": "มาสก์บำรุงผิวสูตรเข้มข้น ช่วยเติมความชุ่มชื้นให้ผิวอย่างล้ำลึก ผิวดูอิ่มน้ำ สุขภาพดี เหมาะสำหรับผิวแห้งหรือผิวที่ต้องการการบำรุงเป็นพิเศษ พร้อมเทคโนโลยีชาร์โคลและแพลทตินัม และ PDRN จากแซลมอน เหมาะสำหรับการบำรุงผิวช่วงกลางคืน"
+    "formulas": {
+      "available_variants": [
+        {
+          "variant": "Acne",
+          "key_ingredients": {
+            "Salicylic_Acid_percent": 1,
+            "Niacinamide_percent": 2
+          },
+          "main_benefits": [
+            "reduce_clogging",
+            "acne_care"
+          ]
+        },
+        {
+          "variant": "Bright",
+          "key_ingredients": {
+            "PHA_percent": 3
+          },
+          "main_benefits": [
+            "brightening",
+            "reduce_dark_spots"
+          ]
+        },
+        {
+          "variant": "Soothing",
+          "main_benefits": [
+            "calming",
+            "hydration"
+          ]
+        }
+      ]
+    },
+    "skin_benefits": {
+      "hydration": true,
+      "cooling": true,
+      "calming": true,
+      "daily_care": true
+    },
+    "suitability": {
+      "skin_types": [
+        "Oily",
+        "Acne",
+        "Sensitive"
+      ],
+      "pregnancy_safe": true,
+      "recommended_pregnancy_variant": "Soothing",
+      "age_min_years": 12
+    },
+    "usage": {
+      "routine_step": "toner",
+      "how_to_use": "เช็ดทั่วใบหน้าหลังล้างหน้า หรือแปะเฉพาะจุด เช่น หน้าผาก แก้ม คาง",
+      "can_replace_mask": true,
+      "mask_use_case": "spot_care_or_quick_soothing",
+      "portable": false,
+      "refrigerator_storage": false
+    },
+    "free_from": [
+      "Fragrance",
+      "Mineral Oil",
+      "Paraben",
+      "Alcohol",
+      "SLS",
+      "SLES",
+      "Synthetic Color",
+      "Sulfate",
+      "Microplastics",
+      "Microbeads"
+    ],
+    "upsell": {
+      "recommended_pair": [
+        "FG-MZ-FCC-NIA",
+        "FG-MZ-FCC-TXB",
+        "FG-MZ-FCC-CIC",
+        "FG-MZ-FCC-DRY",
+        "FG-MZ-FCC-SKB045",
+        "FG-MZ-ACN-HYA",
+        "FG-MZ-FCC-RTN030"
+      ]
+    },
+    "ingredients": {
+      "list": [
+        "Water",
+        "Butylene Glycol",
+        "Glycerin",
+        "Betaine",
+        "Niacinamide",
+        "Panthenol",
+        "Dipropylene Glycol",
+        "Hydroxyacetophenone",
+        "Caprylyl Glycol",
+        "PPG-6-Decyltetradeceth-30",
+        "Polyacrylate Crosspolymer-6",
+        "Trisodium Ethylenediamine Disuccinate",
+        "Aloe Barbadensis Leaf Juice Powder",
+        "Citric Acid",
+        "Artemisia Princeps Leaf Extract",
+        "Acacia Senegal Gum",
+        "Xanthan Gum",
+        "Lavandula Angustifolia (Lavender) Oil",
+        "Pelargonium Graveolens Flower Oil",
+        "Centella Asiatica Leaf Extract",
+        "Dipotassium Glycyrrhizate",
+        "1,2-Hexanediol",
+        "Centella Asiatica Extract",
+        "Biosaccharide Gum-2",
+        "Phenoxyethanol",
+        "Chondrus Crispus (Carrageenan) Extract",
+        "Glucose",
+        "Hyaluronic Acid",
+        "Hydrolyzed Hyaluronic Acid",
+        "Hydrolyzed Sodium Hyaluronate",
+        "Hydroxypropyltrimonium Hyaluronate",
+        "Potassium Hyaluronate",
+        "Sodium Acetylated Hyaluronate",
+        "Sodium Hyaluronate",
+        "Sodium Hyaluronate Crosspolymer"
+      ]
+    },
+    "information_context": " toner pad Acne  สูตรสำหรับผิวมัน เป็นสิว ลดการอุดตัน สาเหตุหนึ่งของการเกิดสิวค่ะโทนเนอร์แพดล่องหน สัมผัสนุ่ม บางเบา แผ่นแนบสนิทเนียนไปกับผิว ชุ่มชื้น ฉ่ำน้ำ เสมือนการใช้แผ่นมาส์กค่ะ"
+  },
+  "FG-MZ-STM-BIP130": {
+    "product_code": "FG-MZ-STM-BIP130",
+    "canonical_name": "MizuMi Bright Skin Fit Invisible Pad",
+    "image_url": "/static/products/mizumi_bright_skin_fit_invisible_pad.jpg",
+    "thai_name": "ไบรท์อินวิซิเบิล แพด",
+    "short_name": "โทนเนอร์แพดสีชมพู",
+    "category": "toner_pad",
+    "facts": {
+      "pad_type": "invisible_pad",
+      "texture": "soft_thin_lightweight",
+      "cooling_effect": true,
+      "essence_absorption_multiplier": 9,
+      "hydration_multiplier": 2,
+      "pad_material": "natural_fiber",
+      "tearable": false,
+      "pads_per_jar": 80,
+      "volume_ml": 130,
+      "max_patch_duration_minutes": 20
+    },
+    "formulas": {
+      "available_variants": [
+        {
+          "variant": "Acne",
+          "actives": {
+            "salicylic_acid_percent": 1,
+            "niacinamide_percent": 2
+          }
+        },
+        {
+          "variant": "Bright",
+          "actives": {
+            "pha_percent": 3,
+            "niacinamide_percent": null
+          }
+        },
+        {
+          "variant": "Soothing",
+          "actives": {}
+        }
+      ]
+    },
+    "suitability": {
+      "skin_types": [
+        "Dull",
+        "Normal",
+        "Combination",
+        "Sensitive"
+      ],
+      "pregnancy_safe": true,
+      "recommended_pregnancy_variant": "Soothing",
+      "age_min_years": 12
+    },
+    "usage": {
+      "routine_step": "toner",
+      "how_to_use": "wipe_or_patch",
+      "can_replace_mask": true,
+      "mask_use_case": "spot_or_quick_care",
+      "portable": false,
+      "refrigerator_storage": false
+    },
+    "free_from": [
+      "Fragrance",
+      "Mineral Oil",
+      "Paraben",
+      "Alcohol",
+      "SLS",
+      "SLES",
+      "Synthetic Color",
+      "Sulfate",
+      "Microplastics",
+      "Microbeads"
+    ],
+    "upsell": {
+      "recommended_pair": [
+        "FG-MZ-FCC-NIA",
+        "FG-MZ-FCC-TXB",
+        "FG-MZ-FCC-CIC",
+        "FG-MZ-FCC-DRY",
+        "FG-MZ-FCC-SKB045",
+        "FG-MZ-ACN-HYA",
+        "FG-MZ-FCC-RTN030"
+      ]
+    },
+    "ingredients": {
+      "list": [
+        "Water",
+        "Propylene Glycol",
+        "Niacinamide",
+        "Glycerin",
+        "Gluconolactone",
+        "Panthenol",
+        "Dipropylene Glycol",
+        "Hydroxyacetophenone",
+        "PPG-6-Decyltetradeceth-30",
+        "Sodium Citrate",
+        "Sodium Hydroxide",
+        "Caprylyl Glycol",
+        "Lactobacillus Ferment",
+        "Butylene Glycol",
+        "Polyacrylate Crosspolymer-6",
+        "Prunus Persica (Peach) Juice",
+        "Trisodium Ethylenediamine Disuccinate",
+        "Citric Acid",
+        "Aloe Barbadensis Leaf Juice Powder",
+        "Acacia Senegal Gum",
+        "Xanthan Gum",
+        "Prunus Amygdalus Dulcis (Sweet Almond) Oil",
+        "Citrus Tangerina (Tangerine) Peel Oil",
+        "Pelargonium Graveolens Oil",
+        "Dipotassium Glycyrrhizate"
+      ]
+    },
+    "information_context": " Toner pad Bright สำหรับผิวหมองคล้ำ ช่วยลดจุดด่างดำ ให้ผิวดูสม่ำเสมอค่ะ  โทนเนอร์แพดล่องหน สัมผัสนุ่ม บางเบา แผ่นแนบสนิทเนียนไปกับผิว ชุ่มชื้น ฉ่ำน้ำ เสมือนการใช้แผ่นมาส์กค่ะ"
+  },
+  "FG-MZ-STM-SIP130": {
+    "product_code": "FG-MZ-STM-SIP130",
+    "canonical_name": "MizuMi Soothing Skin Fit Invisible Pad",
+    "image_url": "/static/products/mizumi_soothing_skin_fit_invisible_pad.jpg",
+    "thai_name": "ซูตติ้งอินวิซิเบิล แพด",
+    "short_name": "โทนเนอร์แพดสีฟ้า",
+    "category": "toner_pad",
+    "facts": {
+      "pad_type": "invisible_pad",
+      "texture": "soft_thin_lightweight",
+      "cooling_effect": true,
+      "essence_absorption_multiplier": 9,
+      "hydration_multiplier": 2,
+      "pad_material": "natural_fiber",
+      "tearable": false,
+      "pads_per_jar": 80,
+      "volume_ml": 130,
+      "max_patch_duration_minutes": 20
+    },
+    "formulas": {
+      "available_variants": [
+        {
+          "variant": "Acne",
+          "actives": {
+            "salicylic_acid_percent": 1,
+            "niacinamide_percent": 2
+          }
+        },
+        {
+          "variant": "Bright",
+          "actives": {
+            "pha_percent": 3
+          }
+        },
+        {
+          "variant": "Soothing",
+          "actives": {}
+        }
+      ]
+    },
+    "suitability": {
+      "skin_types": [
+        "Sensitive",
+        "Dry",
+        "Normal",
+        "Combination"
+      ],
+      "pregnancy_safe": true,
+      "recommended_pregnancy_variant": "Soothing",
+      "age_min_years": 12
+    },
+    "usage": {
+      "routine_step": "toner",
+      "how_to_use": "wipe_or_patch",
+      "can_replace_mask": true,
+      "mask_use_case": "spot_or_quick_care",
+      "portable": false,
+      "refrigerator_storage": false
+    },
+    "free_from": [
+      "Fragrance",
+      "Mineral Oil",
+      "Paraben",
+      "Alcohol",
+      "SLS",
+      "SLES",
+      "Synthetic Color",
+      "Sulfate",
+      "Microplastics",
+      "Microbeads"
+    ],
+    "upsell": {
+      "recommended_pair": [
+        "FG-MZ-FCC-CIC",
+        "FG-MZ-FCC-DRY",
+        "FG-MZ-FCC-SKB045",
+        "FG-MZ-ACN-HYA",
+        "FG-MZ-FCC-NIA"
+      ]
+    },
+    "ingredients": {
+      "list": [
+        "Water",
+        "Propylene Glycol",
+        "Glycerin",
+        "Niacinamide",
+        "Ethoxydiglycol",
+        "Panthenol",
+        "Salicylic Acid",
+        "Dipropylene Glycol",
+        "Propanediol",
+        "Hydroxyacetophenone",
+        "Sodium Hydroxide",
+        "Sodium Citrate",
+        "Caprylyl Glycol",
+        "PPG-6-Decyltetradeceth-30",
+        "Hamamelis Virginiana (Witch Hazel) Extract",
+        "Polyacrylate Crosspolymer-6",
+        "Trisodium Ethylenediamine Disuccinate",
+        "Citric Acid",
+        "Aloe Barbadensis Leaf Juice Powder",
+        "Acacia Senegal Gum",
+        "Xanthan Gum",
+        "Melaleuca Alternifolia (Tea Tree) Leaf Oil",
+        "Dipotassium Glycyrrhizate",
+        "Centella Asiatica Leaf Extract"
+      ]
+    },
+    "information_context": " Toner pad Soothing ช่วยปลอบประโลมผิวระคายเคือง เติมความชุ่มชื้น ให้ผิวดูสุขภาพดีค่ะ โทนเนอร์แพดล่องหน สัมผัสนุ่ม บางเบา แผ่นแนบสนิทเนียนไปกับผิว ชุ่มชื้น ฉ่ำน้ำ เสมือนการใช้แผ่นมาส์กค่ะ"
   }
-}
 }

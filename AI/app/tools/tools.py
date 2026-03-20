@@ -4,7 +4,7 @@ def retrieve_tool(query: str) -> dict:
     """
     Retrieve top-k knowledge snippets from the local FAISS index.
     """
-    k = 5 
+    k = 5
     return search_kb(query=query, k=k)
 
 #def handoff_to_human(issue: str, contact: str | None = None) -> dict:

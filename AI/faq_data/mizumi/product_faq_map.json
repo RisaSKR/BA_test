@@ -36,6 +36,14 @@
     "faq_after_laser",
     "faq_pregnancy"
   ],
+  "FG-MZ-SUN-ALS040": [
+    "faq_texture",
+    "faq_skin_type",
+    "faq_water_resistant",
+    "faq_eye_sting",
+    "faq_after_laser",
+    "faq_pregnancy"
+  ],
   "FG-MZ-SUN-MWS010": [
     "faq_texture",
     "faq_reapply",
@@ -208,6 +216,21 @@
     "faq_upsell",
     "faq_ingredients"
   ],
+  "FG-MZ-CLS-BCC060": [
+    "faq_product_feature",
+    "faq_usage_duration",
+    "faq_lash_extension",
+    "faq_oily_feel",
+    "faq_waterproof_makeup",
+    "faq_eye_film",
+    "faq_mascara",
+    "faq_how_to_use",
+    "faq_sensitive_skin",
+    "faq_fragrance",
+    "faq_pregnancy",
+    "faq_upsell",
+    "faq_ingredients"
+  ],
   "FG-MZ-CLS-EXM": [
     "faq_product_feature",
     "faq_age_min",
@@ -216,18 +239,6 @@
     "faq_body_use",
     "faq_sunscreen_only",
     "faq_fragrance",
-    "faq_pregnancy",
-    "faq_upsell",
-    "faq_ingredients"
-  ],
-  "FG-MZ-CLS-GAW": [
-    "faq_product_feature",
-    "faq_age_min",
-    "faq_ph_value",
-    "faq_sensitive_skin",
-    "faq_salicylic",
-    "faq_tingling",
-    "faq_size_options",
     "faq_pregnancy",
     "faq_upsell",
     "faq_ingredients"

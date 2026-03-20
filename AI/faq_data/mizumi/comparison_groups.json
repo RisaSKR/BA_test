@@ -9,7 +9,8 @@
       "FG-MZ-SUN-JLA040",
       "FG-MZ-SUN-MOC040",
       "FG-MZ-SUN-MWS010",
-      "FG-MZ-SUN-AST020"
+      "FG-MZ-SUN-AST020",
+      "FG-MZ-SUN-ALS040"
     ],
     "comparison_axes": [
       "sunscreen_type",
@@ -52,7 +53,8 @@
     "FG-MZ-CLS-RDO150",
     "FG-MZ-CLS-BLM060",
     "FG-MZ-CLS-BLC060",
-    "FG-MZ-CLS-BLW060"
+    "FG-MZ-CLS-BLW060",
+    "FG-MZ-CLS-BCC060"
   ],
   "comparison_axes": [
     "cleansing_type",
@@ -76,22 +78,6 @@
     "skin_type",
     "age_min_years",
     "special_feature"
-  ]
-},
-"mizumi_acne_cleansers": {
-  "group_name": "MizuMi Acne Cleanser Comparison",
-  "description": "เปรียบเทียบคลีนเซอร์ MizuMi สำหรับผิวมันและเป็นสิวง่าย",
-  "products": [
-    "FG-MZ-CLS-GAW",
-    "FG-MZ-CLS-EZA100"
-  ],
-  "comparison_axes": [
-    "cleanser_type",
-    "bha_percent",
-    "ph_range",
-    "oil_control",
-    "skin_type",
-    "sensation"
   ]
 },
 "mizumi_enzyme_reju": {
