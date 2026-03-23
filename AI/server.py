@@ -59,8 +59,34 @@ class UserMessage(BaseModel):
     context: dict | None = None
     # optional brand field (or supply via context)
     brand: str | None = None
-    # optional store_id for onsite tracking
     store_id: str | None = None
+    language: str | None = "TH"
+
+from fastapi.responses import StreamingResponse
+import json
+from app.agents.base_agent import chat_stream
+
+@app.post("/chat_stream")
+async def chat_stream_endpoint(message: UserMessage):
+    """Streaming chat endpoint that yields chunks as they arrive."""
+    brand = message.brand
+    if not brand and message.context:
+        brand = message.context.get("brand")
+    if not brand:
+        brand = "mizumi"
+
+    async def event_generator():
+        async for chunk in chat_stream(
+            message.text,
+            message.platform_conversation_id,
+            brand=brand,
+            store_id=message.store_id or "onsite_default",
+            language=message.language,
+            image=message.image
+        ):
+            yield f"data: {json.dumps(chunk, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(event_generator(), media_type="text/event-stream")
 
 @app.post("/chat")
 async def chat(message: UserMessage):
@@ -83,6 +109,7 @@ async def chat(message: UserMessage):
         message.platform_conversation_id,
         brand=brand,
         store_id=message.store_id or "onsite_default",
+        language=message.language,
         image=message.image
     )
     return response_data
@@ -94,13 +121,25 @@ async def history(conversation_id: str):
     msgs = await get_history(conversation_id)
     return {"messages": msgs}
 
-# legacy / demonstration route – can be kept or removed
-@app.post("/chat-brand")
-async def chat_brand(message: UserMessage):
-    # this version shows how you could invoke ``root_agent`` directly
-    # but it mostly exists for backwards‑compatibility or testing.
-    response_data = await root_agent.chat(message.text, conversation_id=message.platform_conversation_id)
-    return response_data
+# feedback endpoint to log user sentiment
+class FeedbackData(BaseModel):
+    session_id: str
+    message_text: str
+    feedback: str
+
+from app.utils.logger import update_feedback
+
+@app.post("/feedback")
+async def log_feedback(data: FeedbackData):
+    """Log user feedback (like/dislike) into the main chat_logs table."""
+    logger.info(f"FEEDBACK [{data.feedback}] - Session: {data.session_id}")
+    
+    try:
+        update_feedback(data.session_id, data.message_text, data.feedback)
+        return {"status": "updated"}
+    except Exception as e:
+        logger.error(f"Failed to update feedback: {e}")
+        return {"status": "error", "message": str(e)}
 
 if __name__ == "__main__":
     print("Starting MiMi API Server on port 3171...")

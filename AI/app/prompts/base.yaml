@@ -17,6 +17,7 @@ style:
   - "Lead with a brief direct answer."
   - "Bullet Point Priority: Use short, 1-word or very brief bullet points to present key facts and recommendations."
   - "IMAGE RULE: DO NOT use markdown image syntax (e.g., ![alt](url)). NEVER type 'static/products/...' inside your answer bubble. The system will handle the image display automatically based on the source data. Your response should consist of text only."
+  - "CRITICAL PRODUCT CARD RULE: If the user is speaking English or Chinese, you MUST ALWAYS provide a translated 1-sentence description for the back of each product card you recommend. Format this as [DESC: Product Name | Translated description from retrieve_tool]. This description must be in the same language as your response (English or Chinese). Example: [DESC: MizuMi UV Water Serum | Lightweight daily sunscreen for sensitive skin.]"
   - "Be kind but extremely efficient."
   - "If information is missing, state it briefly."
 

@@ -35,9 +35,17 @@ def init_db():
                 prompt_tokens INTEGER,
                 candidates_tokens INTEGER,
                 total_tokens INTEGER,
-                raw_metadata TEXT
+                raw_metadata TEXT,
+                feedback TEXT DEFAULT 'null'
             )
         ''')
+        
+        # Schema migration: Add feedback column if it doesn't exist
+        cursor.execute("PRAGMA table_info(chat_logs)")
+        columns = [col[1] for col in cursor.fetchall()]
+        if "feedback" not in columns:
+            cursor.execute("ALTER TABLE chat_logs ADD COLUMN feedback TEXT DEFAULT 'null'")
+            logger.info("Chat logs schema updated with feedback column.")
         
         conn.commit()
         conn.close()
@@ -78,7 +86,8 @@ def log_chat(
             "candidates": c_tokens,
             "total": t_tokens
         },
-        "metadata": metadata or {}
+        "metadata": metadata or {},
+        "feedback": "null"
     }
 
     # 1. Save to JSONL (Raw backup)
@@ -96,17 +105,43 @@ def log_chat(
             INSERT INTO chat_logs (
                 timestamp, session_id, brand, store_id, user_query, 
                 bot_response, prompt_tokens, candidates_tokens, 
-                total_tokens, raw_metadata
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                total_tokens, raw_metadata, feedback
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             timestamp, session_id, brand, store_id, user_query,
             bot_response, p_tokens, c_tokens, t_tokens,
-            json.dumps(metadata or {}, ensure_ascii=False)
+            json.dumps(metadata or {}, ensure_ascii=False),
+            "null"
         ))
         conn.commit()
         conn.close()
     except Exception as e:
         logger.error(f"Failed to write to SQLite log: {e}")
+
+def update_feedback(session_id: str, bot_response: str, feedback: str):
+    """Update the feedback for a specific bot response in the logs."""
+    try:
+        # Update SQLite
+        conn = sqlite3.connect(str(DB_PATH))
+        cursor = conn.cursor()
+        # Find the latest entry for this session and response
+        cursor.execute('''
+            UPDATE chat_logs
+            SET feedback = ?
+            WHERE id = (
+                SELECT id FROM chat_logs 
+                WHERE session_id = ? AND bot_response LIKE ? 
+                ORDER BY timestamp DESC LIMIT 1
+            )
+        ''', (feedback, session_id, bot_response))
+        conn.commit()
+        conn.close()
+        logger.info(f"Feedback updated: {feedback} for session {session_id}")
+        
+        # Note: updating JSONL is harder as it's an append-only format.
+        # Usually, we rely on the DB for real analytics.
+    except Exception as e:
+        logger.error(f"Failed to update feedback: {e}")
 
 # Initialize when module is imported
 init_db()

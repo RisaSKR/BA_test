@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content">
     <title>MizuMi - Beauty Advisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #5a96d1;
+            --primary: #67A2D7;
             /* MizuMi-inspired blue */
             --primary-light: #f0f7ff;
             /* Very soft sky blue */
-            --primary-dark: #3b76b1;
+            --primary-dark: #4d8bbf;
             --accent: #ff9e22;
             /* Soft orange */
             --gray-light: #f8fafc;
@@ -25,7 +25,7 @@
             --text: #1e293b;
             --text-muted: #64748b;
             --bot-bubble: #f1f5f9;
-            --user-bubble: #5a96d1;
+            --user-bubble: #67A2D7;
             --border: #e2e8f0;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
@@ -78,13 +78,15 @@
 
         /* ── Header ─────────────────────────────────────────── */
         .chat-header {
-            padding: 16px 20px;
+            padding: 12px 20px;
             background: #67A2D7;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             z-index: 10;
+            flex-shrink: 0;
+            min-height: 72px;
         }
 
         .brand-logo {
@@ -130,13 +132,15 @@
             font-size: 16px;
             font-weight: 700;
             color: white;
+            line-height: 1.2;
         }
 
         .header-info p {
-            font-size: 12px;
+            font-size: 11px;
             color: rgba(255, 255, 255, 0.9);
             display: flex;
             align-items: center;
+            white-space: nowrap;
         }
 
         .status-dot {
@@ -146,10 +150,17 @@
             /* Brighter, vibrant green */
             border-radius: 50%;
             display: inline-block;
-            margin-right: 6px;
+            margin-right: 8px;
             box-shadow: 0 0 8px rgba(0, 230, 118, 0.5);
-            /* Matching glow */
+            position: relative;
+            top: -1px;
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .status-dot {
+                animation: none;
+            }
         }
 
         @keyframes pulse {
@@ -166,27 +177,100 @@
             }
         }
 
+        .camera-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            z-index: 9999;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .camera-overlay.active {
+            display: flex;
+        }
+
+        .camera-viewfinder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .camera-controls {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 10001;
+        }
+
+        .capture-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .capture-btn:active {
+            transform: scale(0.92);
+        }
+
+        .camera-close-btn,
+        .camera-flip-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+
+
+
         /* ── Language Selector ─────────────────────────────── */
         .lang-selector {
             display: flex;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 20px;
-            padding: 3px;
-            gap: 2px;
+            padding: 2px;
+            gap: 1px;
             margin-left: auto;
             flex-shrink: 0;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .lang-option {
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 17px;
             font-size: 11px;
             font-weight: 700;
             color: white;
             cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0.8;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0.7;
             user-select: none;
         }
 
@@ -206,8 +290,8 @@
         .messages {
             flex: 1;
             overflow-y: auto;
-            padding: 20px 20px 100px;
-            /* increased to 100px for better visibility of wrapped bubbles */
+            padding: 20px 20px 30px;
+            /* Adjusted for better natural scroll */
             display: flex;
             flex-direction: column;
             gap: 18px;
@@ -303,54 +387,129 @@
         }
 
         /* ── Product Card ────────────────────────────────────── */
+        /* ── Product Card (Premium Flip) ────────────────────── */
         .product-card {
-            background: white;
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            padding: 10px;
+            perspective: 1000px;
+            width: 220px;
+            max-width: 100%;
+            height: 320px;
             margin-top: 8px;
+            cursor: pointer;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .product-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .product-card.flipped .product-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .product-card-front,
+        .product-card-back {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            padding: 12px;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            width: 100%;
-            min-height: 260px;
-            /* Ensure cards have volume even if images load slowly */
+            box-shadow: var(--shadow);
         }
 
-        .product-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        .product-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            text-align: left;
+            justify-content: flex-start;
+            padding: 20px 16px;
         }
 
-        .product-card h3 {
+        .product-card-back h4 {
+            font-size: 11px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .product-card-back p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 12px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 10;
+            line-clamp: 10;
+            -webkit-box-orient: vertical;
+        }
+
+        .product-card-front h3 {
             font-size: 13px;
             font-weight: 700;
             color: var(--text);
             line-height: 1.3;
             text-align: center;
+            margin-top: 6px;
         }
 
         .product-card .img-container {
             width: 100%;
-            height: 200px;
-            /* increased for better visibility */
-            background: #fdfdfd;
+            height: 220px;
+            background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--border);
+            position: relative;
         }
 
         .product-card img {
-            width: 100%;
-            height: 100%;
+            width: 90%;
+            height: 90%;
             object-fit: contain;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+        }
+
+        .zoom-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .zoom-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-light);
         }
 
         /* ── Slider ─────────────────────────────────────────── */
@@ -373,8 +532,8 @@
 
         .product-slider .product-card {
             min-width: 220px;
-            /* wider cards for more impact */
             max-width: 220px;
+            height: 320px;
             flex-shrink: 0;
             scroll-snap-align: start;
             margin-top: 0;
@@ -414,36 +573,41 @@
 
         /* ── Input Area ─────────────────────────────────────── */
         .input-area {
-            padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+            padding: 12px 20px;
             background: var(--white);
             border-top: 1px solid var(--border);
+            flex-shrink: 0;
         }
 
-        .input-wrapper {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            background: var(--gray-light);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            padding: 6px 6px 6px 18px;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-
-        .input-wrapper:focus-within {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-light);
-            background: white;
-        }
-
-        .input-wrapper input {
+        .input-wrapper textarea {
             flex: 1;
             background: transparent;
             border: none;
             outline: none;
             font-size: 14px;
             color: var(--text);
-            padding: 8px 0;
+            padding: 10px 0;
+            resize: none;
+            max-height: 120px;
+            font-family: inherit;
+            line-height: 1.4;
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+            background: var(--gray-light);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 6px 6px 8px 14px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-wrapper:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+            background: white;
         }
 
         .send-btn {
@@ -476,18 +640,21 @@
 
         /* ── Image Attachment ───────────────────────────────── */
         .attach-btn {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             color: var(--text-muted);
-            transition: color 0.2s;
+            transition: all 0.2s ease;
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: 50%;
         }
 
         .attach-btn:hover {
             color: var(--primary);
+            background: var(--primary-light);
         }
 
         .attachment-preview {
@@ -535,6 +702,124 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        /* ── Feedback (Like/Dislike) ───────────────────────── */
+        .bubble {
+            position: relative;
+            padding-bottom: 12px;
+            /* Base padding */
+        }
+
+        .message.bot .bubble {
+            padding-bottom: 22px;
+            /* Extra room for icons */
+        }
+
+        .message.user .bubble {
+            padding-bottom: 22px;
+            /* Extra room for icons */
+        }
+
+        .feedback-container {
+            position: absolute;
+            bottom: 6px;
+            right: 12px;
+            display: flex;
+            gap: 8px;
+            opacity: 0.4;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        .message:hover .feedback-container {
+            opacity: 1;
+        }
+
+        .feedback-icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+
+        .message.user .feedback-icon {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .feedback-icon:hover {
+            transform: scale(1.15);
+        }
+
+        .feedback-icon.like.active {
+            color: #1ec742 !important;
+            /* Green for Like */
+            opacity: 1;
+        }
+
+        .feedback-icon.dislike.active {
+            color: #f44336 !important;
+            /* Red for Dislike */
+            opacity: 1;
+        }
+
+        .feedback-icon.active svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 3;
+        }
+
+        .feedback-container.has-active {
+            opacity: 1 !important;
+            /* Keep visible if selected */
+        }
+
+        .message.user .feedback-icon:hover {
+            color: white;
+            opacity: 1;
+        }
+
+        /* Inline typing cursor at end of text */
+        .inline-typing {
+            display: inline-flex;
+            gap: 3px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .inline-typing span {
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .inline-typing span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .inline-typing span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+        }
+
+        .feedback-icon svg {
+            width: 13px;
+            height: 13px;
+        }
+
         /* ── Quick Actions ───────────────────────────────────── */
         .quick-actions {
             display: flex;
@@ -552,7 +837,7 @@
             padding: 10px 22px;
             border-radius: 25px;
             background: #ffffff;
-            border: 2px solid var(--primary);
+            border: 1px solid var(--primary);
             /* match the reply buttons */
             color: var(--primary);
             font-size: 14px;
@@ -751,11 +1036,98 @@
 
         .powered-by {
             text-align: center;
-            padding: 6px;
+            padding: 8px;
             font-size: 10px;
             color: var(--text-muted);
             background: var(--white);
-            border-top: 1px solid var(--border);
+            border-top: none;
+            opacity: 0.7;
+            padding-bottom: calc(4px + env(safe-area-inset-bottom));
+        }
+
+        /* ── Camera UI ─────────────────────────────────────── */
+        .camera-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100dvh;
+            background: #000;
+            z-index: 9999;
+            flex-direction: column;
+            overflow: hidden;
+            animation: fadeInOverlay 0.3s ease;
+        }
+
+        .camera-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeInOverlay {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .camera-viewfinder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .camera-viewfinder.ready {
+            opacity: 1;
+        }
+
+        .camera-controls {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 10001;
+        }
+
+        .capture-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .capture-btn:active {
+            transform: scale(0.92);
+        }
+
+        .camera-close-btn,
+        .camera-flip-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
         }
     </style>
 </head>
@@ -793,15 +1165,24 @@
 
         <div class="input-area">
             <div class="input-wrapper">
-                <label for="imageInput" class="attach-btn">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                        <path
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
-                    </svg>
-                </label>
+                <div class="attach-group" style="display: flex; gap: 8px;">
+                    <label for="imageInput" class="attach-btn" aria-label="แนบรูปภาพ">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                        </svg>
+                    </label>
+                    <div class="attach-btn" onclick="openCamera()" role="button" aria-label="ถ่ายรูป">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                </div>
                 <input type="file" id="imageInput" accept="image/*" style="display: none;"
                     onchange="handleImageSelect(this)">
-                <input type="text" id="userInput" placeholder="พิมพ์ข้อความ..." autocomplete="off">
+                <textarea id="userInput" placeholder="พิมพ์ข้อความ..." rows="1" autocomplete="off"></textarea>
                 <button class="send-btn" id="sendBtn" onclick="sendMessage()">
                     <svg viewBox="0 0 24 24">
                         <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
@@ -816,6 +1197,27 @@
         <img id="modalImage" src="" alt="Product">
     </div>
 
+    <!-- Camera Overlay -->
+    <div class="camera-overlay" id="cameraOverlay">
+        <video class="camera-viewfinder" id="cameraVideo" autoplay playsinline></video>
+        <div class="camera-controls">
+            <button class="camera-close-btn" onclick="closeCamera()" aria-label="ปิดกล้อง">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+            </button>
+            <button class="capture-btn" onclick="capturePhoto()" aria-label="ถ่ายรูป"></button>
+            <button class="camera-flip-btn" onclick="flipCamera()" aria-label="สลับกล้อง">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                    <path
+                        d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM5 16l4-4H6c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4z" />
+                </svg>
+            </button>
+        </div>
+        <canvas id="cameraCanvas" style="display: none;"></canvas>
+    </div>
+
     <script>
         const messagesEl = document.getElementById('messages');
         const userInput = document.getElementById('userInput');
@@ -824,6 +1226,13 @@
 
         // Generate a fresh session ID on every page load/refresh
         const sessionId = 'sess-' + Math.random().toString(36).substr(2, 9);
+        window.currentLang = 'TH'; // Default language state
+
+        // Auto-resize textarea
+        userInput.addEventListener('input', () => {
+            userInput.style.height = 'auto';
+            userInput.style.height = userInput.scrollHeight + 'px';
+        });
 
         // No loadHistory on refresh – every load is a clean slate
         window.addEventListener('load', () => {
@@ -852,6 +1261,16 @@
                 { text: '☀️ 推荐防晒', query: '推荐防晒霜' },
                 { text: '☀️ 身体防晒', query: '身体防晒呵护' },
                 { text: '💧 面膜', query: '面膜' }
+            ],
+            'JP': [
+                { text: '☀️ 日焼け止め', query: 'おすすめの日焼け止め' },
+                { text: '☀️ ボディケア', query: 'ボディ日焼け止め' },
+                { text: '💧 マスク', query: 'フェイスマスク' }
+            ],
+            'KR': [
+                { text: '☀️ 자외선 차단제', query: '선크림 추천' },
+                { text: '☀️ 바디 케어', query: '바디 선크림' },
+                { text: '💧 마스크팩', query: '마스크팩' }
             ]
         };
 
@@ -868,7 +1287,71 @@
             quickActionsEl.style.display = 'flex';
         }
 
+        async function submitFeedback(msgText, sentiment) {
+            try {
+                await fetch('/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: sessionId,
+                        message_text: msgText,
+                        feedback: sentiment
+                    })
+                });
+            } catch (e) {
+                console.warn("Feedback failed to log", e);
+            }
+        }
+
+        function createFeedbackUI(msgText, type) {
+            if (type !== 'bot') return null; // Only for chatbot responses
+
+            const container = document.createElement('div');
+            container.className = 'feedback-container';
+
+            // Thumbs Up (Like)
+            const likeBtn = document.createElement('div');
+            likeBtn.className = 'feedback-icon like';
+            likeBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>`;
+            likeBtn.onclick = (e) => {
+                e.stopPropagation();
+                const wasActive = likeBtn.classList.contains('active');
+                if (!wasActive) {
+                    likeBtn.classList.add('active');
+                    dislikeBtn.classList.remove('active');
+                    container.classList.add('has-active'); // Keep container visible
+                    submitFeedback(msgText, 'like');
+                } else {
+                    likeBtn.classList.remove('active');
+                    container.classList.remove('has-active');
+                }
+            };
+
+            // Thumbs Down (Dislike)
+            const dislikeBtn = document.createElement('div');
+            dislikeBtn.className = 'feedback-icon dislike';
+            dislikeBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg>`;
+            dislikeBtn.onclick = (e) => {
+                e.stopPropagation();
+                const wasActive = dislikeBtn.classList.contains('active');
+                if (!wasActive) {
+                    dislikeBtn.classList.add('active');
+                    likeBtn.classList.remove('active');
+                    container.classList.add('has-active'); // Keep container visible
+                    submitFeedback(msgText, 'dislike');
+                } else {
+                    dislikeBtn.classList.remove('active');
+                    container.classList.remove('has-active');
+                }
+            };
+
+            container.appendChild(likeBtn);
+            container.appendChild(dislikeBtn);
+            return container;
+        }
+
         function setLang(lang, el) {
+            window.currentLang = lang; // Store global state for other components
             // Update UI
             document.querySelectorAll('.lang-option').forEach(opt => opt.classList.remove('active'));
             el.classList.add('active');
@@ -879,6 +1362,8 @@
             // Logic to change placeholder or prompt user
             if (lang === '中文') userInput.placeholder = "在这里输入消息...";
             else if (lang === 'EN') userInput.placeholder = "Type your message here...";
+            else if (lang === 'JP') userInput.placeholder = "メッセージを入力...";
+            else if (lang === 'KR') userInput.placeholder = "메시지 입력...";
             else userInput.placeholder = "พิมพ์ข้อความ...";
         }
 
@@ -895,29 +1380,85 @@
             const card = document.createElement('div');
             card.className = 'product-card';
 
-            const imagePath = product.image || product.image_url || product.imageUrl;
+            const inner = document.createElement('div');
+            inner.className = 'product-card-inner';
 
-            // Always create image container to maintain card height/layout
+            // FRONT SIDE
+            const front = document.createElement('div');
+            front.className = 'product-card-front';
+
+            const imagePath = product.image || product.image_url || product.imageUrl;
             const imgCont = document.createElement('div');
             imgCont.className = 'img-container';
             const img = document.createElement('img');
 
-            // Fallback image if both paths are missing
             img.src = imagePath || 'https://placehold.co/400x600?text=MizuMi';
             img.alt = product.name || 'Product Image';
             img.loading = 'lazy';
             img.onerror = () => {
                 img.src = 'https://placehold.co/400x600?text=' + encodeURIComponent(product.name || 'MizuMi');
-                console.warn('Image failed to load:', imagePath);
             };
-            img.onclick = () => openModal(img.src);
-            imgCont.appendChild(img);
-            card.appendChild(imgCont);
 
-            // Show product name below the image
+            // Keep zoom functionality as a button on the front
+            const zoomBtn = document.createElement('div');
+            zoomBtn.className = 'zoom-btn';
+            zoomBtn.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>`;
+            zoomBtn.onclick = (e) => {
+                e.stopPropagation(); // Avoid flipping when clicking zoom
+                openModal(img.src);
+            };
+
+            imgCont.appendChild(zoomBtn);
+            imgCont.appendChild(img);
+            front.appendChild(imgCont);
+
             const title = document.createElement('h3');
             title.textContent = product.name || product.canonical_name || 'MizuMi Product';
-            card.appendChild(title);
+            front.appendChild(title);
+
+            // BACK SIDE
+            const back = document.createElement('div');
+            back.className = 'product-card-back';
+            
+            const backHeader = document.createElement('h4');
+            const headerMap = { 'TH': 'รายละเอียดสินค้า', 'EN': 'Product Details', '中文': '产品详情' };
+            backHeader.textContent = headerMap[window.currentLang] || headerMap['TH'];
+            
+            const desc = document.createElement('p');
+            desc.style.webkitLineClamp = '10'; // Show more description if available
+            desc.textContent = (product.information_context ? product.information_context.trim() : null) || (window.currentLang === 'EN' ? "Experience the best of MizuMi skincare with this special formulation designed for your beauty needs." : "สัมผัสประสบการณ์การดูแลผิวที่ดีที่สุดจาก MizuMi ด้วยสูตรพิเศษที่ออกแบบมาเพื่อความต้องการด้านความงามของคุณ");
+
+            const tapHint = document.createElement('div');
+            tapHint.style.fontSize = '10px';
+            tapHint.style.color = 'var(--primary)';
+            tapHint.style.marginTop = 'auto';
+            tapHint.style.textAlign = 'right';
+            const hintMap = { 'TH': 'แตะเพื่อดูรูปภาพ', 'EN': 'Tap to see image', '中文': '点击查看图片' };
+            tapHint.textContent = hintMap[window.currentLang] || hintMap['TH'];
+
+            back.appendChild(backHeader);
+            back.appendChild(desc);
+            back.appendChild(tapHint);
+
+            inner.appendChild(front);
+            inner.appendChild(back);
+            card.appendChild(inner);
+
+            // MAIN CLICK HANDLER (FLIP + MESSAGE)
+            card.onclick = () => {
+                const isFlipped = card.classList.toggle('flipped');
+
+                // If flipping to the back for the first time
+                if (isFlipped && !card.dataset.tipSent) {
+                    const fallbackMap = { 'TH': 'เป็นทางเลือกที่ยอดเยี่ยมสำหรับคุณค่ะ!', 'EN': 'A great choice for your daily routine!', '中文': '为您提供的绝佳选择！' };
+                    const tip = (product.information_context ? product.information_context.trim() : null) || fallbackMap[window.currentLang] || fallbackMap['TH'];
+                    // Small delay for natural feel
+                    setTimeout(() => {
+                        addMessage(tip, 'bot');
+                    }, 400);
+                    card.dataset.tipSent = "true";
+                }
+            };
 
             return card;
         }
@@ -994,6 +1535,8 @@
                     const topBubble = document.createElement('div');
                     topBubble.className = 'bubble';
                     topBubble.innerHTML = formatText(parts[0].trim());
+                    const fb = createFeedbackUI(parts[0].trim(), type);
+                    if (fb) topBubble.appendChild(fb);
 
                     topMsg.appendChild(avatarDiv);
                     topMsg.appendChild(topBubble);
@@ -1019,6 +1562,8 @@
                     const botBubble = document.createElement('div');
                     botBubble.className = 'bubble';
                     botBubble.innerHTML = formatText(parts[1].trim());
+                    const fb = createFeedbackUI(parts[1].trim(), type);
+                    if (fb) botBubble.appendChild(fb);
 
                     botMsg.style.marginLeft = '42px'; // Align without second avatar
                     botMsg.appendChild(botBubble);
@@ -1027,6 +1572,8 @@
             } else if (text && text.trim()) {
                 // Normal message without table
                 bubbleDiv.innerHTML = formatText(text);
+                const fb = createFeedbackUI(text, type);
+                if (fb) bubbleDiv.appendChild(fb);
                 msgDiv.appendChild(avatarDiv);
                 msgDiv.appendChild(bubbleDiv);
                 messagesEl.appendChild(msgDiv);
@@ -1047,7 +1594,8 @@
                     container.style.marginTop = '10px';
                     container.style.marginLeft = type === 'bot' ? '42px' : '0';
                     container.style.alignSelf = type === 'user' ? 'flex-end' : 'flex-start';
-                    container.style.maxWidth = '220px';
+                    container.style.width = '220px';
+                    container.style.maxWidth = '100%';
                 }
 
                 list.forEach(item => {
@@ -1059,11 +1607,26 @@
             }
 
             // Handle Bubble Options (Interactive Buttons)
-            if (type === 'bot' && bubbleOptions && bubbleOptions.length > 0) {
+            if (type === 'bot') {
+                const otherRecMap = {
+                    'TH': 'แนะนำอื่นๆ',
+                    'EN': 'Other recommendations',
+                    '中文': '其他推荐'
+                };
+                const otherBtnText = otherRecMap[window.currentLang] || otherRecMap['TH'];
+
                 const bubbleContainer = document.createElement('div');
                 bubbleContainer.className = 'quick-replies';
 
-                bubbleOptions.forEach(opt => {
+                // Use existing options or empty array
+                const options = Array.isArray(bubbleOptions) ? [...bubbleOptions] : [];
+
+                // Always add the "Other recommendations" fixed bubble if not already present
+                if (!options.includes(otherBtnText)) {
+                    options.push(otherBtnText);
+                }
+
+                options.forEach(opt => {
                     const btn = document.createElement('button');
                     btn.className = 'quick-reply-btn';
                     btn.textContent = opt;
@@ -1073,7 +1636,7 @@
                 messagesEl.appendChild(bubbleContainer);
             }
 
-            messagesEl.scrollTop = messagesEl.scrollHeight;
+            // messagesEl.scrollTop = messagesEl.scrollHeight; // Disabled auto-scroll as per user request
         }
 
         function showTyping() {
@@ -1098,7 +1661,7 @@
             msgDiv.appendChild(avatarDiv);
             msgDiv.appendChild(bubbleDiv);
             messagesEl.appendChild(msgDiv);
-            messagesEl.scrollTop = messagesEl.scrollHeight;
+            // messagesEl.scrollTop = messagesEl.scrollHeight; // Disabled auto-scroll as per user request
         }
 
         function removeTyping() {
@@ -1139,46 +1702,226 @@
                 platform_user_id: 'test-user',
                 platform_conversation_id: sessionId,
                 text: text,
-                image: currentBase64Image
+                image: currentBase64Image,
+                language: window.currentLang
             };
 
             userInput.value = '';
+            userInput.style.height = 'auto';
             clearAttachment();
             sendBtn.disabled = true;
             showTyping();
 
+            let streamBubble = null;
+            let streamLabel = null;
+            let streamMsgDiv = null;
+            let buffer = "";
+
+            let displayChunks = [];
+            let isWriting = false;
+            let currentDisplayText = "";
+
+            async function processDisplayQueue() {
+                if (isWriting) return;
+                isWriting = true;
+                while (displayChunks.length > 0) {
+                    const chunk = displayChunks.shift();
+                    const bits = chunk.length > 15 ? chunk.match(/.{1,3}/g) || [chunk] : chunk.split('');
+                    for (const bit of bits) {
+                        currentDisplayText += bit;
+                        if (streamBubble) {
+                            const formatted = currentDisplayText.replace(/!\[.*?\]\(.*?\)/g, '')
+                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                .replace(/\n- /g, '<br>• ')
+                                .replace(/\n\* /g, '<br>• ')
+                                .replace(/\n/g, '<br>');
+                            streamBubble.innerHTML = formatted + `<span class="inline-typing"><span></span><span></span><span></span></span>`;
+                        }
+                        await new Promise(r => setTimeout(r, 12));
+                    }
+                }
+                isWriting = false;
+            }
+
             try {
-                const res = await fetch('/chat', {
+                const res = await fetch('/chat_stream', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
 
-                const data = await res.json();
-                removeTyping();
+                if (!res.body) throw new Error("ReadableStream not supported");
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder("utf-8");
 
-                const botText = data.text || '(ไม่มีคำตอบ)';
-                const products = (data.products && data.products.length > 0) ? data.products :
-                    (data.all_images && data.all_images.length > 0 ? data.all_images :
-                        (data.image_url ? [data.image_url] : []));
-                const bubbleOptions = data.bubble_options || [];
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
 
-                addMessage(botText, 'bot', products, bubbleOptions);
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop();
+
+                    for (const line of lines) {
+                        const trimmedLine = line.trim();
+                        if (!trimmedLine || !trimmedLine.startsWith('data: ')) continue;
+                        let data;
+                        try { data = JSON.parse(trimmedLine.substring(6)); } catch (e) { continue; }
+
+                        if (data.type === 'status') {
+                            if (!streamBubble) {
+                                removeTyping();
+                                streamLabel = createStreamLabel();
+                                streamMsgDiv = createStreamMsgContainer();
+                                streamBubble = streamMsgDiv.querySelector('.bubble');
+                            }
+                            streamBubble.innerHTML = `<span style="color:var(--text-muted); font-style:italic;">${data.text}</span><div class="typing-dots"><span></span><span></span><span></span></div>`;
+                        } else if (data.type === 'content') {
+                            // Filter early dots or specific characters
+                            if (currentDisplayText === "" && (data.text.trim() === "." || data.text.trim() === "*")) continue;
+
+                            if (!streamBubble || (currentDisplayText === "" && streamBubble.querySelector('.inline-typing') === null)) {
+                                if (streamBubble) streamBubble.innerHTML = "";
+                                else {
+                                    removeTyping();
+                                    streamLabel = createStreamLabel();
+                                    streamMsgDiv = createStreamMsgContainer();
+                                    streamBubble = streamMsgDiv.querySelector('.bubble');
+                                }
+                            }
+                            displayChunks.push(data.text);
+                            processDisplayQueue();
+                        } else if (data.type === 'metadata') {
+                            while (isWriting || displayChunks.length > 0) await new Promise(r => setTimeout(r, 30));
+                            removeTyping();
+                            if (streamLabel) streamLabel.remove();
+                            if (streamMsgDiv) streamMsgDiv.remove();
+                            addMessage(data.text || '(ไม่มีคำตอบ)', 'bot', data.products || [], data.bubble_options || []);
+                        }
+                    }
+                }
             } catch (err) {
                 removeTyping();
-                addMessage('⚠️ ไม่สามารถเชื่อมต่อได้: ' + err.message, 'bot');
+                if (streamLabel) streamLabel.remove();
+                if (streamMsgDiv) streamMsgDiv.remove();
+                addMessage('⚠️ Error: ' + err.message, 'bot');
             }
-
             sendBtn.disabled = false;
             userInput.focus();
         }
 
-        function quickSend(text) { userInput.value = text; sendMessage(); }
+        function createStreamLabel() {
+            const l = document.createElement('div');
+            l.className = 'bot-label';
+            l.textContent = 'MiMi';
+            messagesEl.appendChild(l);
+            return l;
+        }
+
+        function createStreamMsgContainer() {
+            const div = document.createElement('div');
+            div.className = 'message bot';
+            div.innerHTML = `<div class="msg-avatar">Mi</div><div class="bubble"></div>`;
+            messagesEl.appendChild(div);
+            return div;
+        }
+
+        function quickSend(text) { 
+            userInput.value = text; 
+            userInput.style.height = 'auto';
+            userInput.style.height = userInput.scrollHeight + 'px';
+            sendMessage(); 
+        }
         function openModal(src) {
             document.getElementById('modalImage').src = src;
             document.getElementById('imageModal').classList.add('active');
         }
         function closeModal() { document.getElementById('imageModal').classList.remove('active'); }
+
+        // ── Camera Implementation ──────────────────────────
+        let cameraStream = null;
+        let useFrontCamera = true;
+
+        async function openCamera() {
+            const overlay = document.getElementById('cameraOverlay');
+            const video = document.getElementById('cameraVideo');
+            video.classList.remove('ready');
+
+            try {
+                // Using 16:9 aspect ratio usually reduces zoom significantly
+                // compared to the default 4:3 camera feed.
+                const constraints = {
+                    video: {
+                        facingMode: { ideal: useFrontCamera ? "user" : "environment" },
+                        width: { ideal: 1080 },
+                        height: { ideal: 1920 },
+                        aspectRatio: 1.777777778
+                    }
+                };
+
+                cameraStream = await navigator.mediaDevices.getUserMedia(constraints);
+                video.srcObject = cameraStream;
+
+                // Reset transform/mirroring based on camera
+                video.style.transform = `translate(-50%, -50%) scaleX(${useFrontCamera ? -1 : 1})`;
+
+                // Show only when video is fully playing to avoid "weird" jump
+                video.onloadedmetadata = () => {
+                    video.classList.add('ready');
+                };
+
+                overlay.classList.add('active');
+            } catch (err) {
+                console.error("Camera error:", err);
+                alert("ไม่สามารถเข้าถึงกล้องได้: " + err.message);
+            }
+        }
+
+
+        function closeCamera() {
+            const overlay = document.getElementById('cameraOverlay');
+            const video = document.getElementById('cameraVideo');
+
+            if (cameraStream) {
+                cameraStream.getTracks().forEach(track => track.stop());
+                cameraStream = null;
+            }
+
+            video.srcObject = null;
+            overlay.classList.remove('active');
+        }
+        function capturePhoto() {
+            const video = document.getElementById('cameraVideo');
+            const canvas = document.getElementById('cameraCanvas');
+            const context = canvas.getContext('2d');
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            if (useFrontCamera) {
+                // flip canvas to match the un-mirrored preview
+                context.translate(canvas.width, 0);
+                context.scale(-1, 1);
+            }
+
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            currentBase64Image = canvas.toDataURL('image/jpeg', 0.85);
+
+            document.getElementById('previewImg').src = currentBase64Image;
+            document.getElementById('attachmentPreview').classList.add('active');
+
+            closeCamera();
+        }
+
+
+
+        function flipCamera() {
+            useFrontCamera = !useFrontCamera;
+            if (cameraStream) {
+                closeCamera();
+                openCamera();
+            }
+        }
 
         async function loadHistory() {
             try {
