@@ -14,6 +14,32 @@ LOGS_DIR = BASE_DIR / "logs"
 DB_PATH = LOGS_DIR / "chatbot_logs.db"
 JSONL_PATH = LOGS_DIR / "chat_history.jsonl"
 
+def categorize_query(query: str) -> str:
+    """Categorize the user query into specific product categories."""
+    if not query:
+        return 'Other'
+    q = query.lower()
+    
+    if any(k in q for k in ['body sunscreen', 'กันแดดตัว', 'กันแดดผิวกาย', 'กันแดดทาตัว']):
+        return 'Body Sunscreen'
+    if any(k in q for k in ['face sunscreen', 'กันแดดหน้า', 'กันแดดผิวหน้า', 'กันแดด', 'sunscreen']):
+        return 'Face Sunscreen'
+    if any(k in q for k in ['cleansing', 'คลีนซิ่ง', 'micellar', 'ไมเซล่า']):
+        return 'Cleansing'
+    if any(k in q for k in ['cleanser', 'โฟมล้างหน้า', 'เจลล้างหน้า', 'ล้างหน้า', 'สบู่']):
+        return 'Cleanser'
+    if any(k in q for k in ['body care', 'body', 'โลชั่น', 'ทาตัว', 'ผิวกาย', 'บอดี้']):
+        return 'Body care'
+    if any(k in q for k in ['moisturizer', 'มอยส์เจอ', 'moist']):
+        return 'Moisturizer'
+    if any(k in q for k in ['toner pad', 'toner', 'pad', 'โทนเนอร์', 'แพด']):
+        return 'Toner Pad'
+    if any(k in q for k in ['sheet mask', 'mask', 'มาส', 'มาร์ค', 'มาสก์']):
+        return 'Sheet Mask'
+        
+    return 'Other'
+
+
 def init_db():
     """Initialize the SQLite database and create tables if they don't exist."""
     try:
@@ -46,6 +72,11 @@ def init_db():
         if "feedback" not in columns:
             cursor.execute("ALTER TABLE chat_logs ADD COLUMN feedback TEXT DEFAULT 'null'")
             logger.info("Chat logs schema updated with feedback column.")
+            
+        # Schema migration: Add category column if it doesn't exist
+        if "category" not in columns:
+            cursor.execute("ALTER TABLE chat_logs ADD COLUMN category TEXT DEFAULT 'Other'")
+            logger.info("Chat logs schema updated with category column.")
         
         conn.commit()
         conn.close()
@@ -87,7 +118,8 @@ def log_chat(
             "total": t_tokens
         },
         "metadata": metadata or {},
-        "feedback": "null"
+        "feedback": "null",
+        "category": categorize_query(user_query)
     }
 
     # 1. Save to JSONL (Raw backup)
@@ -105,13 +137,14 @@ def log_chat(
             INSERT INTO chat_logs (
                 timestamp, session_id, brand, store_id, user_query, 
                 bot_response, prompt_tokens, candidates_tokens, 
-                total_tokens, raw_metadata, feedback
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                total_tokens, raw_metadata, feedback, category
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             timestamp, session_id, brand, store_id, user_query,
             bot_response, p_tokens, c_tokens, t_tokens,
             json.dumps(metadata or {}, ensure_ascii=False),
-            "null"
+            "null",
+            categorize_query(user_query)
         ))
         conn.commit()
         conn.close()

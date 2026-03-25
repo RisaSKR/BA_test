@@ -176,15 +176,21 @@ def _process_metadata(ev, text_content: str, found_products: list, brand: str) -
     for name, desc in desc_matches:
         card_descriptions[name.strip().lower()] = desc.strip()
 
-    def get_localized_desc(target_name: str, fallback: str) -> str:
+    def get_localized_desc(target_name: str, fallback: str | list) -> str | list:
         target_lower = target_name.lower().strip()
+        
+        def process_val(val: str):
+            if ';;' in val:
+                return [s.strip() for s in val.split(';;') if s.strip()]
+            return val
+            
         # Direct match
         if target_lower in card_descriptions:
-            return card_descriptions[target_lower]
+            return process_val(card_descriptions[target_lower])
         # Partial match: if tag name is part of target name or vice versa
         for tag_name, tag_desc in card_descriptions.items():
             if tag_name and (tag_name in target_lower or target_lower in tag_name):
-                return tag_desc
+                return process_val(tag_desc)
         return fallback
 
     # Smart image filtering & Ordering

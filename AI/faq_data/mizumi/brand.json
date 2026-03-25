@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "name": "MizuMi",
+    "origin_country": "Thailand",
+    "category": "Skincare",
+    "specialization": "Sensitive Skin",
+    "approach": "Minimalist",
+    "established": 2014,
+    "founder": [
+        "Nui-Waritta Suebphanwong",
+        "Partners"
+    ],
+    "ceo_image_url": "/static/people/nui_waritta_suebphanwong.png",
+    "business_scale": "Billion-baht business",
+
+    "name_meaning": {
+      "Mizu": "Water (Japanese)",
+      "Mi": "Beauty (Japanese)",
+      "philosophy": "Beauty starts with water"
+    },
+
+    "history": {
+      "founding": "Founded in late 2014 by Nui-Waritta Suebphanwong, who previously worked in consulting.",
+      "motivation": "Created to bridge a gap in the Thai market for high-quality, non-chemical sun protection suited for sensitive skin in Thailand's hot, humid climate.",
+      "flagship_product": "100% physical sunscreen",
+      "growth": "Grew from a single hero product into a billion-baht skincare business."
+    },
+
+    "philosophy": {
+      "formulation_style": "Minimalist",
+      "product_base": "Water-based",
+      "target_skin_type": "Sensitive skin",
+      "feel": "Light and gentle",
+      "sun_protection_type": "Physical"
+    }
+  }
+}

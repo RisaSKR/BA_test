@@ -345,14 +345,14 @@
             justify-content: center;
             font-size: 12px;
             font-weight: 700;
-            background: var(--primary);
-            color: white;
+            background: white;
+            color: var(--primary);
             flex-shrink: 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .message.user .msg-avatar {
-            background: var(--accent);
+            background: white;
         }
 
         .bubble {
@@ -510,6 +510,11 @@
         .zoom-btn:hover {
             transform: scale(1.1);
             background: var(--primary-light);
+        }
+
+        .product-card.flipped .zoom-btn {
+            opacity: 0;
+            pointer-events: none;
         }
 
         /* ── Slider ─────────────────────────────────────────── */
@@ -1241,7 +1246,7 @@
             // Send a welcome message if history is empty
             if (messagesEl.children.length === 0) {
                 setTimeout(() => {
-                    addMessage("สวัสดีค่ะ! MiMi ยินดีให้บริการค่ะ (I speak Thai, English, and Chinese!) มีอะไรให้ช่วยไหมคะ?", "bot");
+                    addMessage("สวัสดีค่ะ! MiMi ยินดีให้บริการค่ะ💙 สามารถสื่อสารได้ทั้งภาษาไทย English และ 中文นะคะ✨ แบรนด์ของเราเป็นผู้นำด้านผลิตภัณฑ์กันแดดในประเทศไทย ☀️ โดดเด่นด้วยคุณภาพระดับพรีเมียมและการดูแลผิวอย่างอ่อนโยนค่ะ🌿 หากต้องการคำแนะนำ MiMi ยินดีช่วยคุณเลือกผลิตภัณฑ์ที่เหมาะกับสภาพผิวของคุณนะคะ 😊", "bot");
                 }, 500);
             }
         });
@@ -1261,16 +1266,6 @@
                 { text: '☀️ 推荐防晒', query: '推荐防晒霜' },
                 { text: '☀️ 身体防晒', query: '身体防晒呵护' },
                 { text: '💧 面膜', query: '面膜' }
-            ],
-            'JP': [
-                { text: '☀️ 日焼け止め', query: 'おすすめの日焼け止め' },
-                { text: '☀️ ボディケア', query: 'ボディ日焼け止め' },
-                { text: '💧 マスク', query: 'フェイスマスク' }
-            ],
-            'KR': [
-                { text: '☀️ 자외선 차단제', query: '선크림 추천' },
-                { text: '☀️ 바디 케어', query: '바디 선크림' },
-                { text: '💧 마스크팩', query: '마스크팩' }
             ]
         };
 
@@ -1424,9 +1419,34 @@
             const headerMap = { 'TH': 'รายละเอียดสินค้า', 'EN': 'Product Details', '中文': '产品详情' };
             backHeader.textContent = headerMap[window.currentLang] || headerMap['TH'];
             
-            const desc = document.createElement('p');
-            desc.style.webkitLineClamp = '10'; // Show more description if available
-            desc.textContent = (product.information_context ? product.information_context.trim() : null) || (window.currentLang === 'EN' ? "Experience the best of MizuMi skincare with this special formulation designed for your beauty needs." : "สัมผัสประสบการณ์การดูแลผิวที่ดีที่สุดจาก MizuMi ด้วยสูตรพิเศษที่ออกแบบมาเพื่อความต้องการด้านความงามของคุณ");
+            let contextData = product.information_context;
+            let desc;
+            
+            if (Array.isArray(contextData) && contextData.length > 0) {
+                // If it's an array, display as bullet points
+                desc = document.createElement('ul');
+                desc.style.paddingLeft = '18px';
+                desc.style.fontSize = '12px'; // slightly smaller for bullet lists
+                desc.style.lineHeight = '1.6';
+                desc.style.color = 'var(--text)';
+                desc.style.marginBottom = '12px';
+                desc.style.overflow = 'hidden';
+                desc.style.display = '-webkit-box';
+                desc.style.webkitLineClamp = '10';
+                desc.style.webkitBoxOrient = 'vertical';
+                
+                contextData.forEach(item => {
+                    const li = document.createElement('li');
+                    li.style.marginBottom = '3px';
+                    li.textContent = item;
+                    desc.appendChild(li);
+                });
+            } else {
+                // Otherwise, display as a regular paragraph
+                desc = document.createElement('p');
+                desc.style.webkitLineClamp = '10'; // Show more description if available
+                desc.textContent = (typeof contextData === 'string' ? contextData.trim() : null) || (window.currentLang === 'EN' ? "Experience the best of MizuMi skincare with this special formulation designed for your beauty needs." : "สัมผัสประสบการณ์การดูแลผิวที่ดีที่สุดจาก MizuMi ด้วยสูตรพิเศษที่ออกแบบมาเพื่อความต้องการด้านความงามของคุณ");
+            }
 
             const tapHint = document.createElement('div');
             tapHint.style.fontSize = '10px';
@@ -1444,20 +1464,9 @@
             inner.appendChild(back);
             card.appendChild(inner);
 
-            // MAIN CLICK HANDLER (FLIP + MESSAGE)
+            // MAIN CLICK HANDLER (FLIP ONLY)
             card.onclick = () => {
-                const isFlipped = card.classList.toggle('flipped');
-
-                // If flipping to the back for the first time
-                if (isFlipped && !card.dataset.tipSent) {
-                    const fallbackMap = { 'TH': 'เป็นทางเลือกที่ยอดเยี่ยมสำหรับคุณค่ะ!', 'EN': 'A great choice for your daily routine!', '中文': '为您提供的绝佳选择！' };
-                    const tip = (product.information_context ? product.information_context.trim() : null) || fallbackMap[window.currentLang] || fallbackMap['TH'];
-                    // Small delay for natural feel
-                    setTimeout(() => {
-                        addMessage(tip, 'bot');
-                    }, 400);
-                    card.dataset.tipSent = "true";
-                }
+                card.classList.toggle('flipped');
             };
 
             return card;
@@ -1478,7 +1487,11 @@
 
             const avatarDiv = document.createElement('div');
             avatarDiv.className = 'msg-avatar';
-            avatarDiv.textContent = type === 'bot' ? 'Mi' : '👤';
+            if (type === 'bot') {
+                avatarDiv.innerHTML = '<img src="/static/icon_bot1.jpg" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
+            } else {
+                avatarDiv.innerHTML = '<img src="/static/icon_user.jpg" alt="User" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
+            }
 
             const bubbleDiv = document.createElement('div');
             bubbleDiv.className = 'bubble';
@@ -1652,7 +1665,7 @@
 
             const avatarDiv = document.createElement('div');
             avatarDiv.className = 'msg-avatar';
-            avatarDiv.textContent = 'Mi';
+            avatarDiv.innerHTML = '<img src="/static/icon_bot1.jpg" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
 
             const bubbleDiv = document.createElement('div');
             bubbleDiv.className = 'bubble';
@@ -1821,7 +1834,7 @@
         function createStreamMsgContainer() {
             const div = document.createElement('div');
             div.className = 'message bot';
-            div.innerHTML = `<div class="msg-avatar">Mi</div><div class="bubble"></div>`;
+            div.innerHTML = `<div class="msg-avatar"><img src="/static/icon_bot1.jpg" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div><div class="bubble"></div>`;
             messagesEl.appendChild(div);
             return div;
         }
@@ -1848,16 +1861,19 @@
             video.classList.remove('ready');
 
             try {
-                // Using 16:9 aspect ratio usually reduces zoom significantly
-                // compared to the default 4:3 camera feed.
                 const constraints = {
                     video: {
                         facingMode: { ideal: useFrontCamera ? "user" : "environment" },
-                        width: { ideal: 1080 },
-                        height: { ideal: 1920 },
-                        aspectRatio: 1.777777778
+                        width: { ideal: 1280 },
+                        height: { ideal: 720 }
                     }
                 };
+                
+                // Allow mobile browsers to swap width/height if in portrait
+                if (window.innerHeight > window.innerWidth) {
+                    constraints.video.width = { ideal: 720 };
+                    constraints.video.height = { ideal: 1280 };
+                }
 
                 cameraStream = await navigator.mediaDevices.getUserMedia(constraints);
                 video.srcObject = cameraStream;
