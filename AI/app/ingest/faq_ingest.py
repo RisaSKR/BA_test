@@ -193,6 +193,13 @@ def read_json_products(path: Path) -> list:
                 if isinstance(val, dict):
                     if "canonical_name" in val or "variant" in val or "product_code" in val:
                         process_item(key, val, path.name)
+                    elif key == "best_seller_recommendations":
+                        # Special handling for best seller recommendations
+                        title = val.get("title", "Best Sellers")
+                        for cat in val.get("categories", []):
+                            cat_text = f"{title}\nCategory: {cat.get('category_name')}\n"
+                            cat_text += json.dumps(cat, ensure_ascii=False, indent=2)
+                            docs.append(Document(page_content=cat_text, metadata={"source": path.name}))
                     else:
                         text = f"{key}:\n{json.dumps(val, ensure_ascii=False, indent=2)}"
                         docs.append(Document(page_content=text, metadata={"source": path.name}))
@@ -261,7 +268,7 @@ def process_brand(brand_path: Path, emb: GeminiEmbeddings):
         print(f" No text extracted for {brand_name}.")
         return
 
-    splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=2500, chunk_overlap=500)
     chunks = splitter.split_documents(docs)
     print(f"[{brand_name}] Chunked into {len(chunks)} passages.")
 

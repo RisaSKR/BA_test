@@ -19,7 +19,7 @@ def load_faq_index(brand: str = "mizumi"):
     index = FAISS.load_local(str(index_path), embeddings=emb, allow_dangerous_deserialization=True)
     _indices[brand] = index
     return index
-def retrieve_faq_tool(query: str, brand: str = "mizumi", k: int = 3) -> dict:
+def retrieve_faq_tool(query: str, brand: str = "mizumi", k: int = 10) -> dict:
     """Retrieves FAQ information for a specific brand."""
     try:
         db = load_faq_index(brand)

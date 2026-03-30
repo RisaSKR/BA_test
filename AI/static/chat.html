@@ -517,6 +517,62 @@
             pointer-events: none;
         }
 
+        .flip-btn {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            z-index: 10;
+            border: 1px solid var(--border);
+            pointer-events: none;
+            transition: all 0.2s ease;
+        }
+
+        .flip-btn img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+
+        .product-card.flipped .flip-btn {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .full-detail-btn {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            font-size: 11px;
+            color: var(--primary);
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
+
+        .full-detail-btn:hover {
+            color: var(--primary-dark);
+            background: white;
+            transform: translateY(-1px);
+        }
+
+        .product-card.flipped .full-detail-btn {
+            opacity: 0;
+            pointer-events: none;
+        }
+
         /* ── Slider ─────────────────────────────────────────── */
         .product-slider {
             display: flex;
@@ -544,6 +600,15 @@
             margin-top: 0;
         }
 
+        .product-slider .product-card {
+            min-width: 220px;
+            max-width: 220px;
+            height: 320px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            margin-top: 0;
+        }
+
         /* ── Quick Replies (Bot Bubble Buttons) ──────────────── */
         .quick-replies {
             display: flex;
@@ -557,24 +622,39 @@
         }
 
         .quick-reply-btn {
-            padding: 8px 16px;
-            border-radius: 20px;
-            background: #ffffff;
-            border: 1px solid var(--primary);
-            /* outline style like pic 1 */
+            padding: 8px 18px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            /* More transparent for 'ใส' */
+            backdrop-filter: blur(6px);
+            /* Stronger blur for premium glass look */
+            -webkit-backdrop-filter: blur(6px);
+            border: 1.5px solid rgba(26, 115, 232, 0.3);
+            /* Softer primary border */
             color: var(--primary);
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             white-space: nowrap;
-            /* No flex-shrink here to allow wrapping */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+            min-width: 80px;
+            text-align: center;
         }
 
+
         .quick-reply-btn:hover {
-            background: var(--primary-light);
-            transform: translateY(-1px);
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(26, 115, 232, 0.2);
         }
+
+        .quick-reply-btn:active {
+            transform: translateY(0);
+        }
+
+
 
         /* ── Input Area ─────────────────────────────────────── */
         .input-area {
@@ -1246,7 +1326,7 @@
             // Send a welcome message if history is empty
             if (messagesEl.children.length === 0) {
                 setTimeout(() => {
-                    addMessage("สวัสดีค่ะ! MiMi ยินดีให้บริการค่ะ💙 สามารถสื่อสารได้ทั้งภาษาไทย English และ 中文นะคะ✨ แบรนด์ของเราเป็นผู้นำด้านผลิตภัณฑ์กันแดดในประเทศไทย ☀️ โดดเด่นด้วยคุณภาพระดับพรีเมียมและการดูแลผิวอย่างอ่อนโยนค่ะ🌿 หากต้องการคำแนะนำ MiMi ยินดีช่วยคุณเลือกผลิตภัณฑ์ที่เหมาะกับสภาพผิวของคุณนะคะ 😊", "bot");
+                    addMessage("สวัสดีค่ะ MiMi ยินดีที่ได้ดูแลคุณลูกค้าในวันนี้ค่ะ 🙏\n\nMiMi สามารถให้บริการได้หลายภาษา โดยคุณลูกค้าสามารถเลือกภาษาได้ที่เมนูทางด้านบนค่ะ 🌐\n\nMizuMi เป็นแบรนด์สกินแคร์สำหรับผิวแพ้ง่ายคุณภาพพรีเมียม มีสินค้ากลุ่มกันแดดเป็นสินค้าขายดี มียอดขายดีอันดับ 1 และมีสินค้ากลุ่มมาสก์หน้าเป็นสินค้าแนะนำ อยากให้ MiMi แนะนำสินค้าตัวไหน กดเลือกได้ด้านล่างได้เลยค่ะ 💙", "bot", [], [], true);
                 }, 500);
             }
         });
@@ -1254,18 +1334,21 @@
         const quickActionsMap = {
             'TH': [
                 { text: '☀️ กันแดดหน้า ', query: 'แนะนำกันแดดหน้า' },
-                { text: '☀️ กันแดดตัว', query: 'แนะนำกันแดดตัว' },
-                { text: '💧 มาสหน้า', query: 'แนะนำมาสหน้า' }
+                { text: '🏖️ กันแดดตัว', query: 'แนะนำกันแดดตัว' },
+                { text: '💧 มาส์กหน้า', query: 'แนะนำมาส์กหน้า' },
+                { text: ' เเนะนำอื่นๆ', query: 'เเนะนำอื่นๆ' }
             ],
             'EN': [
                 { text: '☀️ Face Sunscreen', query: 'Face Sunscreen recommendation' },
-                { text: '☀️ Body Sunscreen', query: 'Body Sunscreen recommendation' },
-                { text: '💧 Face Mask', query: 'Face Mask recommendation' }
+                { text: '🏖️ Body Sunscreen', query: 'Body Sunscreen recommendation' },
+                { text: '💧 Face Mask', query: 'Face Mask recommendation' },
+                { text: ' Other recommendations', query: 'Other recommendations' }
             ],
             '中文': [
                 { text: '☀️ 推荐防晒', query: '推荐防晒霜' },
-                { text: '☀️ 身体防晒', query: '身体防晒呵护' },
-                { text: '💧 面膜', query: '面膜' }
+                { text: '🏖️ 身体防晒', query: '身体防晒呵护' },
+                { text: '💧 面膜', query: '面膜' },
+                { text: ' 其他推荐', query: '其他推荐' }
             ]
         };
 
@@ -1357,8 +1440,6 @@
             // Logic to change placeholder or prompt user
             if (lang === '中文') userInput.placeholder = "在这里输入消息...";
             else if (lang === 'EN') userInput.placeholder = "Type your message here...";
-            else if (lang === 'JP') userInput.placeholder = "メッセージを入力...";
-            else if (lang === 'KR') userInput.placeholder = "메시지 입력...";
             else userInput.placeholder = "พิมพ์ข้อความ...";
         }
 
@@ -1411,17 +1492,38 @@
             title.textContent = product.name || product.canonical_name || 'MizuMi Product';
             front.appendChild(title);
 
+            const flipBtn = document.createElement('div');
+            flipBtn.className = 'flip-btn';
+            flipBtn.innerHTML = '<img src="/static/icon_flip.png" alt="Flip">';
+            front.appendChild(flipBtn);
+
+            // Add "See full detail" button
+            const fullDetailBtn = document.createElement('div');
+            fullDetailBtn.className = 'full-detail-btn';
+            const detailLabelMap = { 'TH': 'ดูรายละเอียดเพิ่มเติม', 'EN': 'See full detail', '中文': '查看详情' };
+            fullDetailBtn.textContent = detailLabelMap[window.currentLang] || detailLabelMap['TH'];
+            fullDetailBtn.onclick = (e) => {
+                e.stopPropagation();
+                const productName = product.name || product.canonical_name || 'this product';
+                let query = '';
+                if (window.currentLang === 'TH') query = `ขอรายละเอียดเพิ่มเติมของ ${productName}`;
+                else if (window.currentLang === '中文') query = `查看 ${productName} 的详细页面`;
+                else query = `Full details of ${productName}`;
+                quickSend(query);
+            };
+            front.appendChild(fullDetailBtn);
+
             // BACK SIDE
             const back = document.createElement('div');
             back.className = 'product-card-back';
-            
+
             const backHeader = document.createElement('h4');
             const headerMap = { 'TH': 'รายละเอียดสินค้า', 'EN': 'Product Details', '中文': '产品详情' };
             backHeader.textContent = headerMap[window.currentLang] || headerMap['TH'];
-            
+
             let contextData = product.information_context;
             let desc;
-            
+
             if (Array.isArray(contextData) && contextData.length > 0) {
                 // If it's an array, display as bullet points
                 desc = document.createElement('ul');
@@ -1434,7 +1536,7 @@
                 desc.style.display = '-webkit-box';
                 desc.style.webkitLineClamp = '10';
                 desc.style.webkitBoxOrient = 'vertical';
-                
+
                 contextData.forEach(item => {
                     const li = document.createElement('li');
                     li.style.marginBottom = '3px';
@@ -1472,7 +1574,7 @@
             return card;
         }
 
-        function addMessage(text, type, products, bubbleOptions) {
+        function addMessage(text, type, products, bubbleOptions, suppressOtherRecs = false) {
             if (type === 'user') { quickActionsEl.style.display = 'none'; }
 
             if (type === 'bot') {
@@ -1551,14 +1653,14 @@
                     const fb = createFeedbackUI(parts[0].trim(), type);
                     if (fb) topBubble.appendChild(fb);
 
-                    topMsg.appendChild(avatarDiv);
+                    topMsg.appendChild(avatarDiv.cloneNode(true));
                     topMsg.appendChild(topBubble);
                     messagesEl.appendChild(topMsg);
                 } else {
                     // Still need avatar if first part is empty but table follows
                     const emptyMsg = document.createElement('div');
                     emptyMsg.className = `message ${type}`;
-                    emptyMsg.appendChild(avatarDiv);
+                    emptyMsg.appendChild(avatarDiv.cloneNode(true));
                     messagesEl.appendChild(emptyMsg);
                 }
 
@@ -1634,19 +1736,21 @@
                 // Use existing options or empty array
                 const options = Array.isArray(bubbleOptions) ? [...bubbleOptions] : [];
 
-                // Always add the "Other recommendations" fixed bubble if not already present
-                if (!options.includes(otherBtnText)) {
+                // Add "Other recommendations" fixed bubble if not suppressed and not already present
+                if (!suppressOtherRecs && !options.includes(otherBtnText)) {
                     options.push(otherBtnText);
                 }
 
-                options.forEach(opt => {
-                    const btn = document.createElement('button');
-                    btn.className = 'quick-reply-btn';
-                    btn.textContent = opt;
-                    btn.onclick = () => quickSend(opt);
-                    bubbleContainer.appendChild(btn);
-                });
-                messagesEl.appendChild(bubbleContainer);
+                if (options.length > 0) {
+                    options.forEach(opt => {
+                        const btn = document.createElement('button');
+                        btn.className = 'quick-reply-btn';
+                        btn.textContent = opt;
+                        btn.onclick = () => quickSend(opt);
+                        bubbleContainer.appendChild(btn);
+                    });
+                    messagesEl.appendChild(bubbleContainer);
+                }
             }
 
             // messagesEl.scrollTop = messagesEl.scrollHeight; // Disabled auto-scroll as per user request
@@ -1839,11 +1943,11 @@
             return div;
         }
 
-        function quickSend(text) { 
-            userInput.value = text; 
+        function quickSend(text) {
+            userInput.value = text;
             userInput.style.height = 'auto';
             userInput.style.height = userInput.scrollHeight + 'px';
-            sendMessage(); 
+            sendMessage();
         }
         function openModal(src) {
             document.getElementById('modalImage').src = src;
@@ -1868,7 +1972,7 @@
                         height: { ideal: 720 }
                     }
                 };
-                
+
                 // Allow mobile browsers to swap width/height if in portrait
                 if (window.innerHeight > window.innerWidth) {
                     constraints.video.width = { ideal: 720 };

@@ -38,7 +38,8 @@ def _get_display_name(raw: str) -> str:
 
 def _load_catalog(brand: str = "mizumi") -> dict:
     """Return {normalized_name: {"image": url, "name": display_name}} for every product."""
-    if brand in _catalog_cache:
+    # Cache agents per brand, but force reload if currently empty
+    if brand in _catalog_cache and _catalog_cache[brand]:
         return _catalog_cache[brand]
 
     catalog: dict[str, dict] = {}
@@ -49,6 +50,7 @@ def _load_catalog(brand: str = "mizumi") -> dict:
         try:
             with open(products_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
+            
             for key, val in data.items():
                 if not isinstance(val, dict):
                     continue
@@ -213,8 +215,9 @@ def _process_metadata(ev, text_content: str, found_products: list, brand: str) -
             
         if found:
             p["_pos"] = pos
-            # Enrich with detailed metadata from our catalog lookup
+            # Enrich with detailed metadata from our reliable catalog lookup
             if base in catalog:
+                p["image"] = catalog[base].get("image") or p.get("image")
                 p["variant"] = catalog[base].get("variant", "")
                 # Preference: 1. AI provided localized desc, 2. Catalog desc
                 p["information_context"] = get_localized_desc(base, catalog[base].get("information_context", ""))

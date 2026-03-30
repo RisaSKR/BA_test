@@ -29,7 +29,7 @@ def load_index(brand: str = "mizumi"):
     index = FAISS.load_local(str(index_path), embeddings=emb, allow_dangerous_deserialization=True)
     _indices[brand] = index
     return index
-def search_kb(query: str, brand: str = "mizumi", k: int = 3)-> dict:
+def search_kb(query: str, brand: str = "mizumi", k: int = 10)-> dict:
     """
     Search the local FAISS index for relevant chunks of a specific brand.
     """
