@@ -24,17 +24,35 @@ class GeminiEmbeddings(Embeddings):
         self.model = model
 
     def embed_documents(self, texts: List[str]) -> List[List[float]]:
-        """Embed a list of document chunks in batches of 100."""
-        batch_size = 100
+        """Embed a list of document chunks in smaller batches with retries."""
+        batch_size = 20  # Reduced batch size
         all_embeddings = []
+        
         for i in range(0, len(texts), batch_size):
             batch = texts[i:i+batch_size]
-            res = self.client.models.embed_content(
-                model=self.model,
-                contents=batch,
-            )
-            all_embeddings.extend([e.values for e in res.embeddings])
-            time.sleep(1)  # Pause for 1 second after each batch
+            max_retries = 5
+            base_delay = 5  # Start with 5 seconds delay on error
+            
+            for attempt in range(max_retries):
+                try:
+                    res = self.client.models.embed_content(
+                        model=self.model,
+                        contents=batch,
+                    )
+                    all_embeddings.extend([e.values for e in res.embeddings])
+                    time.sleep(2)  # Healthy pause between successful batches
+                    break
+                except Exception as e:
+                    if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                        if attempt < max_retries - 1:
+                            delay = base_delay * (2 ** attempt)
+                            print(f"[Quota] Rate limit reached. Retrying batch {i//batch_size + 1} in {delay} seconds... (Attempt {attempt + 1}/{max_retries})")
+                            time.sleep(delay)
+                        else:
+                            print(f"[Error] Max retries reached for batch {i//batch_size + 1}.")
+                            raise e
+                    else:
+                        raise e
         return all_embeddings
 
     def embed_query(self, text: str) -> List[float]:

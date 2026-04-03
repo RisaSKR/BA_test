@@ -1,0 +1,15 @@
+{
+  "brand": "Mizumi",
+  "brand_ambassadors": [
+    {
+      "series": ["Mask", "Toner"],
+      "ambassador": "PP Krit Amnuaydechkorn",
+      "pp_krit_image_url": "/static/people/pp_krit.jpg"
+    },
+    {
+      "series": ["Face Sunscreen", "Body Sunscreen"],
+      "ambassador": "Chen Zheyuan",
+      "chenzheyuan_image_url":"/static/people/chenzheyuan.jpg"
+    }
+  ]
+}

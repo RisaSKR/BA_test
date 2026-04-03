@@ -187,28 +187,58 @@ def read_json_products(path: Path) -> list:
         for item in data:
             process_item(item.get("product_code", "unknown"), item, path.name)
     elif isinstance(data, dict):
-        has_sub_dicts = any(isinstance(v, dict) for v in data.values())
-        if has_sub_dicts:
-            for key, val in data.items():
-                if isinstance(val, dict):
-                    if "canonical_name" in val or "variant" in val or "product_code" in val:
-                        process_item(key, val, path.name)
-                    elif key == "best_seller_recommendations":
-                        # Special handling for best seller recommendations
-                        title = val.get("title", "Best Sellers")
-                        for cat in val.get("categories", []):
-                            cat_text = f"{title}\nCategory: {cat.get('category_name')}\n"
-                            cat_text += json.dumps(cat, ensure_ascii=False, indent=2)
-                            docs.append(Document(page_content=cat_text, metadata={"source": path.name}))
-                    else:
-                        text = f"{key}:\n{json.dumps(val, ensure_ascii=False, indent=2)}"
-                        docs.append(Document(page_content=text, metadata={"source": path.name}))
+        # brand or meta keys can be skipped or added as global facts
+        for key, val in data.items():
+            if key == "brand":
+                continue 
+
+            if key == "brand_ambassadors" and isinstance(val, list):
+                # Special handling for ambassadors
+                for ambassador in val:
+                    name = ambassador.get("ambassador", "Unknown Ambassador")
+                    # Make the first line the name for better matching in base_agent.py
+                    text = f"{name}\n"
+                    text += f"Role: Brand Ambassador\n"
+                    text += f"Series: {', '.join(ambassador.get('series', []))}\n"
+                    if ambassador.get("description"):
+                        text += f"Description: {ambassador['description']}\n"
+                    
+                    # Extract any image url either as 'image_url' or a custom 'xxx_image_url'
+                    img_url = ambassador.get("image_url")
+                    if not img_url:
+                        for k, v in ambassador.items():
+                            if k.endswith("_image_url") and isinstance(v, str):
+                                img_url = v
+                                break
+                    
+                    docs.append(Document(
+                        page_content=text, 
+                        metadata={
+                            "source": path.name, 
+                            "image_url": img_url
+                        }
+                    ))
+                continue
+
+            if isinstance(val, dict):
+                if "canonical_name" in val or "variant" in val or "product_code" in val:
+                    process_item(key, val, path.name)
+                elif key == "best_seller_recommendations":
+                    # Special handling for best seller recommendations
+                    title = val.get("title", "Best Sellers")
+                    for cat in val.get("categories", []):
+                        cat_text = f"{title}\nCategory: {cat.get('category_name')}\n"
+                        cat_text += json.dumps(cat, ensure_ascii=False, indent=2)
+                        docs.append(Document(page_content=cat_text, metadata={"source": path.name}))
                 else:
-                    text = f"{key}: {val}"
-                    docs.append(Document(page_content=text, metadata={"source": path.name}))
-        else:
-            text = format_product_text(data)
-            docs.append(Document(page_content=text, metadata={"source": path.name, "image_url": data.get("image_url")}))
+                    # Generic dict indexing
+                    text = f"{key}:\n{json.dumps(val, ensure_ascii=False, indent=2)}"
+                    img_url = val.get("image_url")
+                    docs.append(Document(page_content=text, metadata={"source": path.name, "image_url": img_url}))
+            elif not isinstance(val, list):
+                 # Simple key-value Pair
+                 text = f"{key}: {val}"
+                 docs.append(Document(page_content=text, metadata={"source": path.name}))
     
     return docs
 

@@ -565,7 +565,7 @@
         "Dehydrated",
         "Sensitive"
       ],
-      "age_min_months": null,
+      "age_min_months": 3,
       "pregnancy_safe": true,
       "vegan": true,
       "fragrance_free": true,
@@ -6916,6 +6916,49 @@
         "FG-MZ-FCC-SKB045"
       ]
     },
+  "ingredients": {
+    "list": [
+      "Aqua",
+      "Glycerin",
+      "Polysorbate 20",
+      "Glycereth-26",
+      "Propanediol",
+      "Salicylic Acid",
+      "Beta-Glucan",
+      "Polylysine",
+      "Hamamelis Virginiana Water",
+      "Artemisia Princeps Leaf Extract",
+      "Terminalia Chebula Fruit Extract",
+      "Madecassoside",
+      "Centella Asiatica Extract",
+      "Biosaccharide Gum-1",
+      "Dipotassium Glycyrrhizate",
+      "Betaine",
+      "Sodium Hyaluronate",
+      "Dipropylene Glycol",
+      "Hydroxyacetophenone",
+      "Caprylyl Glycol",
+      "Ammonium Acryloyldimethyltaurate/VP Copolymer",
+      "PEG-40 Hydrogenated Castor Oil",
+      "Triethanolamine",
+      "Benzotriazolyl Dodecyl P-Cresol",
+      "Hydroxypropyl Guar",
+      "Hydroxyethylcellulose",
+      "1,2-Hexanediol",
+      "Methylpropanediol",
+      "PEG-8",
+      "PEG/PPG-17/6 Copolymer",
+      "Ethylhexylglycerin",
+      "PEG-60 Hydrogenated Castor Oil",
+      "Sodium Hydroxide",
+      "Benzoic Acid",
+      "Propylene Glycol",
+      "Carthamus Tinctorius Seed Oil",
+      "Isostearamidopropyl Ethyldimonium Ethosulfate",
+      "Olea Europaea Fruit Oil",
+      "Disodium EDTA"
+    ]
+  },
     "information_context": [
       "MizuMi Black Nova Pad Pore Clarifying สูตรเพื่อ ผิวเป็นสิว อุดตันง่าย"
     ]
