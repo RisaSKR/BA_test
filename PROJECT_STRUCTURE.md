@@ -61,7 +61,7 @@ Data processing and indexing pipeline.
 
 | Directory | Content |
 | :--- | :--- |
-| **`AI/faq_data/`** | Raw brand knowledge (PDF, XLSX, CSV). This is the source of truth for RAG. |
+| **`AI/faq_data/`** | Raw brand knowledge (PDF, XLSX, CSV, JSON). This is the source of truth for RAG. |
 | **`AI/index/`** | Generated FAISS vector database indices. Created by ingestion scripts. |
 
 ---
@@ -78,5 +78,5 @@ To add or modify a brand persona:
 ## 🛡️ License & Maintenance
 
 Designed and maintained for high-performance Thai customer service automation.
-*Last Updated: 2026-02-05*
+*Last Updated: 2026-04-06*
 

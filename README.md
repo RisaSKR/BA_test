@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
-  <img src="https://img.shields.io/badge/Language-Thai%20%2F%20English-blue" alt="Language">
+  <img src="https://img.shields.io/badge/Language-Thai%20%2F%20English%20%2F%20Chinese-blue" alt="Language">
   <img src="https://img.shields.io/badge/Model-Gemini%202.0%20Flash-orange" alt="Model">
   <img src="https://img.shields.io/badge/Framework-FastAPI-009688" alt="Framework">
 </p>
@@ -13,7 +13,7 @@
 
 ## ✨ Key Features
 
-- **🇹🇭 Native Thai Support**: Expertly tuned for Thai language nuances, professional formatting, and cultural context.
+- **🌍 Multilingual Intelligence**: Native-quality support for **Thai**, **English**, and **Chinese** with real-time translation capabilities.
 - **🧠 Agentic Multi-Brand Architecture**: Supports multiple brand personas (e.g., MizuMi) with dedicated instructions and knowledge bases.
 - **📚 Advanced RAG System**: Real-time retrieval from indexed FAQs, store policies, and product documentation using FAISS.
 - **📊 Token usage Tracking**: Precise monitoring of prompt, candidate, and total token counts for cost management.
@@ -36,19 +36,16 @@ MiMi operates as the core intelligence layer between the messaging platforms and
 ## 📁 Project Structure
 
 ```text
-MiMi/
-├── AI/
-│   ├── app/                # Core Logic
-│   │   ├── agents/         # Agent definitions and session management
-│   │   ├── prompts/        # YAML-based brand instructions & personas
-│   │   ├── tools/          # RAG and lookup utilities
-│   │   └── ingest/         # Data indexing and embedding scripts
-│   ├── faq_data/           # Raw knowledge source (PDF, XLSX, CSV)
-│   ├── index/              # Generated FAISS vector indices
+BA_test/
+├── AI/                     # Core Engine
+│   ├── app/                # Application Logic (Agents & Tools)
+│   ├── faq_data/           # Knowledge Base (PDF, XLSX, CSV, JSON)
+│   ├── static/             # Chat UI Frontend (HTML, CSS, JS)
+│   ├── index/              # Search Indices (FAISS)
 │   ├── server.py           # FastAPI Production Server
 │   └── main.py             # CLI Testing Interface
-├── .env                    # Secrets & API Keys (External)
-└── requirements.txt        # Dependency Manifest
+├── .env                    # Secrets & API Keys
+└── requirements.txt        # Dependencies
 ```
 
 ---
@@ -65,9 +62,9 @@ MiMi/
 ```bash
 # Clone the repository
 git clone https://github.com/RisaSKR/BA.git
-cd BA
+cd BA_test
 
-# Create and activate virtual environment
+# Create and activate virtual environment (windows)
 python -m venv .venv
 .venv\Scripts\activate
 
@@ -141,7 +138,7 @@ Primary endpoint for sending user messages and receiving agent responses.
 2. Update the `PromptLoader` logic to switch between brands based on context or headers.
 
 ### Updating Knowledge
-1. Drop new source files (PDF, CSV, XLSX) into `AI/faq_data/`.
+1. Drop new source files (PDF, CSV, XLSX, JSON) into `AI/faq_data/`.
 2. Re-run the ingestion script to refresh the vector store.
 
 ---
