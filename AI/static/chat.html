@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 
 <head>
@@ -743,9 +743,11 @@
         }
 
         .attach-btn svg {
-            width: 23px; /* Increase this to make the icon bigger */
+            width: 23px;
+            /* Increase this to make the icon bigger */
             height: 28px;
-            transform: translate(0px, 0px); /* Adjust these to move it manually (e.g., 2px -1px) */
+            transform: translate(0px, 0px);
+            /* Adjust these to move it manually (e.g., 2px -1px) */
         }
 
 
@@ -1238,7 +1240,7 @@
                 <p><span class="status-dot"></span>Official Beauty Advisor</p>
             </div>
             <div class="lang-selector">
-                <div class="lang-option active" onclick="setLang('TH', this)">TH</div>
+                <div class="lang-option active" onclick="setLang('ไทย', this)">ไทย</div>
                 <div class="lang-option" onclick="setLang('中文', this)">中文</div>
                 <div class="lang-option" onclick="setLang('EN', this)">EN</div>
             </div>
@@ -1718,13 +1720,28 @@
                     container.style.marginTop = '10px';
                     container.style.marginLeft = type === 'bot' ? '42px' : '0';
                     container.style.alignSelf = type === 'user' ? 'flex-end' : 'flex-start';
-                    container.style.width = '220px';
-                    container.style.maxWidth = '100%';
+                    if (type === 'bot') {
+                        container.style.width = '220px';
+                        container.style.maxWidth = '100%';
+                    }
                 }
 
                 list.forEach(item => {
-                    let productObj = (typeof item === 'string') ? { image: item } : item;
-                    container.appendChild(createProductCard(productObj));
+                    if (type === 'user') {
+                        // Simpler rendering for user-uploaded photos
+                        const img = document.createElement('img');
+                        img.src = (typeof item === 'string') ? item : (item.image || item.image_url || item.imageUrl);
+                        img.style.maxWidth = '200px';
+                        img.style.maxHeight = '300px';
+                        img.style.borderRadius = '12px';
+                        img.style.boxShadow = 'var(--shadow)';
+                        img.style.cursor = 'pointer';
+                        img.onclick = () => openModal(img.src);
+                        container.appendChild(img);
+                    } else {
+                        let productObj = (typeof item === 'string') ? { image: item } : item;
+                        container.appendChild(createProductCard(productObj));
+                    }
                 });
 
                 messagesEl.appendChild(container);
