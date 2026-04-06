@@ -57,7 +57,7 @@ sequenceDiagram
 MiMi uses `InMemorySessionService` to maintain conversation context. This allows agents to remember previous parts of the chat, enabling a natural, continuous skincare consultation journey.
 
 ## 🛠️ Key Technologies
-- **LLM**: Google Gemini 2.0 Flash (latest `gemini-3-flash-preview` for high speed).
+- **LLM**: Google Gemini 3.0 Flash (latest `gemini-3-flash-preview` for high speed).
 - **Embeddings**: Google Gemini Embedding models.
 - **Vector Search**: FAISS (Facebook AI Similarity Search).
 - **Framework**: FastAPI with Asynchronous support.

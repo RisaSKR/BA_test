@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
   <img src="https://img.shields.io/badge/Language-Thai%20%2F%20English%20%2F%20Chinese-blue" alt="Language">
-  <img src="https://img.shields.io/badge/Model-Gemini%202.0%20Flash-orange" alt="Model">
+  <img src="https://img.shields.io/badge/Model-Gemini%203.0%20Flash-orange" alt="Model">
   <img src="https://img.shields.io/badge/Framework-FastAPI-009688" alt="Framework">
 </p>
 
@@ -29,7 +29,7 @@ MiMi operates as the core intelligence layer between the messaging platforms and
 1.  **Entry Point**: `AI/server.py` exposes a RESTful API.
 2.  **Logic Layer**: `AI/app/agents/base_agent.py` manages session persistence and agent execution.
 3.  **Retrieval**: `retrieve_tool` queries FAISS indices to ground the model's responses in factual data.
-4.  **LLM**: Processes the combined prompt (Instruction + Context + Knowledge) using Gemini 2.0 Flash.
+4.  **LLM**: Processes the combined prompt (Instruction + Context + Knowledge) using Gemini 3.0 Flash.
 
 ---
 
