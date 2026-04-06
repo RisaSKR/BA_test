@@ -369,6 +369,10 @@
             color: white;
             border-top-right-radius: 4px;
             box-shadow: 0 4px 12px rgba(26, 115, 232, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .message.bot .bubble {
@@ -680,24 +684,24 @@
 
         .input-wrapper {
             display: flex;
-            gap: 8px;
+            gap: 20px;
             align-items: flex-end;
-            background: var(--gray-light);
+            background: var(--bot-bubble);
             border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 6px 6px 8px 14px;
+            border-radius: 32px;
+            padding: 6px 6px 6px 6px;
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .input-wrapper:focus-within {
             border-color: var(--primary);
             box-shadow: 0 0 0 3px var(--primary-light);
-            background: white;
+            background: var(--bot-bubble);
         }
 
         .send-btn {
-            width: 40px;
-            height: 40px;
+            width: 41px;
+            height: 41px;
             border-radius: 50%;
             background: var(--primary);
             border: none;
@@ -718,24 +722,33 @@
         }
 
         .send-btn svg {
-            width: 18px;
-            height: 18px;
+            width: 23px;
+            height: 28px;
             fill: white;
+            transform: rotate(-35deg) translate(2px, -1px);
         }
 
         /* ── Image Attachment ───────────────────────────────── */
         .attach-btn {
-            width: 36px;
-            height: 36px;
+            width: 41px;
+            height: 41px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            color: var(--text-muted);
+            color: #67A2D7;
             transition: all 0.2s ease;
-            background: rgba(0, 0, 0, 0.03);
+            background: white;
             border-radius: 50%;
         }
+
+        .attach-btn svg {
+            width: 23px; /* Increase this to make the icon bigger */
+            height: 28px;
+            transform: translate(0px, 0px); /* Adjust these to move it manually (e.g., 2px -1px) */
+        }
+
+
 
         .attach-btn:hover {
             color: var(--primary);
@@ -758,7 +771,7 @@
             position: relative;
             width: 60px;
             height: 60px;
-            border-radius: 8px;
+            border-radius: 9px;
             overflow: hidden;
             border: 1px solid var(--border);
         }
@@ -790,8 +803,7 @@
         /* ── Feedback (Like/Dislike) ───────────────────────── */
         .bubble {
             position: relative;
-            padding-bottom: 12px;
-            /* Base padding */
+            padding: 12px 16px;
         }
 
         .message.bot .bubble {
@@ -799,10 +811,7 @@
             /* Extra room for icons */
         }
 
-        .message.user .bubble {
-            padding-bottom: 22px;
-            /* Extra room for icons */
-        }
+
 
         .feedback-container {
             position: absolute;
