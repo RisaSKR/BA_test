@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 
 <head>
@@ -1324,6 +1324,22 @@
         const sessionId = 'sess-' + Math.random().toString(36).substr(2, 9);
         window.currentLang = 'TH'; // Default language state
 
+        // ── Branch & Store Detection ────────────────────────
+        // Capture ?shop=...&store=... from URL and persist in localStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        const shopParam = urlParams.get('shop');
+        const storeParam = urlParams.get('store');
+
+        if (shopParam && storeParam) {
+            localStorage.setItem('mimi_shop', shopParam);
+            localStorage.setItem('mimi_store', storeParam);
+            console.log(`Detected branch: ${shopParam}, store: ${storeParam}`);
+        }
+
+        const currentShop = localStorage.getItem('mimi_shop');
+        const currentStore = localStorage.getItem('mimi_store');
+        // ────────────────────────────────────────────────────
+
         // Auto-resize textarea
         userInput.addEventListener('input', () => {
             userInput.style.height = 'auto';
@@ -1846,7 +1862,8 @@
                 platform_conversation_id: sessionId,
                 text: text,
                 image: currentBase64Image,
-                language: window.currentLang
+                language: window.currentLang,
+                store_id: currentStore ? `${currentShop}_${currentStore}` : "onsite_default"
             };
 
             userInput.value = '';

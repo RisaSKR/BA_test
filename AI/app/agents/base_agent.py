@@ -279,15 +279,36 @@ async def chat_stream(user_text: str, session_id: str, brand: str = "mizumi", st
         if s is None:
             s = await ss.create_session(app_name="cs-app", user_id=user_id, session_id=session_id)
 
+        # ── Store Lookup ──
+        store_display_name = store_id
+        try:
+            store_file = Path("faq_data") / brand / "stores.json"
+            if store_file.exists():
+                with open(store_file, "r", encoding="utf-8") as f:
+                    store_data = json.load(f)
+                    if store_id in store_data:
+                        store_display_name = store_data[store_id].get("name", store_id)
+        except Exception as e:
+            logging.warning(f"Failed to load store info: {e}")
+
         runner = Runner(agent=agent, app_name="cs-app", session_service=ss)
         
         parts = []
+        context_parts = []
+        if language:
+            context_parts.append(f"Preferred Language: {language}")
+        if store_id and store_id != "onsite_default":
+            context_parts.append(f"Current Store: {store_display_name}")
+            
+        context_prefix = ""
+        if context_parts:
+            context_prefix = "[" + " | ".join(context_parts) + "]\n"
+
         if user_text:
-            # Inject language preference if provided
-            if language:
-                parts.append(types.Part(text=f"[Preferred Language: {language}]\n{user_text}"))
-            else:
-                parts.append(types.Part(text=user_text))
+            parts.append(types.Part(text=f"{context_prefix}{user_text}"))
+        elif context_prefix:
+            # If no text (e.g. just image), still send the context
+            parts.append(types.Part(text=context_prefix))
         
         if image:
             try:
