@@ -6,13 +6,44 @@
     "category": "กันแดด",
     "image_url": "/static/products/mizumi_uv_water_serum.jpg",
     "facts": {
-      "sunscreen_type": "Physical",
-      "spf": 50,
-      "pa": "++++",
-      "ppd": {
-        "in_vitro": 37.66,
-        "in_vivo": 27.6
-      },
+  "sunscreen_type": "Physical",
+  "label_spf": "50+",
+  "pa": "PA++++",
+  "protection_claim": {
+    "uvb_block_percent": ">98%",
+    "sunspot_risk_reduction": ">16x",
+    "protects_against": [
+      "UVB",
+      "Blue Light",
+      "Infrared (IR)"
+    ]
+  },
+  "ppd": {
+    "in_vitro": {
+      "value": "37.66",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "27.6",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+  },
+  "spf_test": {
+    "in_vitro": {
+      "value": "66.12",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "64",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+    },
       "water_resistant": false,
       "sweat_resistant": false,
       "oil_control": "medium",
@@ -87,8 +118,45 @@
     "image_url": "/static/products/mizumi_uv_water_defense_pro.jpg",
     "facts": {
       "sunscreen_type": "Physical",
-      "spf": 50,
-      "pa": "++++",
+      "label_spf": "50+",
+      "pa": "PA++++",
+      "protection_claim": {
+        "uvb_block_percent": "98%",
+        "sunspot_risk_reduction": ">16x",
+        "protects_against": [
+          "UVB",
+          "Blue Light",
+          "Infrared (IR)",
+          "PM2.5",
+          "Pollution"
+        ]
+      },
+      "ppd": {
+        "in_vitro": {
+          "value": "16.1",
+          "standard": "ISO 24443"
+        },
+        "in_vivo": {
+          "value": "17.83",
+          "standard": [
+            "ISO 24442",
+            "ISO 24444"
+          ]
+        }
+      },
+      "spf_test": {
+        "in_vitro": {
+          "value": "50.5",
+          "standard": "ISO 24443"
+        },
+        "in_vivo": {
+          "value": "52.57",
+          "standard": [
+            "ISO 24442",
+            "ISO 24444"
+          ]
+        }
+      },
       "water_resistant": true,
       "water_resistant_minutes": 80,
       "sweat_resistant": true,
@@ -96,10 +164,6 @@
       "finish": "Matte",
       "tone_up": 1,
       "can_apply_immediately": true,
-      "ppd": {
-        "in_vitro": 16.1,
-        "in_vivo": 17.83
-      },
       "blue_light_protection": true,
       "infrared_protection": true,
       "pm25_protection": true
@@ -172,12 +236,41 @@
     "category": "กันแดด",
     "image_url": "/static/products/mizumi_uv_water_sport.jpg",
     "facts": {
-      "sunscreen_type": "Hybrid",
-      "spf": 50,
-      "pa": "++++",
-      "ppd": {
-        "in_vitro": 34.2,
-        "in_vivo": 21.6
+  "sunscreen_type": "hybrid",
+  "label_spf": "50+",
+  "pa": "PA++++",
+  "protection_claim": {
+    "uvb_block_percent": "98%",
+    "sunspot_risk_reduction": ">16x",
+    "protects_against": [
+      "UVB"
+    ]
+  },
+  "ppd": {
+    "in_vitro": {
+      "value": "34.2",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "21.6",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+  },
+  "spf_test": {
+    "in_vitro": {
+      "value": "122.3",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "68.6",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
       },
       "water_resistant": true,
       "sweat_resistant": true,
@@ -193,6 +286,10 @@
         "All skin types",
         "Sensitive"
       ],
+       "reapply_feature": {
+      "time_required": "5 minutes",
+      "message": "Easy reapply without mirror"
+    },
       "age_min_years": 5,
       "pregnancy_safe": true,
       "vegan": true,
@@ -276,11 +373,46 @@
     "category": "กันแดด",
     "facts": {
       "sunscreen_type": "Hybrid",
-      "spf": 50,
+      "spf": "50+",
       "pa": "++++",
-      "ppd": {
-        "in_vitro": 27.61,
-        "in_vivo": 30.8
+      "protection_claim": {
+    "uvb_block_percent": "98%",
+    "sunspot_risk_reduction": ">16x",
+    "protects_against": [
+      "UVB",
+      "Blue Light / HEV Light",
+      "Infrared (IR)"
+    ],
+    "key_extracts": [
+      "Tara Tannins",
+      "Organic Sunflower Sprouts"
+    ]
+  },
+  "ppd": {
+    "in_vitro": {
+      "value": "27.61",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "30.8",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+  },
+  "spf_test": {
+    "in_vitro": {
+      "value": "106.68",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "62.2",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
       },
       "water_resistant": false,
       "sweat_resistant": "light",
@@ -388,13 +520,44 @@
     "image_url": "/static/products/mizumi_uv_ultimate_matte_oil_control_sunscreen.jpg",
     "variant": "Matte & Oil Control 40 g",
     "category": "กันแดดผิวหน้า",
-    "facts": {
+     "facts": {
       "sunscreen_type": "Hybrid",
-      "spf": 50,
+      "spf": "50+",
       "pa": "++++",
-      "ppd": {
-        "in_vitro": "27.41",
-        "in_vivo": "22.5"
+      "protection_claim": {
+    "uvb_block_percent": "98%",
+    "sunspot_risk_reduction": ">16x",
+    "protects_against": [
+      "UVA1",
+      "UVA2",
+      "UVB"
+    ]
+  },
+  "ppd": {
+    "in_vitro": {
+      "value": "27.41",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "22.5",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+  },
+  "spf_test": {
+    "in_vitro": {
+      "value": "71.95",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "56",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
       },
       "water_resistant": false,
       "sweat_resistant": "light",
@@ -518,38 +681,66 @@
     "category": "กันแดด",
     "image_url": "/static/products/mizumi_uv_aqua_lock_serum.jpg",
     "facts": {
-      "sunscreen_type": "Hybrid",
-      "label_spf": "50+",
-      "pa": "PA++++",
-      "ppd": {
-        "in_vitro": "39.25",
-        "in_vivo": [
-          {
-            "value": "16.1",
-            "tested_in": "Australia"
-          },
-          {
-            "value": "25.3",
-            "tested_in": "Europe"
-          }
-        ]
+    "sunscreen_type": "Hybrid",
+    "label_spf": "50+",
+    "pa": "PA++++",
+    "protection_claim": {
+      "coverage_percent": ">98%",
+      "protects_against": [
+        "UVA1",
+        "UVA2",
+        "UVB",
+        "Blue Light",
+        "HEV Light",
+        "IR",
+        "Pollution"
+      ]
+    },
+    "ppd": {
+      "in_vitro": {
+        "value": "39.25",
+        "standard": "ISO 24443"
       },
-      "spf_test": {
-        "in_vitro": [
-          "112.22",
-          "62.8"
-        ],
-        "in_vivo": [
-          {
-            "value": "71.7",
-            "tested_in": "Australia"
-          },
-          {
-            "value": "68.9",
-            "tested_in": "Europe"
-          }
-        ]
-      },
+      "in_vivo": [
+        {
+          "value": "16.1",
+          "tested_in": "Australia",
+          "pa": "PA++++"
+        },
+        {
+          "value": "21.2",
+          "tested_in": "Europe",
+          "pa": "PA++++"
+        }
+      ]
+    },
+    "spf_test": {
+      "in_vitro": [
+        {
+          "value": "112.22",
+          "standard": "ISO 24443"
+        },
+        {
+          "value": "62.8",
+          "test_type": "Robot Test",
+          "standard": "ISO 23675"
+        }
+      ],
+      "in_vivo": [
+        {
+          "value": "71.7",
+          "tested_in": "Australia"
+        },
+        {
+          "value": "68.7",
+          "tested_in": "Europe"
+        }
+      ],
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    },
       "water_resistant": false,
       "sweat_resistant": false,
       "oil_control": "low",
