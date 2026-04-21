@@ -189,8 +189,6 @@ def read_json_products(path: Path) -> list:
     elif isinstance(data, dict):
         # brand or meta keys can be skipped or added as global facts
         for key, val in data.items():
-            if key == "brand":
-                continue 
 
             if key == "brand_ambassadors" and isinstance(val, list):
                 # Special handling for ambassadors
