@@ -1331,19 +1331,24 @@
         window.currentLang = 'TH'; // Default language state
 
         // ── Branch & Store Detection ────────────────────────
-        // Capture ?shop=...&store=... from URL and persist in localStorage
+        // Capture ?shop=...&store=... from URL and persist in sessionStorage
         const urlParams = new URLSearchParams(window.location.search);
         const shopParam = urlParams.get('shop');
         const storeParam = urlParams.get('store');
 
         if (shopParam && storeParam) {
-            localStorage.setItem('mimi_shop', shopParam);
-            localStorage.setItem('mimi_store', storeParam);
+            sessionStorage.setItem('mimi_shop', shopParam);
+            sessionStorage.setItem('mimi_store', storeParam);
             console.log(`Detected branch: ${shopParam}, store: ${storeParam}`);
+        } else if (!shopParam && !storeParam) {
+            // If explicitly visiting a link without params, clear the stored context 
+            // to ensure a clean 'general' bot experience.
+            sessionStorage.removeItem('mimi_shop');
+            sessionStorage.removeItem('mimi_store');
         }
 
-        const currentShop = localStorage.getItem('mimi_shop');
-        const currentStore = localStorage.getItem('mimi_store');
+        const currentShop = sessionStorage.getItem('mimi_shop');
+        const currentStore = sessionStorage.getItem('mimi_store');
         // ────────────────────────────────────────────────────
 
         // Auto-resize textarea
