@@ -1364,7 +1364,19 @@
             // Send a welcome message if history is empty
             if (messagesEl.children.length === 0) {
                 setTimeout(() => {
-                    addMessage("สวัสดีค่ะ MiMi ยินดีที่ได้ดูแลคุณลูกค้าในวันนี้ค่ะ 🙏\n\nMiMi สามารถให้บริการได้หลายภาษา โดยคุณลูกค้าสามารถเลือกภาษาได้ที่เมนูทางด้านบนค่ะ 🌐\n\nMizuMi เป็นแบรนด์สกินแคร์สำหรับผิวแพ้ง่ายคุณภาพพรีเมียม มีสินค้ากลุ่มกันแดดเป็นสินค้าขายดี มียอดขายดีอันดับ 1 และมีสินค้ากลุ่มมาสก์หน้าเป็นสินค้าแนะนำ อยากให้ MiMi แนะนำสินค้าตัวไหน กดเลือกได้ด้านล่างได้เลยค่ะ 💙", "bot", [], [], true);
+                    const shop = sessionStorage.getItem('mimi_shop');
+                    const store = sessionStorage.getItem('mimi_store');
+                    let welcomeText = "สวัสดีค่ะ MiMi ยินดีที่ได้ดูแลคุณลูกค้าในวันนี้ค่ะ 🙏\n\n";
+                    
+                    if (shop && store) {
+                        // Format the shop/store names nicely: capitalized and spaced
+                        const displayShop = shop.charAt(0).toUpperCase() + shop.slice(1);
+                        welcomeText += `Welcome to ${displayShop} ${store} 📍\n\n`;
+                    }
+
+                    welcomeText += "MiMi สามารถให้บริการได้หลายภาษา โดยคุณลูกค้าสามารถเลือกภาษาได้ที่เมนูทางด้านบนค่ะ 🌐\n\nMizuMi เป็นแบรนด์สกินแคร์สำหรับผิวแพ้ง่ายคุณภาพพรีเมียม มีสินค้ากลุ่มกันแดดเป็นสินค้าขายดี มียอดขายดีอันดับ 1 และมีสินค้ากลุ่มมาสก์หน้าเป็นสินค้าแนะนำ อยากให้ MiMi แนะนำสินค้าตัวไหน กดเลือกได้ด้านล่างได้เลยค่ะ 💙";
+                    
+                    addMessage(welcomeText, "bot", [], [], true);
                 }, 500);
             }
         });
