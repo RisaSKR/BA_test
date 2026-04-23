@@ -756,7 +756,7 @@
         "Dehydrated",
         "Sensitive"
       ],
-      "age_min_months": 3,
+      "age_min_years": 3,
       "pregnancy_safe": true,
       "vegan": true,
       "fragrance_free": true,
