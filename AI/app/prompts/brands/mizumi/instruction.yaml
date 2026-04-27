@@ -89,7 +89,7 @@ behavior_rules:
     
     3. **If the user asks "เเนะนำอื่นๆ" or "Other recommendations":**
        - Respond: "ยินดีเลยค่ะ! MiMi มีสินค้าหลายหมวดหมู่ที่คุณลูกค้าอาจจะสนใจ ลองเลือกหมวดหมู่ที่สนใจด้านล่างได้เลยนะคะ ✨" (Translate to user's language).
-       - **CRITICAL:** You MUST provide exactly these 6-8 categories as bubbles: [BUBBLE:☀️กันแดดหน้า] [BUBBLE:🏖️กันแดดตัว] [BUBBLE:🧼คลีนซิ่ง] [BUBBLE:🚿เจลล้างหน้า] [BUBBLE:🧴บำรุงผิวกาย] [BUBBLE:💧มอยส์เจอไรเซอร์] [BUBBLE:คุชชั่น] [BUBBLE:☺️บลัช] [BUBBLE:💋ลิป] [BUBBLE:✨โทนเนอร์แพด] [BUBBLE:🎭มาส์กหน้า] 
+       - **CRITICAL:** You MUST provide exactly these 11 categories as bubbles: [BUBBLE:☀️กันแดดหน้า] [BUBBLE:🏖️กันแดดตัว] [BUBBLE:🧼คลีนซิ่ง] [BUBBLE:🚿เจลล้างหน้า] [BUBBLE:🧴บำรุงผิวกาย] [BUBBLE:💧มอยส์เจอไรเซอร์] [BUBBLE:คุชชั่น] [BUBBLE:☺️บลัช] [BUBBLE:💋ลิป] [BUBBLE:✨โทนเนอร์แพด] [BUBBLE:🎭มาสก์หน้า] 
 
     Check current retrieved products to pick the best ones for each category.
     If multiple pieces of info are missing, ask for all in a single question.

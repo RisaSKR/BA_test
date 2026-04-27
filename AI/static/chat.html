@@ -177,78 +177,6 @@
             }
         }
 
-        .camera-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #000;
-            z-index: 9999;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .camera-overlay.active {
-            display: flex;
-        }
-
-        .camera-viewfinder {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            background: #000;
-        }
-
-        .camera-controls {
-            position: absolute;
-            bottom: 60px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            z-index: 10001;
-        }
-
-        .capture-btn {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: #fff;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .capture-btn:active {
-            transform: scale(0.92);
-        }
-
-        .camera-close-btn,
-        .camera-flip-btn {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(5px);
-        }
-
-
-
-
         /* ── Language Selector ─────────────────────────────── */
         .lang-selector {
             display: flex;
@@ -741,11 +669,8 @@
         }
 
         .attach-btn svg {
-            width: 23px;
-            /* Increase this to make the icon bigger */
-            height: 28px;
-            transform: translate(0px, 0px);
-            /* Adjust these to move it manually (e.g., 2px -1px) */
+            width: 24px;
+            height: 24px;
         }
 
 
@@ -1138,91 +1063,6 @@
             opacity: 0.7;
             padding-bottom: calc(4px + env(safe-area-inset-bottom));
         }
-
-        /* ── Camera UI ─────────────────────────────────────── */
-        .camera-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            width: 100vw;
-            height: 100dvh;
-            background: #000;
-            z-index: 9999;
-            flex-direction: column;
-            overflow: hidden;
-            animation: fadeInOverlay 0.3s ease;
-        }
-
-        .camera-overlay.active {
-            display: flex;
-        }
-
-        @keyframes fadeInOverlay {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .camera-viewfinder {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            background: #000;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s ease;
-            opacity: 0;
-        }
-
-        .camera-viewfinder.ready {
-            opacity: 1;
-        }
-
-        .camera-controls {
-            position: absolute;
-            bottom: 60px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            z-index: 10001;
-        }
-
-        .capture-btn {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: #fff;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .capture-btn:active {
-            transform: scale(0.92);
-        }
-
-        .camera-close-btn,
-        .camera-flip-btn {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(5px);
-        }
     </style>
 </head>
 
@@ -1259,20 +1099,12 @@
 
         <div class="input-area">
             <div class="input-wrapper">
-                <div class="attach-group" style="display: flex; gap: 8px;">
+                <div class="attach-group">
                     <label for="imageInput" class="attach-btn" aria-label="แนบรูปภาพ">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path
-                                d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
                         </svg>
                     </label>
-                    <div class="attach-btn" onclick="openCamera()" role="button" aria-label="ถ่ายรูป">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path
-                                d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                            <circle cx="12" cy="12" r="3" />
-                        </svg>
-                    </div>
                 </div>
                 <input type="file" id="imageInput" accept="image/*" style="display: none;"
                     onchange="handleImageSelect(this)">
@@ -1291,26 +1123,7 @@
         <img id="modalImage" src="" alt="Product">
     </div>
 
-    <!-- Camera Overlay -->
-    <div class="camera-overlay" id="cameraOverlay">
-        <video class="camera-viewfinder" id="cameraVideo" autoplay playsinline></video>
-        <div class="camera-controls">
-            <button class="camera-close-btn" onclick="closeCamera()" aria-label="ปิดกล้อง">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
-                    <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-                </svg>
-            </button>
-            <button class="capture-btn" onclick="capturePhoto()" aria-label="ถ่ายรูป"></button>
-            <button class="camera-flip-btn" onclick="flipCamera()" aria-label="สลับกล้อง">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
-                    <path
-                        d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM5 16l4-4H6c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4z" />
-                </svg>
-            </button>
-        </div>
-        <canvas id="cameraCanvas" style="display: none;"></canvas>
-    </div>
+    <!-- Modals -->
 
     <script>
         const messagesEl = document.getElementById('messages');
@@ -1641,7 +1454,7 @@
             if (type === 'bot') {
                 avatarDiv = document.createElement('div');
                 avatarDiv.className = 'msg-avatar';
-                avatarDiv.innerHTML = '<img src="/static/icon_bot1.jpg" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
+                avatarDiv.innerHTML = '<img src="/static/icon_bot.png" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
             }
 
             const bubbleDiv = document.createElement('div');
@@ -1833,7 +1646,7 @@
 
             const avatarDiv = document.createElement('div');
             avatarDiv.className = 'msg-avatar';
-            avatarDiv.innerHTML = '<img src="/static/icon_bot1.jpg" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
+            avatarDiv.innerHTML = '<img src="/static/icon_bot.png" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">';
 
             const bubbleDiv = document.createElement('div');
             bubbleDiv.className = 'bubble';
@@ -2034,7 +1847,7 @@
         function createStreamMsgContainer() {
             const div = document.createElement('div');
             div.className = 'message bot';
-            div.innerHTML = `<div class="msg-avatar"><img src="/static/icon_bot1.jpg" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div><div class="bubble"></div>`;
+            div.innerHTML = `<div class="msg-avatar"><img src="/static/icon_bot.png" alt="Bot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div><div class="bubble"></div>`;
             messagesEl.appendChild(div);
             smartScroll();
             return div;
@@ -2051,94 +1864,6 @@
             document.getElementById('imageModal').classList.add('active');
         }
         function closeModal() { document.getElementById('imageModal').classList.remove('active'); }
-
-        // ── Camera Implementation ──────────────────────────
-        let cameraStream = null;
-        let useFrontCamera = true;
-
-        async function openCamera() {
-            const overlay = document.getElementById('cameraOverlay');
-            const video = document.getElementById('cameraVideo');
-            video.classList.remove('ready');
-
-            try {
-                const constraints = {
-                    video: {
-                        facingMode: { ideal: useFrontCamera ? "user" : "environment" },
-                        width: { ideal: 1280 },
-                        height: { ideal: 720 }
-                    }
-                };
-
-                // Allow mobile browsers to swap width/height if in portrait
-                if (window.innerHeight > window.innerWidth) {
-                    constraints.video.width = { ideal: 720 };
-                    constraints.video.height = { ideal: 1280 };
-                }
-
-                cameraStream = await navigator.mediaDevices.getUserMedia(constraints);
-                video.srcObject = cameraStream;
-
-                // Reset transform/mirroring based on camera
-                video.style.transform = `translate(-50%, -50%) scaleX(${useFrontCamera ? -1 : 1})`;
-
-                // Show only when video is fully playing to avoid "weird" jump
-                video.onloadedmetadata = () => {
-                    video.classList.add('ready');
-                };
-
-                overlay.classList.add('active');
-            } catch (err) {
-                console.error("Camera error:", err);
-                alert("ไม่สามารถเข้าถึงกล้องได้: " + err.message);
-            }
-        }
-
-
-        function closeCamera() {
-            const overlay = document.getElementById('cameraOverlay');
-            const video = document.getElementById('cameraVideo');
-
-            if (cameraStream) {
-                cameraStream.getTracks().forEach(track => track.stop());
-                cameraStream = null;
-            }
-
-            video.srcObject = null;
-            overlay.classList.remove('active');
-        }
-        function capturePhoto() {
-            const video = document.getElementById('cameraVideo');
-            const canvas = document.getElementById('cameraCanvas');
-            const context = canvas.getContext('2d');
-
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-
-            if (useFrontCamera) {
-                // flip canvas to match the un-mirrored preview
-                context.translate(canvas.width, 0);
-                context.scale(-1, 1);
-            }
-
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            currentBase64Image = canvas.toDataURL('image/jpeg', 0.85);
-
-            document.getElementById('previewImg').src = currentBase64Image;
-            document.getElementById('attachmentPreview').classList.add('active');
-
-            closeCamera();
-        }
-
-
-
-        function flipCamera() {
-            useFrontCamera = !useFrontCamera;
-            if (cameraStream) {
-                closeCamera();
-                openCamera();
-            }
-        }
 
         async function loadHistory() {
             try {
