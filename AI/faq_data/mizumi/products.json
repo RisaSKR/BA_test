@@ -1854,6 +1854,173 @@
       "มี Sodium Hyaluronate ช่วยเติมความชุ่มชื้นให้ผิว"
     ]
   },
+  "FG-MZ-SUN-USS100": {
+  "product_code": "FG-MZ-SUN-USS100",
+  "canonical_name": "MizuMi UV Sport Body Serum SPF50+ PA++++",
+  "variant": "กันแดดบอดี้สปอร์ต",
+  "category": "กันแดดผิวตัว",
+  "image_url": "/static/products/mizumi_uv_sport_body_serum.jpg",
+  "facts": {
+    "sunscreen_type": "hybrid",
+    "label_spf": "50+",
+    "pa": "PA++++",
+    "protection_claim": {
+      "uvb_block_percent": ">98%",
+      "protects_against": [
+        "UVA1",
+        "UVA2",
+        "UVB",
+        "Blue Light",
+        "HEV Light",
+        "Infrared",
+        "Pollution"
+      ]
+    },
+    "ppd": {
+      "in_vitro": {
+        "value": "38.63",
+        "standard": "ISO 24443"
+      },
+      "in_vivo": {
+        "value": "19.4",
+        "standard": [
+          "ISO 24442",
+          "ISO 24444"
+        ]
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "115.98",
+        "standard": "ISO 24443"
+      },
+      "in_vivo": {
+        "value": "58.7",
+        "standard": [
+          "ISO 24442",
+          "ISO 24444"
+        ]
+      },
+      "robot_test": {
+        "value": "55.8",
+        "standard": "ISO 23675"
+      }
+    },
+    "water_resistant": true,
+    "sweat_resistant": true,
+    "water_resistant_minutes": 80,
+    "reef_safe": true,
+    "pollution_protection": true,
+    "blue_light_protection": true,
+    "infrared_protection": true
+  },
+  "suitability": {
+    "skin_types": [
+      "All skin types",
+      "Sensitive"
+    ],
+    "best_for": [
+      "Sports",
+      "Outdoor activities",
+      "Swimming",
+      "Heavy sweating"
+    ],
+    "pregnancy_safe": true,
+    "coral_safe": true,
+    "fragrance_free": true,
+    "alcohol_free": true,
+    "paraben_free": true,
+    "mineral_oil_free": true
+  },
+  "experience": {
+    "texture": "Body serum",
+    "absorption": "Fast",
+    "finish": "Natural",
+    "non_sticky": true,
+    "spreadability": "Easy"
+  },
+  "usage": {
+    "shake_before_use": true,
+    "apply_before_sun_minutes": 15,
+    "reapply_every_hours": "1-2",
+    "reapply_after_water_minutes": 80,
+    "body_only": true,
+    "suitable_for_swimming": true
+  },
+  "ingredients": {
+    "uv_filters": [
+      "Diethylamino Hydroxybenzoyl Hexyl Benzoate",
+      "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine",
+      "Ethylhexyl Triazone",
+      "Ethylhexyl Salicylate",
+      "Diethylhexyl Butamido Triazone",
+      "Methylene Bis-Benzotriazolyl Tetramethylbutylphenol (Nano)",
+      "Tris-Biphenyl Triazine (Nano)"
+    ],
+    "list": [
+      "Aqua",
+      "Dibutyl Adipate",
+      "Cyclopentasiloxane",
+      "Cetyl Ethylhexanoate",
+      "Ethylhexyl Salicylate",
+      "Dimethicone",
+      "Diethylamino Hydroxybenzoyl Hexyl Benzoate",
+      "Lauryl PEG-9 Polydimethylsiloxyethyl Dimethicone",
+      "Propylene Glycol",
+      "Methylene Bis-Benzotriazolyl Tetramethylbutylphenol (Nano)",
+      "Lauroyl Lysine",
+      "Diethylhexyl Butamido Triazone",
+      "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine",
+      "Talc",
+      "Ethylhexyl Triazone",
+      "Isohexadecane",
+      "Tris-Biphenyl Triazine (Nano)",
+      "VP/Hexadecene Copolymer",
+      "Phenoxyethanol",
+      "Glyceryl Behenate/Eicosadioate",
+      "Polyglyceryl-6 Polyricinoleate",
+      "Sodium Chloride",
+      "Tocopheryl Acetate",
+      "Decyl Glucoside",
+      "Chlorphenesin",
+      "Niacinamide",
+      "Dimethicone/Vinyl Dimethicone Crosspolymer",
+      "Disodium EDTA",
+      "Dipotassium Glycyrrhizate",
+      "Sodium Polyacrylate",
+      "Triethoxycaprylylsilane",
+      "Xanthan Gum",
+      "Butylene Glycol",
+      "Disodium Phosphate",
+      "Glycerin",
+      "Tocopherol",
+      "1,2-Hexanediol",
+      "Terminalia Ferdinandiana Fruit Extract",
+      "Biosaccharide Gum-4"
+    ]
+  },
+  "information_context": [
+    "7 Guard UV Filters สำหรับกิจกรรมกลางแจ้ง",
+    "กันน้ำ กันเหงื่อสูงสุด 80 นาที",
+    "เหมาะสำหรับกีฬาและกิจกรรมกลางแจ้ง"
+  ]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "FG-MZ-CLS-SMT": {
     "product_code": "FG-MZ-CLS-SMT",
     "canonical_name": "MizuMi Smooth Cleansing Water",
