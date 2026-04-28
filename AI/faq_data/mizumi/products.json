@@ -1925,6 +1925,7 @@
       "Swimming",
       "Heavy sweating"
     ],
+    "age_min_years": 1,
     "pregnancy_safe": true,
     "coral_safe": true,
     "fragrance_free": true,
@@ -2004,23 +2005,7 @@
     "กันน้ำ กันเหงื่อสูงสุด 80 นาที",
     "เหมาะสำหรับกีฬาและกิจกรรมกลางแจ้ง"
   ]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  },
   "FG-MZ-CLS-SMT": {
     "product_code": "FG-MZ-CLS-SMT",
     "canonical_name": "MizuMi Smooth Cleansing Water",
