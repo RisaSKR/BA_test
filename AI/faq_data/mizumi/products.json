@@ -856,8 +856,30 @@
       "spf": 50,
       "pa": "++++",
       "ppd": {
-        "in_vitro": 63.3,
-        "in_vivo": 23.6
+    "in_vitro": {
+      "value": "63.3",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "23.6",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+  },
+  "spf_test": {
+    "in_vitro": {
+      "value": "226.73",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "52.9",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
       },
       "water_resistant": false,
       "sweat_resistant": false,
@@ -989,8 +1011,30 @@
       "spf": 50,
       "pa": "++++",
       "ppd": {
-        "in_vitro": 121.53,
-        "in_vivo": 16.4
+    "in_vitro": {
+      "value": "121.53",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "16.4",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
+  },
+  "spf_test": {
+    "in_vitro": {
+      "value": "1536.70",
+      "standard": "ISO 24443"
+    },
+    "in_vivo": {
+      "value": "65.5",
+      "standard": [
+        "ISO 24442",
+        "ISO 24444"
+      ]
+    }
       },
       "water_resistant": true,
       "sweat_resistant": true,
@@ -1167,6 +1211,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+    "ppd": {
+      "in_vitro": {
+        "value": "58.11",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "55.48",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": false,
       "sweat_resistant": false,
@@ -1268,6 +1324,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+      "ppd": {
+      "in_vitro": {
+        "value": "72.87",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "67.88",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": false,
       "sweat_resistant": false,
@@ -1363,6 +1431,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+      "ppd": {
+      "in_vitro": {
+        "value": "32.03",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "54.88",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": false,
       "sweat_resistant": false,
@@ -1459,6 +1539,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+      "ppd": {
+      "in_vitro": {
+        "value": "20.66",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "51.26",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": true,
       "water_resistant_minutes": 40,
@@ -1562,6 +1654,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+      "ppd": {
+      "in_vitro": {
+        "value": "19.65",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "53.09",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": true,
       "water_resistant_minutes": 40,
@@ -1664,6 +1768,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+      "ppd": {
+      "in_vitro": {
+        "value": "37.90",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "51.48",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": false,
       "sweat_resistant": false,
@@ -1765,6 +1881,18 @@
       "sunscreen_type": "Hybrid",
       "spf": 50,
       "pa": "++++",
+      "ppd": {
+      "in_vitro": {
+        "value": "38.30",
+        "standard": "ISO 24443"
+      }
+    },
+    "spf_test": {
+      "in_vitro": {
+        "value": "52.23",
+        "standard": "ISO 24443"
+      }
+    },
       "sun_protection_hours": "3-4",
       "water_resistant": false,
       "sweat_resistant": false,
