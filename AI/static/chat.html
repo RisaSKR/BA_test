@@ -1149,10 +1149,14 @@
         const shopParam = urlParams.get('shop');
         const storeParam = urlParams.get('store');
 
-        if (shopParam && storeParam) {
+        if (shopParam) {
             sessionStorage.setItem('mimi_shop', shopParam);
-            sessionStorage.setItem('mimi_store', storeParam);
-            console.log(`Detected branch: ${shopParam}, store: ${storeParam}`);
+            if (storeParam) {
+                sessionStorage.setItem('mimi_store', storeParam);
+            } else {
+                sessionStorage.removeItem('mimi_store');
+            }
+            console.log(`Detected shop: ${shopParam}${storeParam ? `, store: ${storeParam}` : ''}`);
         } else if (!shopParam && !storeParam) {
             // If explicitly visiting a link without params, clear the stored context 
             // to ensure a clean 'general' bot experience.
@@ -1181,10 +1185,11 @@
                     const store = sessionStorage.getItem('mimi_store');
                     let welcomeText = "สวัสดีค่ะ MiMi ยินดีที่ได้ดูแลคุณลูกค้าในวันนี้ค่ะ 🙏\n\n";
                     
-                    if (shop && store) {
-                        // Format the shop/store names nicely: capitalized and spaced
+                    if (shop) {
+                        // Format the shop name nicely: capitalized
                         const displayShop = shop.charAt(0).toUpperCase() + shop.slice(1);
-                        welcomeText += `Welcome to ${displayShop} ${store} 📍\n\n`;
+                        const displayStore = store ? ` ${store}` : "";
+                        welcomeText += `Welcome to ${displayShop}${displayStore} 📍\n\n`;
                     }
 
                     welcomeText += "MiMi สามารถให้บริการได้หลายภาษา โดยคุณลูกค้าสามารถเลือกภาษาได้ที่เมนูทางด้านบนค่ะ 🌐\n\nMizuMi เป็นแบรนด์สกินแคร์สำหรับผิวแพ้ง่ายคุณภาพพรีเมียม มีสินค้ากลุ่มกันแดดเป็นสินค้าขายดี มียอดขายดีอันดับ 1 และมีสินค้ากลุ่มมาสก์หน้าเป็นสินค้าแนะนำ อยากให้ MiMi แนะนำสินค้าตัวไหน กดเลือกได้ด้านล่างได้เลยค่ะ 💙";
@@ -1726,7 +1731,7 @@
                 text: text,
                 image: currentBase64Image,
                 language: window.currentLang,
-                store_id: currentStore ? `${currentShop}_${currentStore}` : "onsite_default"
+                store_id: currentStore ? `${currentShop}_${currentStore}` : (currentShop || "onsite_default")
             };
 
             userInput.value = '';
