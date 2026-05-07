@@ -2,7 +2,7 @@ import os
 import json
 import sqlite3
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # Setup simple logging for the logger itself
@@ -110,7 +110,8 @@ def log_chat(
     
     tokens: dict containing 'prompt_token_count', 'candidates_token_count', 'total_token_count'
     """
-    timestamp = datetime.now().isoformat()
+    # Use Thailand time (UTC+7)
+    timestamp = datetime.now(timezone(timedelta(hours=7))).isoformat()
     
     # Prepare data for logs
     p_tokens = tokens.get("prompt_token_count", 0)
@@ -187,7 +188,8 @@ def update_feedback(session_id: str, bot_response: str, feedback: str):
 
 def log_event(session_id: str, event_type: str, event_value: str, metadata: dict = None):
     """Log a specific UI event (e.g., bubble click)."""
-    timestamp = datetime.now().isoformat()
+    # Use Thailand time (UTC+7)
+    timestamp = datetime.now(timezone(timedelta(hours=7))).isoformat()
     try:
         conn = sqlite3.connect(str(DB_PATH))
         cursor = conn.cursor()
