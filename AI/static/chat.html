@@ -295,10 +295,7 @@
             color: white;
             border-top-right-radius: 4px;
             box-shadow: 0 4px 12px rgba(26, 115, 232, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            text-align: left;
         }
 
         .message.bot .bubble {
@@ -1199,6 +1196,39 @@
             }
         });
 
+        async function submitFeedback(msgText, sentiment) {
+            try {
+                await fetch('/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: sessionId,
+                        message_text: msgText,
+                        feedback: sentiment
+                    })
+                });
+            } catch (e) {
+                console.warn("Feedback failed to log", e);
+            }
+        }
+
+        async function logEvent(eventType, eventValue, metadata = {}) {
+            try {
+                await fetch('/event', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: sessionId,
+                        event_type: eventType,
+                        event_value: eventValue,
+                        metadata: metadata
+                    })
+                });
+            } catch (e) {
+                console.warn("Event failed to log", e);
+            }
+        }
+
         const quickActionsMap = {
             'TH': [
                 { text: '☀️ กันแดดหน้า ', query: 'แนะนำกันแดดหน้า' },
@@ -1227,26 +1257,10 @@
                 const btn = document.createElement('button');
                 btn.className = 'quick-btn';
                 btn.innerHTML = act.text;
-                btn.onclick = () => quickSend(act.query);
+                btn.onclick = () => quickSend(act.query, 'quick_action');
                 quickActionsEl.appendChild(btn);
             });
             quickActionsEl.style.display = 'flex';
-        }
-
-        async function submitFeedback(msgText, sentiment) {
-            try {
-                await fetch('/feedback', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        session_id: sessionId,
-                        message_text: msgText,
-                        feedback: sentiment
-                    })
-                });
-            } catch (e) {
-                console.warn("Feedback failed to log", e);
-            }
         }
 
         function createFeedbackUI(msgText, type) {
@@ -1267,6 +1281,7 @@
                     dislikeBtn.classList.remove('active');
                     container.classList.add('has-active'); // Keep container visible
                     submitFeedback(msgText, 'like');
+                    logEvent('feedback', 'like', { message: msgText });
                 } else {
                     likeBtn.classList.remove('active');
                     container.classList.remove('has-active');
@@ -1285,6 +1300,7 @@
                     likeBtn.classList.remove('active');
                     container.classList.add('has-active'); // Keep container visible
                     submitFeedback(msgText, 'dislike');
+                    logEvent('feedback', 'dislike', { message: msgText });
                 } else {
                     dislikeBtn.classList.remove('active');
                     container.classList.remove('has-active');
@@ -1436,7 +1452,11 @@
 
             // MAIN CLICK HANDLER (FLIP ONLY)
             card.onclick = () => {
+                const isFlippingToBack = !card.classList.contains('flipped');
                 card.classList.toggle('flipped');
+                if (isFlippingToBack) {
+                    logEvent('product_flip', product.name || 'unknown', { action: 'see_description' });
+                }
             };
 
             return card;
@@ -1628,7 +1648,7 @@
                         const btn = document.createElement('button');
                         btn.className = 'quick-reply-btn';
                         btn.textContent = opt;
-                        btn.onclick = () => quickSend(opt);
+                        btn.onclick = () => quickSend(opt, 'bubble');
                         bubbleContainer.appendChild(btn);
                     });
                     messagesEl.appendChild(bubbleContainer);
@@ -1858,7 +1878,8 @@
             return div;
         }
 
-        function quickSend(text) {
+        function quickSend(text, source = 'unknown') {
+            logEvent('click', text, { source: source });
             userInput.value = text;
             userInput.style.height = 'auto';
             userInput.style.height = userInput.scrollHeight + 'px';

@@ -127,7 +127,14 @@ class FeedbackData(BaseModel):
     message_text: str
     feedback: str
 
-from app.utils.logger import update_feedback
+# event endpoint to log UI interactions
+class EventData(BaseModel):
+    session_id: str
+    event_type: str
+    event_value: str
+    metadata: dict | None = None
+
+from app.utils.logger import update_feedback, log_event
 
 @app.post("/feedback")
 async def log_feedback(data: FeedbackData):
@@ -139,6 +146,17 @@ async def log_feedback(data: FeedbackData):
         return {"status": "updated"}
     except Exception as e:
         logger.error(f"Failed to update feedback: {e}")
+        return {"status": "error", "message": str(e)}
+
+@app.post("/event")
+async def log_event_endpoint(data: EventData):
+    """Log specific UI events like bubble clicks."""
+    logger.info(f"EVENT [{data.event_type}] - {data.event_value} - Session: {data.session_id}")
+    try:
+        log_event(data.session_id, data.event_type, data.event_value, data.metadata)
+        return {"status": "logged"}
+    except Exception as e:
+        logger.error(f"Failed to log event: {e}")
         return {"status": "error", "message": str(e)}
 
 if __name__ == "__main__":

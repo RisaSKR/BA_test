@@ -77,6 +77,18 @@ def init_db():
         if "category" not in columns:
             cursor.execute("ALTER TABLE chat_logs ADD COLUMN category TEXT DEFAULT 'Other'")
             logger.info("Chat logs schema updated with category column.")
+
+        # Create event_logs table for tracking UI interactions (e.g. bubble clicks)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS event_logs (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                timestamp TEXT NOT NULL,
+                session_id TEXT,
+                event_type TEXT,
+                event_value TEXT,
+                metadata TEXT
+            )
+        ''')
         
         conn.commit()
         conn.close()
@@ -170,11 +182,28 @@ def update_feedback(session_id: str, bot_response: str, feedback: str):
         conn.commit()
         conn.close()
         logger.info(f"Feedback updated: {feedback} for session {session_id}")
-        
-        # Note: updating JSONL is harder as it's an append-only format.
-        # Usually, we rely on the DB for real analytics.
     except Exception as e:
         logger.error(f"Failed to update feedback: {e}")
+
+def log_event(session_id: str, event_type: str, event_value: str, metadata: dict = None):
+    """Log a specific UI event (e.g., bubble click)."""
+    timestamp = datetime.now().isoformat()
+    try:
+        conn = sqlite3.connect(str(DB_PATH))
+        cursor = conn.cursor()
+        cursor.execute('''
+            INSERT INTO event_logs (
+                timestamp, session_id, event_type, event_value, metadata
+            ) VALUES (?, ?, ?, ?, ?)
+        ''', (
+            timestamp, session_id, event_type, event_value,
+            json.dumps(metadata or {}, ensure_ascii=False)
+        ))
+        conn.commit()
+        conn.close()
+        logger.info(f"Event logged: {event_type}={event_value} for session {session_id}")
+    except Exception as e:
+        logger.error(f"Failed to log event: {e}")
 
 # Initialize when module is imported
 init_db()
