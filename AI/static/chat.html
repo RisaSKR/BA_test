@@ -1393,7 +1393,7 @@
                 if (window.currentLang === 'TH') query = `ขอรายละเอียดเพิ่มเติมของ ${productName}`;
                 else if (window.currentLang === '中文') query = `查看 ${productName} 的详细页面`;
                 else query = `Full details of ${productName}`;
-                quickSend(query);
+                quickSend(query, 'full_details');
             };
             front.appendChild(fullDetailBtn);
 
