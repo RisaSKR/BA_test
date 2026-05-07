@@ -110,8 +110,9 @@ def log_chat(
     
     tokens: dict containing 'prompt_token_count', 'candidates_token_count', 'total_token_count'
     """
-    # Use Thailand time (UTC+7)
-    timestamp = datetime.now(timezone(timedelta(hours=7))).isoformat()
+    # Ensure Thailand time (UTC+7) regardless of server local time
+    now_utc = datetime.now(timezone.utc)
+    timestamp = (now_utc + timedelta(hours=7)).strftime('%d-%m-%Y %H:%M:%S')
     
     # Prepare data for logs
     p_tokens = tokens.get("prompt_token_count", 0)
@@ -188,8 +189,9 @@ def update_feedback(session_id: str, bot_response: str, feedback: str):
 
 def log_event(session_id: str, event_type: str, event_value: str, metadata: dict = None):
     """Log a specific UI event (e.g., bubble click)."""
-    # Use Thailand time (UTC+7)
-    timestamp = datetime.now(timezone(timedelta(hours=7))).isoformat()
+    # Ensure Thailand time (UTC+7) regardless of server local time
+    now_utc = datetime.now(timezone.utc)
+    timestamp = (now_utc + timedelta(hours=7)).strftime('%d-%m-%Y %H:%M:%S')
     try:
         conn = sqlite3.connect(str(DB_PATH))
         cursor = conn.cursor()
