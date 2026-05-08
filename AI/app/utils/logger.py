@@ -21,24 +21,46 @@ def categorize_query(query: str) -> str:
         return 'Other'
     q = query.lower()
     
-    if any(k in q for k in ['body sunscreen', 'กันแดดตัว', 'กันแดดผิวกาย', 'กันแดดทาตัว']):
+    # 1. Product Specific Categories (More specific first)
+    if any(k in q for k in ['body sunscreen', 'กันแดดตัว', 'กันแดดผิวกาย', 'กันแดดทาตัว', 'sport body']):
         return 'Body Sunscreen'
-    if any(k in q for k in ['face sunscreen', 'กันแดดหน้า', 'กันแดดผิวหน้า', 'กันแดด', 'sunscreen']):
+    if any(k in q for k in ['face sunscreen', 'กันแดดหน้า', 'กันแดดผิวหน้า', 'กันแดด', 'sunscreen', 'uv water', 'uv matte', 'uv aqua']):
         return 'Face Sunscreen'
-    if any(k in q for k in ['cleansing', 'คลีนซิ่ง', 'micellar', 'ไมเซล่า']):
+    if any(k in q for k in ['cleansing', 'คลีนซิ่ง', 'micellar', 'ไมเซล่า', 'balm', 'oil']):
         return 'Cleansing'
-    if any(k in q for k in ['cleanser', 'โฟมล้างหน้า', 'เจลล้างหน้า', 'ล้างหน้า', 'สบู่']):
+    if any(k in q for k in ['cleanser', 'โฟมล้างหน้า', 'เจลล้างหน้า', 'ล้างหน้า', 'สบู่', 'gentle wash']):
         return 'Cleanser'
+    if any(k in q for k in ['acne', 'สิว', 'แต้มสิว', 'sulfur', 'clay', 'โคลนพอก']):
+        return 'Acne Care'
+    if any(k in q for k in ['serum', 'เซรั่ม', 'peptide', 'niacinamide', 'ampoule', 'skin barrier']):
+        return 'Serum'
     if any(k in q for k in ['body care', 'body', 'โลชั่น', 'ทาตัว', 'ผิวกาย', 'บอดี้']):
         return 'Body care'
-    if any(k in q for k in ['moisturizer', 'มอยส์เจอ', 'moist']):
+    if any(k in q for k in ['lips', 'ลิป', 'lip']):
+        return 'Lips'
+    if any(k in q for k in ['moisturizer', 'มอยส์เจอ', 'moist', 'hyaluron']):
         return 'Moisturizer'
     if any(k in q for k in ['toner pad', 'toner', 'pad', 'โทนเนอร์', 'แพด']):
         return 'Toner Pad'
-    if any(k in q for k in ['sheet mask', 'mask', 'มาส', 'มาร์ค', 'มาสก์']):
+    if any(k in q for k in ['sheet mask', 'mask', 'มาส', 'มาร์ค', 'มาสก์','pdrn','cicafuse']):
         return 'Sheet Mask'
+    if any(k in q for k in ['cushion', 'คุชชั่น']):
+        return 'Cushion'
+    if any(k in q for k in ['blush', 'บลัช']):
+        return 'Blush'
+
+    # 2. General Intent Categories (To capture noise that falls into 'Other')
+    if any(k in q for k in ['ต่างกัน', 'เปรียบเทียบ', 'vs', 'compare', 'อันไหนดีกว่า', 'เลือกตัวไหน', 'ตัวไหนดี']):
+        return 'Comparison/Advice'
+    if any(k in q for k in ['วิธีใช้', 'ใช้ยังไง', 'how to use']):
+        return 'Usage'
+    if any(k in q for k in ['โปรโมชั่น', 'ราคา', 'promotion', 'price', 'ลดราคา', 'กี่บาท', 'ขายยังไง', 'ซื้อที่ไหน', 'shopee', 'lazada', 'tiktok', 'watsons']):
+        return 'Promotion/Price'
+    if any(k in q for k in ['สวัสดี', 'หวัดดี', 'hello', 'hi', 'ขอบคุณ', 'thanks', 'thank you']):
+        return 'Greeting/General'
         
     return 'Other'
+
 
 
 def init_db():
