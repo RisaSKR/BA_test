@@ -151,7 +151,28 @@ def _extract_products_from_event(ev, found_products: list) -> bool:
             result = part.function_response.response
             if isinstance(result, dict) and "matches" in result:
                 for m in result["matches"]:
-                    # Collect all images from the match metadata
+                    text = m.get("text", "")
+                    lines = text.split("\n")
+                    name = ""
+
+                    for line in lines:
+                        if line.startswith("Product: "):
+                            name = line.replace("Product: ", "").strip()
+                            break
+
+                    if not name and lines:
+                        name = lines[0].strip()
+                    if not name:
+                        continue
+
+                    clean = name
+                    clean = clean.split("(")[0]
+                    clean = clean.split(" - ")[0]
+                    clean = re.sub(r'\s+SPF\d+\+?\s*PA\+{1,4}', '', clean, flags=re.IGNORECASE)
+                    base_name = clean.strip().lower()
+                    short_name = re.sub(r'^mizumi\s+', '', base_name).strip()
+                    
+                    # Collect images from RAG metadata
                     imgs = []
                     if m.get("image_url"):
                         imgs.append(m["image_url"])
@@ -160,35 +181,15 @@ def _extract_products_from_event(ev, found_products: list) -> bool:
                         if m.get(k):
                             imgs.append(m[k])
                     
-                    if imgs:
-                        text = m.get("text", "")
-                        lines = text.split("\n")
-                        name = ""
-
-                        for line in lines:
-                            if line.startswith("Product: "):
-                                name = line.replace("Product: ", "").strip()
-                                break
-
-                        if not name and lines:
-                            name = lines[0].strip()
-
-                        clean = name
-                        clean = clean.split("(")[0]
-                        clean = clean.split(" - ")[0]
-                        clean = re.sub(r'\s+SPF\d+\+?\s*PA\+{1,4}', '', clean, flags=re.IGNORECASE)
-                        base_name = clean.strip().lower()
-                        short_name = re.sub(r'^mizumi\s+', '', base_name).strip()
-                            
-                        # Add all images for this product
-                        for img_url in imgs:
-                            if not any(p["image"] == img_url for p in found_products):
-                                found_products.append({
-                                    "name": _get_display_name(name),
-                                    "image": img_url,
-                                    "_base": base_name,
-                                    "_short": short_name,
-                                })
+                    # Add to found_products if not already there (deduplicate by base_name)
+                    if not any(p["_base"] == base_name for p in found_products):
+                        found_products.append({
+                            "name": _get_display_name(name),
+                            "image": imgs[0] if imgs else None,
+                            "_images": imgs if imgs else None,
+                            "_base": base_name,
+                            "_short": short_name,
+                        })
     return detected
 
 def process_metadata(ev, text_content: str, found_products: list, brand: str) -> dict:
@@ -234,14 +235,18 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
     for p in found_products:
         base  = p.get("_base", "")
         short = p.get("_short", "")
+        name_raw = p.get("name", "").lower()
         pos = 999999
         found = False
         
         if base and base in response_lower:
             pos = min(pos, response_lower.find(base))
             found = True
-        if short and len(short) >= 8 and short in response_lower:
+        if short and len(short) >= 3 and short in response_lower:
             pos = min(pos, response_lower.find(short))
+            found = True
+        if name_raw and name_raw in response_lower:
+            pos = min(pos, response_lower.find(name_raw))
             found = True
             
         if found:
@@ -253,6 +258,11 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
                 p["variant"] = catalog[base].get("variant", "")
                 # Preference: 1. AI provided localized desc, 2. Catalog desc
                 p["information_context"] = get_localized_desc(base, catalog[base].get("information_context", ""))
+            elif name_raw in catalog:
+                p["_images"] = catalog[name_raw].get("images") or [p.get("image")]
+                p["variant"] = catalog[name_raw].get("variant", "")
+                p["information_context"] = get_localized_desc(name_raw, catalog[name_raw].get("information_context", ""))
+
             mentioned_products.append(p)
 
     existing_bases = {p["_base"] for p in mentioned_products}
@@ -283,7 +293,7 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
                 final_products.append(product_data)
                 seen_images.add(img)
         
-        if len(final_products) >= 20: # Increased limit to show more images
+        if len(final_products) >= 30: # Increased limit to show more images
             break
 
     # Extract bubble options

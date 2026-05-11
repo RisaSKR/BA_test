@@ -1584,7 +1584,7 @@
             // Handle Products/Images
             if (products && products.length > 0) {
                 let list = Array.isArray(products) ? products : [products];
-                if (list.length > 10) list = list.slice(0, 10);
+                if (list.length > 20) list = list.slice(0, 20);
 
                 const useSlider = type === 'bot' && list.length > 1;
 
