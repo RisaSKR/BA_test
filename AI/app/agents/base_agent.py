@@ -22,7 +22,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
 # Loaded once at startup from faq_data/<brand>/products.json so that we can
 # resolve images for any product MiMi mentions, even if the RAG didn't happen
 # to retrieve that product's chunk in this turn.
-_catalog_cache: dict[str, dict] = {}  # brand → {name: image_url}
+catalog_cache: dict[str, dict] = {}  # brand → {name: image_url}
 
 def _clean_name(raw: str) -> str:
     """Normalise a product name for fuzzy matching."""
@@ -37,10 +37,10 @@ def _get_display_name(raw: str) -> str:
     return c.strip()
 
 def _load_catalog(brand: str = "mizumi") -> dict:
-    """Return {normalized_name: {"image": url, "name": display_name}} for every product."""
+    """Return {normalized_name: {"image": url, "images": [urls], "name": display_name}} for every product."""
     # Cache agents per brand, but force reload if currently empty
-    if brand in _catalog_cache and _catalog_cache[brand]:
-        return _catalog_cache[brand]
+    if brand in catalog_cache and catalog_cache[brand]:
+        return catalog_cache[brand]
 
     catalog: dict[str, dict] = {}
     faq_dir = Path("faq_data") / brand
@@ -54,8 +54,19 @@ def _load_catalog(brand: str = "mizumi") -> dict:
             for key, val in data.items():
                 if not isinstance(val, dict):
                     continue
-                img = val.get("image_url")
-                if not img:
+                
+                # Collect all images: image_url, image_url_2, image_url_3...
+                imgs = []
+                if val.get("image_url"):
+                    imgs.append(val["image_url"])
+                
+                # Look for image_url_2, image_url_3, etc.
+                for i in range(2,20): # Support up to 20 images
+                    k = f"image_url_{i}"
+                    if val.get(k):
+                        imgs.append(val[k])
+                
+                if not imgs:
                     continue
                 
                 canon = val.get("canonical_name", "")
@@ -63,32 +74,42 @@ def _load_catalog(brand: str = "mizumi") -> dict:
                     display = _get_display_name(canon)
                     catalog[_clean_name(canon)] = {
                         "name": display,
-                        "image": img,
+                        "image": imgs[0],
+                        "images": imgs,
                         "variant": val.get("variant", ""),
                         "information_context": val.get("information_context", "")
                     }
             
             # Also integrate aliases into the image-detection catalog
-            # this ensures that if MiMi mentions an alias (e.g. from aliases.json), 
-            # we can still show the product image.
             aliases_file = faq_dir / "aliases.json"
             if aliases_file.exists():
                 with open(aliases_file, "r", encoding="utf-8") as f:
                     aliases_data = json.load(f)
                 for alias, code in aliases_data.items():
                     p_info = data.get(code)
-                    if p_info and p_info.get("image_url"):
-                        disp = _get_display_name(p_info.get("canonical_name", alias))
-                        catalog[alias.lower().strip()] = {
-                            "name": disp,
-                            "image": p_info["image_url"],
-                            "variant": p_info.get("variant", ""),
-                            "information_context": p_info.get("information_context", "")
-                        }
+                    if p_info:
+                        # Extract all images for the alias target too
+                        alias_imgs = []
+                        if p_info.get("image_url"):
+                            alias_imgs.append(p_info["image_url"])
+                        for i in range(2, 21):
+                            k = f"image_url_{i}"
+                            if p_info.get(k):
+                                alias_imgs.append(p_info[k])
+                        
+                        if alias_imgs:
+                            disp = _get_display_name(p_info.get("canonical_name", alias))
+                            catalog[alias.lower().strip()] = {
+                                "name": disp,
+                                "image": alias_imgs[0],
+                                "images": alias_imgs,
+                                "variant": p_info.get("variant", ""),
+                                "information_context": p_info.get("information_context", "")
+                            }
         except Exception as e:
             logging.warning(f"Could not load product catalog for {brand}: {e}")
 
-    _catalog_cache[brand] = catalog
+    catalog_cache[brand] = catalog
     logging.info(f"Product catalog loaded for '{brand}': {len(catalog)} entries")
     return catalog
 
@@ -130,8 +151,16 @@ def _extract_products_from_event(ev, found_products: list) -> bool:
             result = part.function_response.response
             if isinstance(result, dict) and "matches" in result:
                 for m in result["matches"]:
-                    img_url = m.get("image_url")
-                    if img_url:
+                    # Collect all images from the match metadata
+                    imgs = []
+                    if m.get("image_url"):
+                        imgs.append(m["image_url"])
+                    for i in range(2, 6):
+                        k = f"image_url_{i}"
+                        if m.get(k):
+                            imgs.append(m[k])
+                    
+                    if imgs:
                         text = m.get("text", "")
                         lines = text.split("\n")
                         name = ""
@@ -150,17 +179,19 @@ def _extract_products_from_event(ev, found_products: list) -> bool:
                         clean = re.sub(r'\s+SPF\d+\+?\s*PA\+{1,4}', '', clean, flags=re.IGNORECASE)
                         base_name = clean.strip().lower()
                         short_name = re.sub(r'^mizumi\s+', '', base_name).strip()
-                        
-                        if not any(p["image"] == img_url or p["_base"] == base_name for p in found_products):
-                            found_products.append({
-                                "name": _get_display_name(name),
-                                "image": img_url,
-                                "_base": base_name,
-                                "_short": short_name,
-                            })
+                            
+                        # Add all images for this product
+                        for img_url in imgs:
+                            if not any(p["image"] == img_url for p in found_products):
+                                found_products.append({
+                                    "name": _get_display_name(name),
+                                    "image": img_url,
+                                    "_base": base_name,
+                                    "_short": short_name,
+                                })
     return detected
 
-def _process_metadata(ev, text_content: str, found_products: list, brand: str) -> dict:
+def process_metadata(ev, text_content: str, found_products: list, brand: str) -> dict:
     """Extract products, bubble options, and token usage from the final event."""
     # Extract token usage
     token_usage = {}
@@ -217,7 +248,8 @@ def _process_metadata(ev, text_content: str, found_products: list, brand: str) -
             p["_pos"] = pos
             # Enrich with detailed metadata from our reliable catalog lookup
             if base in catalog:
-                p["image"] = catalog[base].get("image") or p.get("image")
+                # Store all images from catalog if available
+                p["_images"] = catalog[base].get("images") or [p.get("image")]
                 p["variant"] = catalog[base].get("variant", "")
                 # Preference: 1. AI provided localized desc, 2. Catalog desc
                 p["information_context"] = get_localized_desc(base, catalog[base].get("information_context", ""))
@@ -230,6 +262,7 @@ def _process_metadata(ev, text_content: str, found_products: list, brand: str) -
             mentioned_products.append({
                 "name": info["name"],
                 "image": info["image"],
+                "_images": info.get("images", [info["image"]]),
                 "variant": info.get("variant", ""),
                 "information_context": get_localized_desc(clean_name, info.get("information_context", "")),
                 "_base": clean_name,
@@ -241,12 +274,16 @@ def _process_metadata(ev, text_content: str, found_products: list, brand: str) -
     final_products = []
     seen_images = set()
     for p in mentioned_products:
-        img = p.get("image")
-        if img and img not in seen_images:
-            product_data = {k: v for k, v in p.items() if not k.startswith("_")}
-            final_products.append(product_data)
-            seen_images.add(img)
-        if len(final_products) >= 10:
+        # If we have multiple images for this product, add each one as a separate card
+        imgs = p.get("_images") or [p.get("image")]
+        for img in imgs:
+            if img and img not in seen_images:
+                product_data = {k: v for k, v in p.items() if not k.startswith("_")}
+                product_data["image"] = img
+                final_products.append(product_data)
+                seen_images.add(img)
+        
+        if len(final_products) >= 20: # Increased limit to show more images
             break
 
     # Extract bubble options
@@ -356,7 +393,7 @@ async def chat_stream(user_text: str, session_id: str, brand: str = "mizumi", st
             # 3. Handle final response
             if ev.is_final_response():
                 # Note: full_text should be the same as ev.content.parts[0].text
-                meta = _process_metadata(ev, full_text, found_products, brand)
+                meta = process_metadata(ev, full_text, found_products, brand)
                 
                 # Save Logs
                 try:

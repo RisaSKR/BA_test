@@ -6004,6 +6004,7 @@
     "canonical_name": "MizuMi Skincare UV Lip Glassy Balm",
     "thai_name": "มิซึมิ ยูวี ลิป กลาสซี่ บาล์ม",
     "image_url": "/static/products/mizumi_skincare_uv_lip_glassy_balm.jpg",
+    "image_url_2": "/static/products/mizumi_skincare_uv_lip_glassy_balm_swatch.jpg",
     "short_name": "ลิปบาล์มกันแดด",
     "category": "lip_care",
     "variants": [
@@ -6310,6 +6311,7 @@
     "canonical_name": "MizuMi UV Plumping Lip Oil",
     "thai_name": "มิซึมิ ยูวี พลัมพิ่ง ลิป ออยล์",
     "image_url": "/static/products/mizumi_uv_plumping_lip_oil.jpg",
+    "image_url_2": "/static/products/mizumi_uv_plumping_lip_oil_swatch.jpg",
     "short_name": "ลิปออยล์พลัมพิ่ง",
     "category": "lip_care",
     "variants": [
@@ -7439,6 +7441,8 @@
     "canonical_name": "MizuMi UV Blush Stick",
     "thai_name": "มิซึมิ ยูวี บลัช สติ๊ก",
     "image_url": "/static/products/mizumi_uv_blush_stick.jpg",
+    "image_url_2": "/static/products/mizumi_uv_blush_swatch_2.jpg",
+    "image_url_3": "/static/products/mizumi_uv_blush_swatch_3.jpg",
     "short_name": "บลัชสติ๊กกันแดด",
     "category": "makeup_blush",
     "variants": [

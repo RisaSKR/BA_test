@@ -162,25 +162,46 @@ def read_json_products(path: Path) -> list:
         if variants:
             for v in variants:
                 text = format_product_text(val, variant=v)
-                # Use variant image_url if available, else fallback to product image_url
-                img_url = v.get("image_url") or val.get("image_url")
+                # Collect all image_urls
+                meta = {
+                    "source": source,
+                    "product_code": v.get("variant_code") or key,
+                }
+                # Variant specific image
+                if v.get("image_url"):
+                    meta["image_url"] = v["image_url"]
+                
+                # If variant has no image, or to include product images
+                if not meta.get("image_url") and val.get("image_url"):
+                    meta["image_url"] = val["image_url"]
+                
+                # Add extra images from product level
+                for i in range(2, 6):
+                    k = f"image_url_{i}"
+                    if val.get(k):
+                        meta[k] = val[k]
+
                 docs.append(Document(
                     page_content=text, 
-                    metadata={
-                        "source": source, 
-                        "product_code": v.get("variant_code") or key, 
-                        "image_url": img_url
-                    }
+                    metadata=meta
                 ))
         else:
             text = format_product_text(val)
+            meta = {
+                "source": source,
+                "product_code": val.get("product_code") or key,
+            }
+            if val.get("image_url"):
+                meta["image_url"] = val["image_url"]
+            
+            for i in range(2, 6):
+                k = f"image_url_{i}"
+                if val.get(k):
+                    meta[k] = val[k]
+
             docs.append(Document(
                 page_content=text, 
-                metadata={
-                    "source": source, 
-                    "product_code": val.get("product_code") or key, 
-                    "image_url": val.get("image_url")
-                }
+                metadata=meta
             ))
 
     if isinstance(data, list):
