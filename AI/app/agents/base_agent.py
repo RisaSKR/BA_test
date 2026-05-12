@@ -192,7 +192,7 @@ def _extract_products_from_event(ev, found_products: list) -> bool:
                         })
     return detected
 
-def process_metadata(ev, text_content: str, found_products: list, brand: str) -> dict:
+def process_metadata(ev, text_content: str, found_products: list, brand: str, language: str | None = "TH") -> dict:
     """Extract products, bubble options, and token usage from the final event."""
     # Extract token usage
     token_usage = {}
@@ -205,8 +205,8 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
     # Extract localized card descriptions from text tags like [DESC: Name | Text] or [DESC: Name : Text]
     # This allows the trilingual bot to translate the info_context on the fly.
     card_descriptions = {}
-    # Handles both [DESC: Name | Text] and [DESC: Name : Text] with optional spaces
-    desc_matches = re.findall(r'\[DESC:\s*(.*?)\s*[\|:]\s*(.*?)\]', text_content, re.IGNORECASE)
+    # Robust regex: handles [DESC: Name | Text], [DESC|Name:Text], [DESC : Name | Text], etc.
+    desc_matches = re.findall(r'\[DESC\s*[:\|]\s*(.*?)\s*[\|:]\s*(.*?)\]', text_content, re.IGNORECASE)
     for name, desc in desc_matches:
         card_descriptions[name.strip().lower()] = desc.strip()
 
@@ -235,18 +235,14 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
     for p in found_products:
         base  = p.get("_base", "")
         short = p.get("_short", "")
-        name_raw = p.get("name", "").lower()
         pos = 999999
         found = False
         
         if base and base in response_lower:
             pos = min(pos, response_lower.find(base))
             found = True
-        if short and len(short) >= 3 and short in response_lower:
+        if short and len(short) >= 8 and short in response_lower:
             pos = min(pos, response_lower.find(short))
-            found = True
-        if name_raw and name_raw in response_lower:
-            pos = min(pos, response_lower.find(name_raw))
             found = True
             
         if found:
@@ -258,11 +254,6 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
                 p["variant"] = catalog[base].get("variant", "")
                 # Preference: 1. AI provided localized desc, 2. Catalog desc
                 p["information_context"] = get_localized_desc(base, catalog[base].get("information_context", ""))
-            elif name_raw in catalog:
-                p["_images"] = catalog[name_raw].get("images") or [p.get("image")]
-                p["variant"] = catalog[name_raw].get("variant", "")
-                p["information_context"] = get_localized_desc(name_raw, catalog[name_raw].get("information_context", ""))
-
             mentioned_products.append(p)
 
     existing_bases = {p["_base"] for p in mentioned_products}
@@ -293,7 +284,7 @@ def process_metadata(ev, text_content: str, found_products: list, brand: str) ->
                 final_products.append(product_data)
                 seen_images.add(img)
         
-        if len(final_products) >= 30: # Increased limit to show more images
+        if len(final_products) >= 20: # Increased limit to show more images
             break
 
     # Extract bubble options
@@ -403,7 +394,7 @@ async def chat_stream(user_text: str, session_id: str, brand: str = "mizumi", st
             # 3. Handle final response
             if ev.is_final_response():
                 # Note: full_text should be the same as ev.content.parts[0].text
-                meta = process_metadata(ev, full_text, found_products, brand)
+                meta = process_metadata(ev, full_text, found_products, brand, language=language)
                 
                 # Save Logs
                 try:

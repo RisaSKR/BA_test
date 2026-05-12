@@ -1384,13 +1384,17 @@
             // Add "See full detail" button
             const fullDetailBtn = document.createElement('div');
             fullDetailBtn.className = 'full-detail-btn';
-            const detailLabelMap = { 'TH': 'ดูรายละเอียดเพิ่มเติม', 'EN': 'See full detail', '中文': '查看详情' };
+            const detailLabelMap = { 
+                'TH': 'ดูรายละเอียดเพิ่มเติม',
+                'EN': 'See full detail', 
+                '中文': '查看详情' 
+            };
             fullDetailBtn.textContent = detailLabelMap[window.currentLang] || detailLabelMap['TH'];
             fullDetailBtn.onclick = (e) => {
                 e.stopPropagation();
                 const productName = product.name || product.canonical_name || 'this product';
                 let query = '';
-                if (window.currentLang === 'TH') query = `ขอรายละเอียดเพิ่มเติมของ ${productName}`;
+                if (window.currentLang === 'TH' || window.currentLang === 'ไทย') query = `ขอรายละเอียดเพิ่มเติมของ ${productName}`;
                 else if (window.currentLang === '中文') query = `查看 ${productName} 的详细页面`;
                 else query = `Full details of ${productName}`;
                 quickSend(query, 'full_details');
@@ -1402,7 +1406,12 @@
             back.className = 'product-card-back';
 
             const backHeader = document.createElement('h4');
-            const headerMap = { 'TH': 'รายละเอียดสินค้า', 'EN': 'Product Details', '中文': '产品详情' };
+            const headerMap = { 
+             
+                'ไทย': 'รายละเอียดสินค้า',
+                'EN': 'Product Details', 
+                '中文': '产品详情' 
+            };
             backHeader.textContent = headerMap[window.currentLang] || headerMap['TH'];
 
             let contextData = product.information_context;
@@ -1431,7 +1440,12 @@
                 // Otherwise, display as a regular paragraph
                 desc = document.createElement('p');
                 desc.style.webkitLineClamp = '10'; // Show more description if available
-                desc.textContent = (typeof contextData === 'string' ? contextData.trim() : null) || (window.currentLang === 'EN' ? "Experience the best of MizuMi skincare with this special formulation designed for your beauty needs." : "สัมผัสประสบการณ์การดูแลผิวที่ดีที่สุดจาก MizuMi ด้วยสูตรพิเศษที่ออกแบบมาเพื่อความต้องการด้านความงามของคุณ");
+                const fallbackMap = {
+                    'EN': "Experience the best of MizuMi skincare with this special formulation designed for your beauty needs.",
+                    '中文': "体验 MizuMi 为您的护肤需求专门设计的卓越配方，开启最佳护肤体验。",
+                    'ไทย': "สัมผัสประสบการณ์การดูแลผิวที่ดีที่สุดจาก MizuMi ด้วยสูตรพิเศษที่ออกแบบมาเพื่อความต้องการด้านความงามของคุณ"
+                };
+                desc.textContent = (typeof contextData === 'string' ? contextData.trim() : null) || fallbackMap[window.currentLang] || fallbackMap['TH'];
             }
 
             const tapHint = document.createElement('div');
@@ -1439,7 +1453,11 @@
             tapHint.style.color = 'var(--primary)';
             tapHint.style.marginTop = 'auto';
             tapHint.style.textAlign = 'right';
-            const hintMap = { 'TH': 'แตะเพื่อดูรูปภาพ', 'EN': 'Tap to see image', '中文': '点击查看图片' };
+            const hintMap = { 
+                'ไทย': 'แตะเพื่อดูรูปภาพ',
+                'EN': 'Tap to see image', 
+                '中文': '点击查看图片' 
+            };
             tapHint.textContent = hintMap[window.currentLang] || hintMap['TH'];
 
             back.appendChild(backHeader);
